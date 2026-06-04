@@ -2,6 +2,7 @@
 
 ## Source
 
+- Suggested filename: `YYYY-MM-DD_short-title.md`
 - Title:
 - URL or PDF:
 - Authors / Organization:
@@ -34,3 +35,9 @@
 
 - `tasks/active/...`
 
+## Naming Rule
+
+- 1 URL または 1 論文につき 1 要約ファイルを作る。
+- ファイル名は `YYYY-MM-DD_short-title.md` にする。
+- `short-title` は英小文字、数字、ハイフンのみを使う。
+- 例: `2026-06-04_react-agent-workflow.md`

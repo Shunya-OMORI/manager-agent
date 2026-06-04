@@ -1,5 +1,7 @@
 # TUAT Master Exam Status
 
+Status: todo
+
 ## Current State
 
 受験準備のため、PDF 原本、抽出結果、勉強計画、出力物を分ける初期構成を追加した。
@@ -25,4 +27,3 @@
 - Extracted notes: `tuat-master-exam/extracted/`
 - Plans: `tuat-master-exam/plans/`
 - Logs: `tuat-master-exam/logs/`
-

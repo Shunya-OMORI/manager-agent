@@ -1,5 +1,7 @@
 # NEDO Status
 
+Status: todo
+
 ## Current State
 
 リポジトリ構成を「根拠重視型」に整理した初期状態。
@@ -24,4 +26,3 @@
 - Context: `nedo/context/source_files.md`
 - Research URLs: `nedo/research/urls.md`
 - Logs: `nedo/logs/`
-

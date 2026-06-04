@@ -1,5 +1,7 @@
 # Research Status
 
+Status: todo
+
 ## Current State
 
 雑誌会論文選定に向けて、候補論文・URL・要約を分離して管理する初期構成を追加した。
@@ -23,4 +25,3 @@
 - Context: `research/context/source_files.md`
 - Candidate URLs: `research/paper_candidates/urls.md`
 - Logs: `research/logs/`
-
