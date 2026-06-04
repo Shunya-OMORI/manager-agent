@@ -35,7 +35,12 @@ Type は `file`、`url`、`paper`、`official`、`note` などを使う。
 
 - `path`: 変更内容を書く。
 
+## User Review
+
+- 見てほしいファイル:
+- 確認してほしい判断:
+- 許可が必要な次の編集:
+
 ## Next Prompt
 
 次のエージェントにそのまま渡せる依頼文を書く。
-

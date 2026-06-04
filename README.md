@@ -59,12 +59,36 @@ tuat-master-exam/
 
 1. `tasks/active/*.md` の該当タスクを読む。
 2. `status.md` と `context/source_files.md` を読む。
-3. 必要な URL、論文、公式資料を調査する。
-4. 調査結果を URL 一覧と要約ファイルに分けて保存する。
-5. 解決方針や設計方針を 3 案ほど提示する。
-6. ユーザ確認後に、下書きまたは成果物を編集する。
-7. `logs/YYYY-MM-DD.md` を更新する。
-8. `status.md` を更新する。
+3. `workflows/agent-checklist.md` を読む。
+4. 必要な URL、論文、公式資料を調査する。
+5. 調査結果を URL 一覧と要約ファイルに分けて保存する。
+6. 解決方針や設計方針を 3 案ほど提示する。
+7. ユーザ確認後に、下書きまたは成果物を編集する。
+8. `logs/YYYY-MM-DD.md` を更新する。
+9. `status.md` を更新する。
+
+## Workflow Templates
+
+作業時は、目的に合わせて `workflows/` のテンプレートを使います。
+
+| File | Use When |
+| --- | --- |
+| `workflows/agent-checklist.md` | すべての作業前後に標準フローを確認する |
+| `workflows/task-template.md` | `tasks/active/` に新しいタスクを作る |
+| `workflows/research-template.md` | URL、論文、PDF、公式資料を 1 件ずつ要約する |
+| `workflows/report-template.md` | 調査結果、設計方針、比較案をユーザに見せる |
+| `workflows/log-template.md` | `logs/YYYY-MM-DD.md` を作成・追記する |
+| `workflows/status-labels.md` | `status.md` とログの `Status` を決める |
+
+## Handoff To User
+
+作業後は、ユーザが実態を確認しやすいように次を必ず示します。
+
+- 変更したファイル
+- 追加した根拠 URL、PDF、要約
+- ユーザに確認してほしい判断
+- 未解決点
+- 次にエージェントへ依頼できるプロンプト
 
 ## Status Labels
 
@@ -97,3 +121,11 @@ tuat-master-exam/
 - ユーザ確認後の成果物だけ `outputs/` に置く。
 - コードは関数単位、文章や論文は小段落単位で編集する。
 
+## Drift Prevention
+
+ファイルの実態とユーザの認識がずれないように、次を守ります。
+
+- 作業後に `logs/YYYY-MM-DD.md` と `status.md` を必ず更新する。
+- `status.md` の `Latest Outputs` には、実在する成果物だけを書く。
+- 調査結果、推測、ユーザ確認済みの判断を混ぜない。
+- 参照ファイルを増やしたら `context/source_files.md` または URL 一覧にも反映する。
