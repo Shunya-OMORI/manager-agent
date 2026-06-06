@@ -12,12 +12,14 @@
 - 新しいタスク、調査、報告、ログを作る場合は `workflows/` の対応テンプレートを使う。
 - 既存ファイルを移動・リネーム・削除しない。
 - 文章編集や成果物作成に入る前に、必要な調査と根拠整理を行う。
+- PDFをMarkdown化するときは、`workflows/pdf-to-markdown.md`を読み、`scripts/pdf_to_markdown.py`で読み順版とレイアウト確認版を作る。
 
 ## workflows の使い分け
 
 - `workflows/agent-checklist.md`: 作業前後に必ず確認する標準手順。
 - `workflows/task-template.md`: `tasks/active/` に新しいタスクを追加するときに使う。
 - `workflows/research-template.md`: URL、論文、PDF などを 1 件ずつ要約するときに使う。
+- `workflows/pdf-to-markdown.md`: PDFの抽出、原本照合、全文和訳、詳細要約を行うときに使う。
 - `workflows/report-template.md`: 調査結果や設計方針をまとめてユーザに見せるときに使う。
 - `workflows/log-template.md`: `logs/YYYY-MM-DD.md` を作成・追記するときに使う。
 - `workflows/status-labels.md`: `status.md` とログの `Status` を決めるときに使う。

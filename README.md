@@ -23,6 +23,7 @@ tasks/
 
 workflows/
   agent-checklist.md          # 標準作業フロー
+  pdf-to-markdown.md          # PDF 抽出、校訂、和訳、要約の手順
   task-template.md            # タスク定義テンプレート
   research-template.md        # 調査要約テンプレート
   report-template.md          # 報告書テンプレート
@@ -53,6 +54,9 @@ tuat-master-exam/
   outputs/                    # ユーザ確認後の成果物
   logs/                       # 作業ログ
   status.md                   # 現在状態
+
+scripts/
+  pdf_to_markdown.py          # PDF の読み順版、レイアウト版、メタデータを抽出
 ```
 
 ## Standard Flow
@@ -74,11 +78,26 @@ tuat-master-exam/
 | File | Use When |
 | --- | --- |
 | `workflows/agent-checklist.md` | すべての作業前後に標準フローを確認する |
+| `workflows/pdf-to-markdown.md` | PDF を Markdown 化し、和訳・要約まで校訂する |
 | `workflows/task-template.md` | `tasks/active/` に新しいタスクを作る |
 | `workflows/research-template.md` | URL、論文、PDF、公式資料を 1 件ずつ要約する |
 | `workflows/report-template.md` | 調査結果、設計方針、比較案をユーザに見せる |
 | `workflows/log-template.md` | `logs/YYYY-MM-DD.md` を作成・追記する |
 | `workflows/status-labels.md` | `status.md` とログの `Status` を決める |
+
+## PDF Extraction
+
+PDFをMarkdownへ変換するときは、[PDF To Markdown Workflow](workflows/pdf-to-markdown.md)を正とします。
+
+```bash
+python3 scripts/pdf_to_markdown.py \
+  path/to/source.pdf \
+  --output-dir path/to/drafts \
+  --slug short-name \
+  --title "Document Title"
+```
+
+スクリプトの出力は未検証の下書きです。二段組み、数式、表、図キャプション、参考文献、数値をPDFと照合してから、全文和訳や要約を作成します。
 
 ## Handoff To User
 
