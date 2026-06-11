@@ -1,0 +1,13 @@
+format: PDF 1.5
+title: Novel Moving Steady-State Visual Evoked Potential Stimulus to Assess Afferent and Efferent Dysfunction in Multiple Sclerosis
+author: 
+subject: IEEE Transactions on Neural Systems and Rehabilitation Engineering;2023;31; ;10.1109/TNSRE.2023.3243554
+keywords: 
+creator: LaTeX with hyperref
+producer: pdfTeX-1.40.24; modified using iText® 7.1.1 ©2000-2018 iText Group NV (AGPL-version)
+creationDate: D:20230215063352+05'30'
+modDate: D:20230215223624-05'00'
+trapped: False
+encryption: None
+pages: 5
+file_size: 4968396

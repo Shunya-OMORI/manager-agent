@@ -13,3 +13,8 @@
 - このファイルは参照リストであり、原本は移動しない。
 - 論文候補を決める前に、`tasks/active/journal-paper-selection.md` と `research/status.md` を読む。
 
+作業場所:
+
+- `research/drafts/journal-club/`: 論文の原文抽出、和訳、詳細要約
+- `research/drafts/journal-club-presentation/`: 雑誌会の発表構成、スライド原稿、参考資料分析
+

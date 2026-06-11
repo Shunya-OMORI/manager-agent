@@ -1,5 +1,7 @@
 # 雑誌会 論文選定
 
+Status: done
+
 ## Goal
 
 卒論テーマに近い、または研究室に関連する先行研究から、雑誌会で紹介する論文候補を選ぶ。
@@ -7,6 +9,19 @@
 ## Deadline
 
 2026-06-06 までに候補を決めたい。
+
+## Decision
+
+2026-06-11、雑誌会で紹介する論文を次の論文に決定した。
+
+- PDF: `research/paper_candidates/papers/Novel_Moving_Steady-State_Visual_Evoked_Potential_Stimulus_to_Assess_Afferent_and_Efferent_Dysfunction_in_Multiple_Sclerosis.pdf`
+- Title: Novel Moving Steady-State Visual Evoked Potential Stimulus to Assess Afferent and Efferent Dysfunction in Multiple Sclerosis
+- Drafts:
+  - `research/drafts/journal-club/moving-mfssvep-ms_original.md`
+  - `research/drafts/journal-club/moving-mfssvep-ms_ja.md`
+  - `research/drafts/journal-club/moving-mfssvep-ms_summary.md`
+
+論文選定タスクは完了とし、以後はこの論文の発表準備を進める。
 
 ## Expected Outputs
 

@@ -1,0 +1,13 @@
+format: PDF 1.4
+title: 雑誌会20260529_imamura25
+author: 
+subject: 
+keywords: 
+creator: Keynote
+producer: macOS Version 26.4.1 (Build 25E253) Quartz PDFContext
+creationDate: D:20260529025947Z00'00'
+modDate: D:20260529025947Z00'00'
+trapped: 
+encryption: None
+pages: 31
+file_size: 6355837
