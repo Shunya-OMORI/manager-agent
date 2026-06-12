@@ -1,8 +1,14 @@
 # NEDO Status
 
-Status: researching
+Status: waiting-user
 
 ## Current State
+
+第2回ミーティング決定事項を中心に，`nedo/提案書様式.txt` の公開サマリー，審査用資料，審査用補足資料1〜9，参考文献をスライド単位で埋めた下書き `nedo/drafts/2026-06-12_proposal-all-slides.md` を作成した。
+
+確定済みの「1．課題・背景」は変更していない。未確定の数値・仕様・計画は `[仮定]`，チーム固有情報は `[要確認]`，既存研究から導いた判断は `[推論]` として区別した。本文中引用は著者年方式とし，末尾に参考文献スライドを設けた。
+
+市場母集団は総務省統計局の2024年「専門的・技術的職業従事者」1,324万人を用いた。SAMは `[仮定]` 月額1,000円を掛けた約1,589億円/年を検証対象の仮説として記載した。
 
 第2回ミーティング記録をもとに、NEDOシステムを「EEG/生理信号による認知状態推定」「画面・作業ログの記録」「VLM/OCRによる作業文脈理解」「LLMエージェントによるタスク細分化」「レポート生成とTodo更新」に分解した。
 
@@ -18,7 +24,7 @@ Status: researching
 
 ## Next Action
 
-`nedo/drafts/2026-06-05_statewise_expert_model_design.md` を確認し、6 expert model の方針で進めるか判断する。最初の実装候補は `stuck`, `thinking`, `switching` の3 expert。
+`nedo/drafts/2026-06-12_proposal-all-slides.md` をユーザが確認し，提案タイトル，EEGデバイス，実行体制，倫理審査，研究開発期間，PoC対象者数，知財・実績，SAM価格仮説，データ二次利用の扱いを回答する。
 
 ## Blockers
 
@@ -29,6 +35,9 @@ Status: researching
 
 ## Latest Outputs
 
+- `nedo/drafts/2026-06-12_proposal-all-slides.md`
+- `nedo/research/summaries/2026-06-12-japan-knowledge-worker-market.md`
+- `nedo/research/summaries/2026-06-12-ethics-and-privacy.md`
 - `nedo/drafts/2026-06-05_system_problem_decomposition.md`
 - `nedo/drafts/2026-06-05_multimodal_cognitive_state_definition.md`
 - `nedo/drafts/2026-06-05_statewise_expert_model_design.md`

@@ -28,4 +28,8 @@ NEDO 提案書に使う調査 URL を記録する。
 | 2026-06-05 | Developer emotion recognition while programming | https://arxiv.org/abs/2001.09177 | Paper | `nedo/drafts/2026-06-05_multimodal_cognitive_state_definition.md` | Girardi et al., 2020。プログラミング中の感情認識と生体センサ。 |
 | 2026-06-05 | Programmer EEG debug state classification | https://pman.uwanolab.jp/pman3.cgi?DOWNLOAD=131 | Paper | `nedo/drafts/2026-06-05_multimodal_cognitive_state_definition.md` | Ishida and Uwano, 2019。デバッグ/コード理解中のEEG時系列解析。 |
 | 2026-06-05 | EEG and eye-tracking cognitive load review | https://www.mdpi.com/2414-4088/9/9/99 | Review | `nedo/drafts/2026-06-05_multimodal_cognitive_state_definition.md` | Khan et al., MTI 2025。EEG/視線指標はタスク依存で混在するという背景。 |
+| 2026-06-12 | Japan professional and engineering workers | https://www.stat.go.jp/english/data/handbook/pdf/2025all.pdf | Official statistics | `nedo/research/summaries/2026-06-12-japan-knowledge-worker-market.md` | 2024年の専門的・技術的職業従事者は1,324万人。SAM母集団の公的根拠。 |
+| 2026-06-12 | Human-subject research ethics guidelines | https://www.mext.go.jp/a_menu/lifescience/bioethics/seimeikagaku_igaku.html | Official guidance | `nedo/research/summaries/2026-06-12-ethics-and-privacy.md` | EEG・画面・操作ログを取得する研究の倫理審査と同意設計の根拠。 |
+| 2026-06-12 | Personal Information Protection Commission guidance | https://www.ppc.go.jp/personalinfo/legal/ | Official guidance | `nedo/research/summaries/2026-06-12-ethics-and-privacy.md` | 個人データの利用目的，安全管理，仮名加工等の確認先。 |
+| 2026-06-12 | Routine and sleep EEG minimum recording standards | https://pmc.ncbi.nlm.nih.gov/articles/PMC10006292/ | Guideline paper | `nedo/drafts/2026-06-12_proposal-all-slides.md` | IFCN・ILAEによるEEG最低記録標準。デバイスと品質管理の根拠。 |
 
