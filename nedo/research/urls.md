@@ -32,4 +32,20 @@ NEDO 提案書に使う調査 URL を記録する。
 | 2026-06-12 | Human-subject research ethics guidelines | https://www.mext.go.jp/a_menu/lifescience/bioethics/seimeikagaku_igaku.html | Official guidance | `nedo/research/summaries/2026-06-12-ethics-and-privacy.md` | EEG・画面・操作ログを取得する研究の倫理審査と同意設計の根拠。 |
 | 2026-06-12 | Personal Information Protection Commission guidance | https://www.ppc.go.jp/personalinfo/legal/ | Official guidance | `nedo/research/summaries/2026-06-12-ethics-and-privacy.md` | 個人データの利用目的，安全管理，仮名加工等の確認先。 |
 | 2026-06-12 | Routine and sleep EEG minimum recording standards | https://pmc.ncbi.nlm.nih.gov/articles/PMC10006292/ | Guideline paper | `nedo/drafts/2026-06-12_proposal-all-slides.md` | IFCN・ILAEによるEEG最低記録標準。デバイスと品質管理の根拠。 |
-
+| 2026-06-12 | ADS1299 official specifications | https://www.ti.com/product/ADS1299 | Official document | `nedo/research/summaries/2026-06-12_ads1299-specifications.md` | EEG・生体電位計測向け8チャネル24 bit ADCの公式仕様。自作機候補の部品仕様に使用。 |
+| 2026-06-12 | ADS1299 EEG performance validation | https://doi.org/10.3390/s18113721 | Paper | `nedo/research/summaries/2026-06-12_ads1299-eeg-validation.md` | ADS1299と湿式Ag/AgCl電極を研究用装置と比較。自作機そのものの性能証明ではない。 |
+| 2026-06-14 | AttentivU engagement threshold | https://doi.org/10.3390/s19235200 | Paper | `nedo/research/summaries/2026-06-14_attentivu-threshold.md` | 5分較正，0-100正規化，15秒窓，0-30低 engagement と振動介入。 |
+| 2026-06-14 | EEG engagement index | https://pubmed.ncbi.nlm.nih.gov/7647180/ | Paper | `nedo/research/summaries/2026-06-14_eeg-indicators.md` | beta/(alpha+theta) を含む operator engagement 指標の原報。 |
+| 2026-06-14 | Cognitive workload EEG meta-analysis | https://doi.org/10.1111/psyp.14009 | Paper | `nedo/research/summaries/2026-06-14_eeg-indicators.md` | 前頭thetaが最も一貫した認知負荷指標。 |
+| 2026-06-14 | EEG fatigue ratios | https://doi.org/10.1016/j.eswa.2007.12.043 | Paper | `nedo/research/summaries/2026-06-14_eeg-indicators.md` | (theta+alpha)/beta等を単調運転中の疲労検出で比較。 |
+| 2026-06-14 | Frontal alpha asymmetry review | https://doi.org/10.3389/fcomp.2022.869123 | Review | `nedo/research/summaries/2026-06-14_eeg-indicators.md` | FAAは単純な快不快より接近・回避傾向として慎重に使用。 |
+| 2026-06-14 | Phase lag index | https://doi.org/10.1002/hbm.20346 | Paper | `nedo/research/summaries/2026-06-14_eeg-indicators.md` | 共通源・体積伝導の影響を低減する位相同期指標。 |
+| 2026-06-14 | Weighted phase lag index | https://doi.org/10.1016/j.neuroimage.2011.01.055 | Paper | `nedo/research/summaries/2026-06-14_eeg-indicators.md` | ノイズと標本数バイアスへ頑健なwPLI。 |
+| 2026-06-14 | Motion auto-scheduling | https://www.usemotion.com/help/time-management/auto-scheduling | Official product document | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | 優先度，締切，空き時間に基づく自動配置と再計画。 |
+| 2026-06-14 | Reclaim priorities | https://help.reclaim.ai/en/articles/8291694-how-reclaim-uses-priorities-to-intelligently-plan-your-workweek | Official product document | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | 優先度，期限，空き時間を用いる週間計画。 |
+| 2026-06-14 | Sunsama timeboxing | https://help.sunsama.com/docs/usage-guides/timeboxing/ | Official product document | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | タスクをカレンダー上の作業枠へ変換。 |
+| 2026-06-14 | Todoist Task Assist | https://www.todoist.com/help/articles/use-the-task-assist-extension-with-todoist-ZgldtcPeT | Official product document | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | AIによるサブタスク分解。 |
+| 2026-06-14 | Retrieval-Augmented Generation | https://arxiv.org/abs/2005.11401 | Paper | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | 外部の更新可能な非パラメトリック記憶を生成へ利用。 |
+| 2026-06-14 | Plan-and-Solve prompting | https://doi.org/10.18653/v1/2023.acl-long.147 | Paper | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | 目標をサブタスクへ分解してから実行する設計。 |
+| 2026-06-14 | LoRA | https://arxiv.org/abs/2106.09685 | Paper | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | ローカルモデルの低コスト追加学習候補。 |
+| 2026-06-14 | Direct Preference Optimization | https://arxiv.org/abs/2305.18290 | Paper | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | 選択・拒否ペアを用いる軽量な選好最適化候補。 |
