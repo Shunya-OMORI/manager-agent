@@ -49,3 +49,9 @@ NEDO 提案書に使う調査 URL を記録する。
 | 2026-06-14 | Plan-and-Solve prompting | https://doi.org/10.18653/v1/2023.acl-long.147 | Paper | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | 目標をサブタスクへ分解してから実行する設計。 |
 | 2026-06-14 | LoRA | https://arxiv.org/abs/2106.09685 | Paper | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | ローカルモデルの低コスト追加学習候補。 |
 | 2026-06-14 | Direct Preference Optimization | https://arxiv.org/abs/2305.18290 | Paper | `nedo/research/summaries/2026-06-14_task-ai-and-llm-architecture.md` | 選択・拒否ペアを用いる軽量な選好最適化候補。 |
+| 2026-06-15 | EventRAG | https://aclanthology.org/2025.acl-long.830/ | Paper | `nedo/research/summaries/2026-06-15_temporal-episodic-graph-rag.md` | イベント知識グラフで時間的・論理的なイベント連鎖を検索するRAG。 |
+| 2026-06-15 | ScreenTrack | https://dl.acm.org/doi/10.1145/3313831.3376753 | Paper | `nedo/research/summaries/2026-06-15_temporal-episodic-graph-rag.md` | PC画面履歴を用いた作業文脈の再構成とタスク復帰支援。 |
+| 2026-06-15 | Entity-Event Knowledge Graph for RAG | https://aclanthology.org/2026.eacl-long.90/ | Paper | `nedo/research/summaries/2026-06-15_temporal-episodic-graph-rag.md` | 通常のRAGで失われる時間順序をイベント単位のグラフで保持する。 |
+| 2026-06-15 | 近藤蒼大氏のNEDO NEP採択 | https://nep.nedo.go.jp/selected/491e4c3d-e5df-4032-a554-0ffb2a2b0ad7 | Official program profile | 未作成 | 耳脳波の日常利用とヘルスケア展開に関する事業化検証。 |
+| 2026-06-15 | 工学院大学のNEDO NEP採択記事 | https://www.kogakuin.ac.jp/news/2026/042101.html | University news | 未作成 | 近藤蒼大氏の採択テーマは「耳脳波ヘルスケアの事業化検証」。記事上の肩書は非常勤講師。 |
+| 2026-06-15 | 近藤蒼大氏の耳介周辺EEG研究 | https://www.kogakuin.ac.jp/news/2023/100202.html | University news | 未作成 | 耳介周辺電極からSSVEPを取得し，BCIへの応用を目指す研究とデモンストレーション受賞。 |
