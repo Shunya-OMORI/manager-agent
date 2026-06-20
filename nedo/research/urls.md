@@ -55,3 +55,8 @@ NEDO 提案書に使う調査 URL を記録する。
 | 2026-06-15 | 近藤蒼大氏のNEDO NEP採択 | https://nep.nedo.go.jp/selected/491e4c3d-e5df-4032-a554-0ffb2a2b0ad7 | Official program profile | 未作成 | 耳脳波の日常利用とヘルスケア展開に関する事業化検証。 |
 | 2026-06-15 | 工学院大学のNEDO NEP採択記事 | https://www.kogakuin.ac.jp/news/2026/042101.html | University news | 未作成 | 近藤蒼大氏の採択テーマは「耳脳波ヘルスケアの事業化検証」。記事上の肩書は非常勤講師。 |
 | 2026-06-15 | 近藤蒼大氏の耳介周辺EEG研究 | https://www.kogakuin.ac.jp/news/2023/100202.html | University news | 未作成 | 耳介周辺電極からSSVEPを取得し，BCIへの応用を目指す研究とデモンストレーション受賞。 |
+| 2026-06-21 | Personal informatics model | https://doi.org/10.1145/1753326.1753409 | Paper | `nedo/research/summaries/2026-06-21_episode-data-format-prior-art.md` | 収集，統合，振り返り，行動まで含めて個人データ形式を設計する根拠。 |
+| 2026-06-21 | Cognitive Prosthetic for episodic recall | https://doi.org/10.1145/3772363.3798940 | Paper | `nedo/research/summaries/2026-06-21_episode-data-format-prior-art.md` | 知識労働における発話，生理信号，視線を時間同期JSONエピソードとして保存する近接事例。 |
+| 2026-06-21 | MindMirror digital worker support | https://arxiv.org/abs/2605.11700 | Preprint | `nedo/research/summaries/2026-06-21_episode-data-format-prior-art.md` | デジタルワーカー向けのローカルファースト状態支援，手動訂正，構造化内省，レビュー設計。 |
+| 2026-06-21 | Lifelog retrieval review | https://pmc.ncbi.nlm.nih.gov/articles/PMC9112086/ | Review | `nedo/research/summaries/2026-06-21_episode-data-format-prior-art.md` | 日常デジタルデータの検索・記憶支援としてのライフログ研究の整理。 |
+| 2026-06-21 | Multi-modal time series survey | https://arxiv.org/abs/2503.13709 | Preprint / survey | `nedo/research/summaries/2026-06-21_episode-data-format-prior-art.md` | 多モーダル時系列を単一平均値ではなく相互作用・時間軌跡として扱う設計参考。 |
