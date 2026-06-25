@@ -1,0 +1,2030 @@
+
+
+--- PAGE 1 ---
+VIEWS & REVIEWS
+OPEN ACCESS
+Leveraging Visual Outcome Measures to Advance
+Therapy Development in Neuroimmunologic Disorders
+Jennifer S. Graves, MD, PhD, MAS, Frederike Cosima Oertel, MD, Anneke Van der Walt, MBChB, PhD,
+Sara Collorone, MD, PhD, Elias S. Sotirchos, MD, Gorm Pihl-Jensen, PhD, Philipp Albrecht, MD, E. Ann Yeh, MD,
+Shiv Saidha, MBBCh, MD, MRCPI, Jette Frederiksen, MD, Scott Douglas Newsome, DO, and
+Friedemann Paul, MD, on behalf of IMSVISUAL
+Neurol Neuroimmunol Neuroinﬂamm 2022;9:e1126. doi:10.1212/NXI.0000000000001126
+Correspondence
+Dr. Graves
+jgraves@ucsd.edu
+Abstract
+The visual system oﬀers unparalleled precision in the assessment of neuroaxonal damage. With
+the majority of patients with multiple sclerosis (MS) experiencing aﬀerent and eﬀerent visual
+dysfunction, outcome measures capturing these deﬁcits provide insight into neuroaxonal injury,
+even in those with minimal disability. Ideal for use in clinical trials, visual measures are generally
+inexpensive, accessible, and reproducible. Quantiﬁcation of visual acuity, visual ﬁelds, visual
+quality of life, and electrophysiologic parameters allows assessment of function, whereas optical
+coherence tomography (OCT) provides reliable measures of the structural integrity of the
+anterior aﬀerent visual pathway. The technology of oculomotor biometrics continues to advance,
+and discrete measures of ﬁxation, smooth pursuit, and saccadic eye movement abnormalities are
+ready for inclusion in future trials of MS progression. Visual outcomes allow tracking of neuro-
+axonal injury and aid in distinguishing MS from diseases such as neuromyelitis optica spectrum
+disorder (NMOSD) or myelin oligodendrocyte glycoprotein antibody–associated diseases
+(MOGAD). OCT has also provided unique insights into pathophysiology, including the iden-
+tiﬁcation of foveal pitting in NMOSD, possibly from damage to M¨uller cells, which carry an
+abundance of aquaporin-4 channels. For some study designs, the cost-beneﬁt ratio favors visual
+outcomes over more expensive MRI outcomes. With the next frontier of therapeutics focused on
+remyelination and neuroprotection, visual outcomes are likely to take center stage. As an in-
+ternational community of collaborative, committed, vision scientists, this review by the In-
+ternational MS Visual System Consortium (IMSVISUAL) outlines the quality standards,
+informatics, and framework needed to routinely incorporate vision outcomes into MS and
+NMOSD trials.
+Department of Neurosciences (J.S.G.), University of California, San Diego; Experimental and Clinical Research Center (F.C.O., F.P.), Max Delbr¨uck Center for Molecular Medicine and
+Charit´e – Universit¨atsmedizin Berlin & NeuroCure Clinical Research Center, Charité – Universitätsmedizin Berlin, corporate member of Freie Universität Berlin, Humboldt-Universität
+zu Berlin, and Berlin Institute of Health, Berlin, Germany; Department of neuroscience (A.V.D.W.), Central Clinical School, Monash University, Melbourne, Australia; NMR Research Unit,
+Queen Square MS Centre, Department of Neuroinflammation (S.C.), UCL Queen Square Institute of Neurology, Faculty of Brain Sciences, University College London, London, United
+Kingdom; Department of Neurology (E.S.S., S.S., S.D.N.), Johns Hopkins University School of Medicine, Baltimore, MD; Rigshospitalet (J.F.), Denmark; Department of Neurology (P.A.),
+Medical Faculty, Heinrich-Heine-University D¨usseldorf, Germany; Division of Neurology, Department of Pediatrics (E.A.Y.), Division of Neuroscience and Mental Health, Hospital for
+Sick Children, Hospital for Sick Children Research Institute, and University of Toronto, Toronto, Canada.
+Go to Neurology.org/NN for full disclosures. Funding information is provided at the end of the article.
+The Article Processing Charge was funded by the authors.
+IMSVISUAL coinvestigators are listed in the appendix at the end of the article.
+This is an open access article distributed under the terms of the Creative Commons Attribution-NonCommercial-NoDerivatives License 4.0 (CC BY-NC-ND), which permits downloading
+and sharing the work provided it is properly cited. The work cannot be changed in any way or used commercially without permission from the journal.
+Copyright © 2021 The Author(s). Published by Wolters Kluwer Health, Inc. on behalf of the American Academy of Neurology.
+1
+
+
+--- PAGE 2 ---
+The ﬁrst revolution in ophthalmology occurred in 1845 with
+the invention of the ophthalmoscope. Before this time, there
+was no clear way to diﬀerentiate visual disorders; diseases
+were categorized only as either ophthalmia or blindness.1
+Progress was made into the early 20th century when optic
+neuritis (ON) was distinguished from other forms of optic
+disc swelling and linked to MS.1 A century later, we now have
+tools that visualize retinal damage to 5–6 μm resolution and
+hold strong promise as outcome measures for clinical trials.
+At least 50% of patients with MS experience ON during the
+course of their disease, with many more experiencing sub-
+clinical damage to retinal ganglion cells.2 Up to 70% will also
+experience eﬀerent dysfunction from oscillopsia to subtle
+smooth pursuit dysfunction and impaired gaze stabilization.2
+In neuromyelitis optica spectrum disorders (NMOSDs),
+nearly half of patients may have a risk of developing clinical
+blindness in the ﬁrst 5 years of disease.3 Recently, myelin
+oligodendrocyte glycoprotein antibody–associated disease
+(MOGAD) has emerged as pathophysiologically distinct
+from classic NMOSD with an even stronger preponderance
+for optic nerve involvement.
+The visual system is highly amenable to quantiﬁcation, with
+well-understood structure-function relationships, and yet it
+has been underutilized in clinical trials. Rigorous methods
+have recently emerged to quantify visual injury in neuro-
+inﬂammatory diseases. Herein, the International MS Visual
+System Consortium (IMSVISUAL) (imsvisual.org) reviews
+structure-function relationship and utility in clinical trials of
+both aﬀerent and eﬀerent visual system outcome measures
+that have—in light of relatively low costs, high reliability, and
+exquisite sensitivity for pathology—the potential to transform
+the next generation of MS, NMOSD, and MOGAD clinical
+trials.
+Aﬀerent Visual System Anatomy
+Retinal ganglion cells (RGCs) represent the anterior visual
+pathway and are aﬀected by inﬂammation, demyelination, and
+neuroaxonal degeneration during ON or subclinical optic
+neuropathy (Figure 1A). RGC axons track along the inner
+retinal nerve ﬁber layer (RNFL) and converge at the optic
+nerve head (ONH) to form the optic nerve. RGC cell bodies
+are in the retinal ganglion cell layer (GCL). Subjacent to the
+GCL, the inner nuclear layer (INL) may also be aﬀected by
+neuroimmunologic diseases.4,e1-e5 Minimal changes in outer
+retinal layers have been reported after ON but may be tran-
+sient5 or speciﬁc to progressive forms of MS.6 Nonneuronal
+retinal cells have not been as well studied, but astrocyte re-
+activity plays a crucial role in neuroimmunologic disease, es-
+pecially in NMOSD, and advancing metrics targeting these
+cell types are of interest.7
+Beyond the cribriform plate, the optic nerve is myelinated and
+travels approximately 4 cm to the optic chiasm, where the
+axons from the contralateral nasal and ipsilateral temporal
+hemiretinas join to form the optic tract (OT). Lesions that
+involve the chiasm or OT8 are more common in aquaporin-4
+(AQP4)-IgG+ NMOSD than in MS, and longitudinally ex-
+tensive intraorbital optic nerve involvement is more frequent
+in MOGAD than in AQP4-IgG+ NMOSD.e6 The OT carries
+visual signals through the dorsal thalamic lateral geniculate
+nucleus (LGN) and secondary LGN neurons within the optic
+radiation (OR) to the primary visual cortex (Figure 1B).
+Anterograde and retrograde transsynaptic degeneration can
+occur across the synapse in the dorsal LGN9e7 and is of in-
+terest in the context of visual outcome measures in trials. The
+primary visual (calcarine/striate) cortex is organized into
+columns in which neurons are grouped according to their
+function. The occipital cortical thickness reﬂects this complex
+cytoarchitecture, and this thickness can be captured with MRI
+surface-based cortical reconstruction.e8 From the primary vi-
+sual cortex, there are projections to the parietal (dorsal
+pathway for visually guided movements) and temporal lobes
+(ventral pathway for object recognition) (Figure 1B). The
+extrastriate occipital cortex also has areas with functional
+speciﬁcity that may be involved in neuroplasticity recovery
+processes after ON.e9
+Aﬀerent Visual Function Measures
+An array of tools captures complementary measures of aﬀer-
+ent visual function. These include assessments of visual acuity,
+Glossary
+AQP4 = aquaporin-4; CS = contrast sensitivity; EDSS = Expanded Disability Status Scale; EDTRS = Early Treatment Diabetic
+Retinopathy Study; ERGs = Electroretinograms; GCIPL = ganglion cell + inner plexiform layer; GCL = ganglion cell layer;
+HCVA = High-contrast visual acuity; IMSVISUAL = International MS Visual System Consortium; INL = inner nuclear layer;
+ISCEV = International Society for Clinical Electrophysiology of Vision; LCLA = low-contrast letter acuity; LGN = lateral
+geniculate nucleus; MD = mean deviation; MOGAD = myelin oligodendrocyte glycoprotein antibody–associated disease;
+MSFC = MS Functional Composite; NEI-VFQ = National Eye Institute Visual Function Questionnaire; NMOSDs =
+neuromyelitis optica spectrum disorders; OCT = optical coherence tomography; ON = optic neuritis; ONH = optic nerve head;
+ONL = outer nuclear layer; OPL = outer plexiform layer; ONTT = optic neuritis treatment trial; OR = optic radiation; OT =
+optic tract; QoL = quality of life; RGC = Retinal ganglion cells; RNFL = retinal nerve ﬁber layer; VEPs = Visual Evoked
+Potentials.
+2
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 3 ---
+formal perimetry, electrophysiology, and self-reported visual
+quality of life (QoL). Key to applying these measures is rec-
+ognizing that the magnitudes of deﬁcits are expected to be
+diﬀerent in eyes with prior ON vs subclinical injury. Consis-
+tent across most clinical trials has been the application of the
+ON diagnostic criteria used in the optic neuritis treatment
+trial (ONTT).e10
+High- and Low-Contrast Visual Acuity in ON
+and MS
+High-contrast visual acuity (HCVA), black letters on a white
+background, is part of the visual functional system score in the
+Expanded Disability Status Scale (EDSS). Standardized
+HCVA tools include the 100% Early Treatment Diabetic
+Retinopathy Study (ETDRS) charts (Precision Vision, La
+Salle, USA) and Snellen Charts. Methods that generate con-
+tinuous variables amenable to statistical models (letters cor-
+rect, logMAR, and decimal vision scores) are preferable for
+clinical trials. A clinically meaningful change in HCVA is
+generally accepted as a minimum 5-letter diﬀerence.e11
+A normal HCVA result, however, does not exclude MS-
+related optic nerve injury.10 Low-contrast vision assessments
+are more sensitive and include measures of contrast sensitivity
+(CS) and low-contrast letter acuity (LCLA). In the former,
+the patient is asked to read letters of constant size but de-
+creasing contrast to determine the CS threshold. In the
+ONTT, CS determined by the Pelli-Robson Chart11 dem-
+onstrated greater sensitivity to detect visual injury than
+HCVA.12 For LCLA, the level of contrast is held constant and
+the letters decrease in size, similar to how HCVA is measured,
+but instead of 100% black on white contrast, light gray colors
+are used (e.g., 2.5% or 1.25% contrast). The Sloan low-
+contrast chartse12 have been frequently used to provide LCLA
+measurements, but other tools are also available. As an ex-
+ample, the standardized low-contrast Landolt C Broken Rings
+Chart (at 3 M) with direct data entry into an electronic data
+capture system was used for visual outcomes in the
+N-Momentum trial of inebilizumab (NCT02200770) in
+NMOSD. As the level of contrast required for letter per-
+ception is aﬀected by letter size,e13-e14 the Sloan LCLA may
+be more sensitive than CS in detecting subtle losses.13
+Furthermore, Sloan LCLA correlates strongly with optical
+coherence tomography (OCT), electrophysiologic, brain
+imaging, and self-reported QoL outcomes.13 Conse-
+quently, Sloan LCVA has been proposed as a primary
+outcome measure for visual function in ON, MS, and
+NMOSD and recommended as a potential (4th) compo-
+nent of the MS Functional Composite (MSFC) scale of MS
+disability.13 A seven-letter loss in LCVA has been validated
+as clinically meaningful.e13 LCVA is the primary outcome
+for an ongoing trial of nanocrystalline gold as a remyeli-
+nating agent (NCT03536559).
+For assessment of neurologic acuity deﬁcits, it is critical to
+address confounding refractive error. Ideally, a formal re-
+fraction and lens correction is performed; however, correction
+with pinhole devices has also been accepted. Assessments
+should be performed under standard lighting conditions
+throughout a trial.
+Digital tools created to capture both HCVA and LCLAe15-e16
+may have challenges with backlighting on devices, but these
+tools can provide standardization across trial sites (less issue
+with ambient lighting in traditional testing), allow home use,
+and ease data collection processes.
+Visual Fields
+Substantial visual deﬁcits may be missed if outcomes focus on
+central acuity measures alone. In MS, NMOSD, and MOGAD,
+VF defects may vary, but a diﬀuse central scotoma is most
+commonly observed in acute ON.14 After recovery, patients may
+Figure 1 Afferent Visual System Anatomy
+(A) Phototransduction occurs in photoreceptor cells in the outer retina. These visual signals are processed and transmitted by horizontal and bipolar cells
+residing in the inner nuclear layer (INL). Bipolar cell axons form synapses with the dendrites of retinal ganglion cells (RGCs) in the inner plexiform retinal layer.
+The optic nerve is formed by the unmyelinated axons of RGCs, tracking along the inner retinal surface in the nerve fiber layer (RNFL) and converging at the
+optic nerve head. Subjacent to the ganglion cell layer (GCL), the INL consists of the bipolar, horizontal, and amacrine cells as well the cell bodies of astrocytic
+M¨uller cells. (B) Beyond the cribiform plate, the RGC axons of the optic nerve are myelinated and travel approximately 4 cm to the optic chiasm. The optic
+nerve partially decussates at the chiasm: The axons from the contralateral nasal and ipsilateral temporal hemiretinas join to form the optic tract (OT). The OT
+carries visual signals to the thalamic lateral geniculate nucleus (LGN). The secondary LGN neurons project to the primary visual cortex through the optic
+radiations (OR). From the primary visual cortex, projections go through the extrastriate cortex of the occipital lobe to the parietal lobe (the dorsal pathway for
+visually guided movements) and the temporal lobe (the ventral pathway for object recognition). Parts of the figure are provided by courtesy of neurodial.de
+(neurodial.de/2017/08/25/schematic-figure-retina-creative-commons-license/).
+Neurology.org/NN
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+3
+
+
+--- PAGE 4 ---
+show an arcuate scotoma due to the predominant temporal loss
+of retinal nerve ﬁbers and ganglion cells.14 VF defects are not
+limited to optic nerve patterns and may include those consistent
+with injury to the optic chiasm, optic tract, optic radiations, or
+occipital lobe.
+VF can be assessed with diﬀerent techniques. Standard static
+automated perimetry evaluates the central 10–30 degrees of
+vision and provides a qualitative depiction of ﬁeld loss pattern
+and 2 quantitative indices: the mean deviation (MD), which
+measures the sensitivity deviation at each test location from
+the age-adjusted healthy population, and the pattern SD
+(PSD), which is the average sensitivity deviation from the
+normal slope after correction for global sensitivity diﬀerences.
+Kinetic perimetry can be used in patients with diﬃculty fo-
+cusing or those with expected peripheral ﬁeld loss, but
+quantiﬁcation of results can be challenging for clinical trials.
+VF interpretation can be limited because of defect variability,
+severely impaired VA, or impaired cognition. Standardization
+can be reached in trials by deﬁning light conditions and pre-
+deﬁning cutoﬀs for loss of ﬁxation frequency, false nega-
+tives, and false positives.15 In acute ON, automated perimetry
+has been successfully used as a primary outcome as in the
+ONTT12,15 and in a recent NMO trial (Table 1).16 For trials
+using acute ON as a model for remyelination and neuro-
+protection, perimetry has been used as a secondary out-
+come.e16-e18
+Electrophysiology
+Across electrophysiology methods, recordings are dependent
+on stimulus parameters, the patient’s anatomy, and the testing
+environment. To diﬀerentiate true signal from electrical back-
+ground potentials, signal ampliﬁcation and averaging tech-
+niques are used. When using electrophysiologic outcomes for
+clinical trials, clear and standardized protocols are essential.e19
+Visual Evoked Potentials
+Visual Evoked Potentials (VEPs) have been successfully used
+as outcomes in trials for acute ON or MS-related chronic optic
+neuropathy (Table 2, eTable 1, links.lww.com/NXI/A675).
+They are electrical potentials generated in the occipital cortex
+(captured with occipital electrodes) in response to visual
+stimuli.e19 As VEPs are hidden in EEG signals, they are
+evaluated with averaged waveform signals from repetitive
+stimulation. For quality control, the International Society for
+Clinical Electrophysiology of Vision (ISCEV) standards
+should be applied. A variety of stimulation paradigms may be
+used. Flash VEPs (using bright-light stimuli) have been shown
+to be inferior to pattern-reversal VEPs (using mostly check-
+erboard stimuli) and are reserved for patients unable to ﬁxate
+or with severe central vision loss (e.g., NMOSD-ON).e19
+Pattern-reversal (or full-ﬁeld) VEP analysis is based on the
+ﬁrst major positive deﬂection of the signal waveform, which
+occurs approximately 100 ms after the stimulus (P100
+latency).e19 This latency reﬂects conduction speed and myelin
+integrity. The upper P100 latency limit of normal diﬀers
+according to the reference population and VEP method, and
+values should always be interpreted within the context of the
+individual, taking previous and contralateral eye measure-
+ments into account. The P100 amplitude peak is more vari-
+able than latency and should be used with caution in clinical
+trials, but it may help diﬀerentiate demyelinating ON from
+noninﬂammatory/ischemic optic neuropathies.e19
+During acute demyelinating ON, the P100 latency is typically
+delayed (>125 ms) and the peak amplitude reduced. In cases of
+severe vision loss (central acuity <20/100–20/200), the patient
+may be unable to ﬁxate to complete a pattern-reversal VEP, or
+the response may be absent.e20 For this reason, it is challenging
+to measure correlation between VEP and visual acuity during
+an acute episode of ON. With remittance of the ON, the am-
+plitude recovers, and the latency may slowly shorten over
+weeks to 2 years.16 Latency improvement is most pronounced
+in the ﬁrst 3–6 months with decreasing inﬂammation and
+presumed early remyelination. Lack of latency recovery or in-
+sidious worsening of latency delay is associated with overall
+disability.e21-e23 Latency insidious worsening in ON or non-
+ON eyes may indicate chronic global demyelination without
+suﬃcient remyelination.17,18 In recovered ON or non-ON MS
+eyes, correlations between LCLA and VEP latency are ob-
+servable in cross-sectional analyses.e24
+Given the changes of VEP latencies over time following ON, the
+timing of when to measure VEPs in a clinical trial requires
+consideration of the intervention and desired eﬀect/outcome.
+For remyelinating therapies, given the lack of a widely accepted
+gold standard for MRI-based myelin measurements, P100 la-
+tency has been prominent as a primary or secondary outcome
+measure.19 Two recent trials using VEP as the primary outcome
+for remyelination interventions demonstrated greater P100 la-
+tency reduction by clemastine in chronic MS optic nerve injury19
+and by liothyronine sodium in an acute ON model.20 Other
+potential remyelinating or neuroprotective agents showed neg-
+ative VEP results for treatment eﬀects, including the phase 2 trials
+of anti–LINGO-1 antibodies21 and phenytoin.22 Advancement in
+the basic science of evoked potentials and several ongoing trials
+with remyelinating therapies (NCT03586557, NCT03605238,
+NCT03062579,NCT01883661,NCT01364246,NCT02671682,
+NCT01337986,NCT04042363,NCT04002934,NCT03774407,
+and NCT04121468) will enlighten and continue to improve the
+application of VEP for clinical trials.
+Electroretinograms
+Electroretinograms (ERGs) recorded from the cornea or per-
+iorbital skin capture electrical potentials generated in the reti-
+na.e19 For ﬂash ERGs, the ﬁrst negative (consisting of rod
+and cone photoreceptor cell signals; ca. 14 msec) and positive
+(b-wave consisting of the slower bipolar cell signals; ca. 30–35
+msec) waveform deﬂections are evaluated.e19 In contrast, a
+pattern ERG records the response to a pattern-reversal stim-
+ulus (e.g., alternating checkerboard); the resulting b-wave
+(N95; ca. 95 msec) is suggested to reﬂect the activation of
+RGCs.e19 In MS and NMOSD—especially but not exclusively
+4
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 5 ---
+after ON—N95 is prolonged, and the amplitude is diminished,
+indicative of retinal damage.23,e25-26 A novel ERG protocol
+recently identiﬁed b-wave changes in AQP4-IgG–seropositive
+NMOSD in line with M¨uller glial dysfunction, suggesting a
+potential relevance of ERG for diﬀerential diagnosis and trial
+outcome parameters in NMOSD.7
+Multifocal VEP and ERG
+Multifocal VEP and ERG approaches divide the visual ﬁeld
+into sectors, which are stimulated and assessed separately.e27-28
+The waveforms are comparable to those of full-ﬁeld ap-
+proaches, and multifocal methods are objective alternatives to
+VF measurements.e29 However, a high demand for patient
+Table 1 Clinical Trials and Interventional Studies Using Visual Fields as an Outcome Measure
+Trial (Number/name; publication)
+Patients
+Drug
+VF outcome
+Effect on VF
+Visual recovery in the acute phase optic neuritis
+NCT00000146 (ONTT; Beck et al. Arch Ophthal
+1993; 111: 773–775)
+457
+Methylprednisolone + oral
+prednisone vs oral prednisone vs
+placebo
+Primary
+Accelerated visual recovery at
+6 mo in the
+methylprednisolone group.
+No intergroup difference in
+visual recovery at 12 mo.
+Not registered (Merle H et al., Arch
+Ophthalmol 2012; 130: 858–862)
+36 (NMO)
+Plasma exchange +
+methylprednisolone vs
+methylprednisolone
+Primary
+Significant effect (p = 0.02)
+NCT04155424
+15 (pediatric
+NMOSD)
+Eculizumab (open label)
+Secondary
+Ongoing
+Visual recovery in the chronic phase of optic neuritis
+NCT01337986
+53
+Dalfampridine vs placebo
+Secondary
+Significant effect (p = 0.04)
+NCT02220244 (Tourbah A et al., CNS Drugs
+2018; 32: 661–672)
+93
+MD1003 vs placebo
+Secondary
+No significant effect
+NCT01274702 (VISION; Schinzel J et al., Trials
+2012; 13)
+80
+Vision restoration therapy vs
+saccadic
+Training (control intervention)
+Primary
+Ongoing
+NCT04148781 (FAMP-ON)
+20
+Fampridine (open label)
+Primary
+Ongoing
+Neuroprotection in acute ON
+NCT00355095 (S¨uhs KW et al., Ann Neurol
+2012; 72: 199–210)
+40
+Erythropoietin vs placebo
+Secondary
+No significant effect
+Not registered (2012 Esfahani MR et al.,
+Graefes Arch Clin Exp Ophthalmol. 2012 Jun;
+250(6):863–9)
+50
+Memantine vs placebo
+Secondary
+No significant effect
+NCT01294176 (Falardeau J et al., Mult Scler J -
+Exp Transl Clin 2019; 5: 205521731985019)
+31
+Lipoic Acid vs placebo
+Secondary
+No significant effect
+(incomplete recruitment)
+NCT01802489
+(ACTION; McKee JB et al., BMJ Open 2015; 53)
+46
+Amiloride vs placebo
+Secondary
+Ongoing
+NCT01962571 (TONE; Diem R et al., BMJ Open
+2016; 6)
+100
+Erythropoietin vs placebo
+Secondary
+Ongoing
+NCT04042363 (ONSTIM)
+45
+Active transorbital electrical
+stimulation vs sham transorbital
+electrical stimulation (control
+intervention)
+Secondary
+Ongoing
+NCT03862313 (ACSON)
+30
+Repetitive transorbital alternating
+current stimulation vs sham
+stimulation (control intervention)
+Secondary
+Ongoing
+EudraCT: 2020-003147-29 (NCT # pending)
+36
+ACT-01 vs placebo
+Primary
+Ongoing
+Neuroprotection in multiple sclerosis
+NCT00395200 (Connick P et al., Lancet Neurol
+2012; 11: 150–156)
+10 (SPMS)
+Autologous mesenchymal stem
+cells (open label)
+Secondary
+No significant effect
+Abbreviations: ONTT = optic neuritis treatment trial; NMOSD = neuromyelitis optica defined in the study by the presence of anti–aquaporin-4 antibodies;
+NMOSD = neuromyelitis optica spectrum disorder defined in the study by the 2015 Criteria; SPMS = secondary progressive MS.
+Neurology.org/NN
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+5
+
+
+--- PAGE 6 ---
+Table 2 Electrophysiologic and MRI Outcomes in Multiple Sclerosis (MS) and Neuromyelitis Optica Spectrum Disorder
+(NMOSD) Clinical Trials
+Trial (Trial name,
+patients)
+Drug/treatment
+VEP measures
+Imaging measure
+NCT00355095
+40 (acute ON)
+Erythropoietin (33000IU IV for 3 days)
+vs placebo
+Secondary (change in ffVEP latency and
+amplitude)
+Improved latency in intereye analysis (p < 0.001),
+no effect on amplitude
+Optic nerve volume: no change over 16 wks
+NCT00261326 (10)
+64 (acute ON)
+Simvastatin (80 mg) vs placebo
+Secondary (change in ffVEP P100 latency and
+amplitude)
+Effect on VEP latency (p = 0.0132) and VEP
+amplitude (p = 0.0103)
+T2 lesion activity: no change
+NCT02220244 (11)
+93 (MS, chronic
+optic neuropathy)
+MD1003 (100 mg) vs placebo
+Secondary (presence of clear wave, change in
+ffVEP P100 latency)
+No significant differences
+—
+NCT00772525 (12)
+31 (MS)
+Nerispirdine (50 mg or 400 mg) vs
+placebo
+Primary (ffVEP P100 latency)—ongoing
+—
+NCT03350633144
+118 (NMOSD)
+Tocilizumab vs azathioprine
+Exploratory (change in P100 latency and
+amplitude change over 60 wks)
+P100 latency increased compared with those in
+the tocilizumab group (p = 0.009)
+T2 lesion activity: used to confirm relapses
+NCT03586557 (2)
+142 (acute ON,
+AQP4-IgG–positive
+NMOSD)
+Corticosteroid and plasma exchange
+vs corticosteroids alone
+Secondary (changes in flash VEP
+latency)—ongoing
+—
+NCT02671682 (17)
+60 (MS or CIS)
+Immunoabsorption vs
+plasmapheresis
+Secondary (change in ffVEP latency)—unknown
+—
+NCT02040298 (19)
+(ReBUILD)
+50 (early MS)
+Cross-over trial for clemastine
+fumarate (4 mg) vs placebo
+Primary (change in ffVEP P100 latency)
+Reduced P100 latency delay by 1.7 ms/eye
+(p = 0.0048)
+DTI: secondary–white matter FA—no effect
+found; MTR: secondary—white matter—no
+effect
+NCT02521311145
+90, acute ON
+RCT clemastine 12 mg and 8 mg vs
+placebo
+Primary (change in ffVEP P100 latency)—ongoing
+MTR: secondary—whole brain MTR
+NCT01721161
+(RENEW)146
+82 (acute ON)
+Anti–LINGO-1 mAb (BIIB033,
+100 mg/kg IV) vs placebo
+Primary (change in ffVEP P100 latency)—no
+significant differences
+T2 lesion activity: T2 and enhancing lesions
+recorded—no difference between groups
+NCT01864148
+(SYNERGY)100
+Anti–LINGO-1 vs placebo in RRMS
+T2 lesion activity: exploratory—new or
+enhancing T2 lesions
+DTI: subgroup—improved disability
+outcomes in 10 mg/kg group if lower
+baseline DTI-RD
+MTR : exploratory. In post hoc analysis of 10
+mg/kg dose: lower baseline lesion MTR
+improved outcomes
+NCT01451593148
+86 (acute ON)
+Phenytoin (4 mg/kg) vs placebo
+Primary (change in ffVEP P100 latency and
+amplitude)—no significant differences
+T2 lesion activity: Secondary—optic nerve
+lesion length—no difference
+Optic nerve volume: Secondary—no
+difference
+NCT01337986 (23)
+53 (MS, chronic
+optic neuropathy)
+Cross-over trial for dalfampridine
+(10 mg) vs placebo
+Secondary (change in ffVEP latency)—no
+significant differences
+—
+NCT04042363
+(ONSTIM) (24)
+45 (acute ON in
+early RRMS)
+Active transorbital electrical
+stimulation vs sham
+Primary (change in ffVEP P100 latency)—ongoing
+—
+NCT04002934
+(ReWRAP) (25)
+50 (female, RRMS)
+Delayed start trial bazedoxifene
+acetate (40 mg) vs placebo + late
+bazedoxifene acetate
+Primary (change in ffVEP P100 latency)—ongoing
+—
+NCT03536559
+(VISIONARY-MS)
+(26)
+150 (early RRMS)
+CNM-Au8 (15 mg or 30 mg) vs placebo
+Secondary (ffVEP and mfVEP latency)—ongoing
+T2 lesion activity: secondary—new or
+enhancing T2 lesions
+Continued
+6
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 7 ---
+Table 2 Electrophysiologic and MRI Outcomes in Multiple Sclerosis (MS) and Neuromyelitis Optica Spectrum Disorder
+(NMOSD) Clinical Trials (continued)
+Trial (Trial name,
+patients)
+Drug/treatment
+VEP measures
+Imaging measure
+NCT04121468 (33)
+30 (children, MS,
+recent ON event)
+Delayed start trial for metformin (500
+mg/m2/day) vs placebo
+Secondary (ffVEP latency) —ongoing
+—
+NCT01802489
+(ACTION)149
+46 (acute ON,
+RRMS)
+Amiloride (10 mg) vs placebo
+Secondary (differences in ffVEP and pattern ERG)
+VEP latency prolonged in the amiloride group
+compared with placebo (p = 0.004), no significant
+differences for ERG
+—
+NCT00355095
+40 (acute ON)
+Erythropoietin (33000IU IV for 3 days)
+vs placebo
+Secondary (change in ffVEP latency and
+amplitude)
+Improved latency in intereye analysis (p < 0.001),
+no effect on amplitude
+Optic nerve volume: no change over 16 wks
+NCT00261326 (10)
+64 (acute ON)
+Simvastatin (80 mg) vs placebo
+Secondary (change in ffVEP P100 latency and
+amplitude)
+Effect on VEP latency (p = 0.0132) and VEP
+amplitude (p = 0.0103)
+T2 lesion activity: no change
+NCT02220244 (11)
+93 (MS, chronic
+optic neuropathy)
+MD1003 (100 mg) vs placebo
+Secondary (presence of clear wave, change in
+ffVEP P100 latency)
+No significant differences
+—
+NCT00772525 (12)
+31 (MS)
+Nerispirdine (50 mg or 400 mg) vs
+placebo
+Primary (ffVEP P100 latency)—ongoing
+—
+NCT03350633144
+118 (NMOSD)
+Tocilizumab vs azathioprine
+Exploratory (change in P100 latency and
+amplitude change over 60 wks)
+P100 latency increased compared with those in
+the tocilizumab group (p = 0.009).
+T2 lesion activity: used to confirm relapses
+NCT03586557 (2)
+142 (acute ON,
+AQP4-IgG–positive
+NMOSD)
+Corticosteroid and plasma exchange
+vs corticosteroids alone
+Secondary (changes in flash VEP
+latency)—ongoing
+—
+NCT02671682 (17)
+60 (MS or CIS)
+Immunoabsorption vs
+plasmapheresis
+Secondary (change in ffVEP latency)—unknown
+—
+NCT02040298 (19)
+(ReBUILD)
+50 (early MS)
+Cross-over trial for clemastine
+fumarate (4mg) vs placebo
+Primary (change in ffVEP P100 latency)
+Reduced P100 latency delay by 1.7 ms/eye
+(p = 0.0048)
+DTI: secondary—white matter FA—no effect
+found; MTR: secondary—white matter—no
+effect
+NCT02521311145
+90, acute ON
+RCT clemastine 12 mg and 8 mg vs
+placebo
+Primary (change in ffVEP P100 latency)—ongoing
+MTR: secondary-whole brain MTR
+NCT01721161
+(RENEW)146
+82 (acute ON)
+Anti–LINGO-1 mAb (BIIB033,
+100 mg/kg IV) vs placebo
+Primary (change in ffVEP P100 latency)—no
+significant differences
+T2 lesion activity: T2 and enhancing lesions
+recorded—no difference between groups
+NCT01864148
+(SYNERGY)100
+Anti–LINGO-1 vs placebo in RRMS
+T2 lesion activity: exploratory—new or
+enhancing T2 lesions
+DTI: subgroup—improved disability
+outcomes in 10 mg/kg group if lower
+baseline DTI-RD
+MTR: exploratory. In post hoc analysis of 10
+mg/kg dose: lower baseline lesion MTR
+improved outcomes
+NCT01451593148
+86 (acute ON)
+Phenytoin (4 mg/kg) vs placebo
+Primary (change in ffVEP P100 latency and
+amplitude)—no significant differences
+T2 lesion activity: secondary—optic nerve
+lesion length—no difference
+Optic nerve volume: secondary—no
+difference
+NCT01337986 (23)
+53 (MS, chronic
+optic neuropathy)
+Cross-over trial for dalfampridine
+(10 mg) vs placebo
+Secondary (change in ffVEP latency)—no
+significant differences
+—
+NCT04042363
+(ONSTIM) (24)
+45 (acute ON in
+early RRMS)
+Active transorbital electrical
+stimulation vs sham
+Primary (change in ffVEP P100 latency)—ongoing
+—
+Continued
+Neurology.org/NN
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+7
+
+
+--- PAGE 8 ---
+alertness and ﬁxation as well as issues of intersubject variability,
+especially for multifocal VEP (mfVEP), has been limiting. Newer
+stimulation and analysis algorithms may provide a better stan-
+dardization and user friendliness. These mfVEP devices have
+been used in a subanalysis of the anti–LINGO-1 remyelination
+clinical trial24 and are currently used as in an ongoing study
+investigating the eﬀects of nanocrystalline gold to treat remye-
+linating failure (NCT03536559). Multifocal ERG responses
+have been studied in MS and NMOSD,31 albeit without appli-
+cation in neuroimmunology clinical trials.
+Additional Measures
+Other aﬀerent measures include the analog and digital ﬂicker
+tests, object from motion (OFM), and critical ﬂicker fre-
+quency (CFF). Digital administration may expand the ac-
+cessibility of new visual outcomes for trials. As an example, the
+digital Aulhorn ﬂicker test showed superior diagnostic sensi-
+tivity (sensitivity 93% and speciﬁcity 96%) compared with the
+Aulhorn analog ﬂicker test (sensitivity 76% and speciﬁcity
+100%).e32 The digital CFF test associates with disability
+in patients with MS.e33 OFM generates a hidden object that is
+Table 2 Electrophysiologic and MRI Outcomes in Multiple Sclerosis (MS) and Neuromyelitis Optica Spectrum Disorder
+(NMOSD) Clinical Trials (continued)
+Trial (Trial name,
+patients)
+Drug/treatment
+VEP measures
+Imaging measure
+NCT04002934
+(ReWRAP) (25)
+50 (female, RRMS)
+Delayed start trial bazedoxifene
+acetate (40 mg) vs placebo + late
+bazedoxifene acetate
+Primary (change in ffVEP P100 latency)—ongoing
+—
+NCT03536559
+(VISIONARY-MS)
+(26)
+150 (early RRMS)
+CNM-Au8 (15 mg or 30 mg) vs placebo
+Secondary (ffVEP and mfVEP latency)—ongoing
+T2 lesion activity: secondary—new or
+enhancing T2 lesions
+NCT04121468 (33)
+30 (children, MS,
+recent ON event)
+Delayed start trial for metformin (500
+mg/m2/day) vs placebo
+Secondary (ffVEP latency) —ongoing
+—
+NCT01802489
+(ACTION)149
+46 (acute ON,
+RRMS)
+Amiloride (10 mg) vs placebo
+Secondary (differences in ffVEP and pattern ERG)
+VEP latency prolonged in the amiloride group
+compared with placebo (p = 0.004), no significant
+differences for ERG
+—
+NCT00355095
+40 (acute ON)
+Erythropoietin (33000IU IV for 3 days)
+vs placebo
+Secondary (change in ffVEP latency and
+amplitude)
+Improved latency in intereye analysis (p < 0.001),
+no effect on amplitude
+Optic nerve volume: no change over 16 wks
+NCT00261326 (10)
+64 (acute ON)
+Simvastatin (80 mg) vs placebo
+Secondary (change in ffVEP P100 latency and
+amplitude)
+Effect on VEP latency (p = 0.0132) and VEP
+amplitude (p = 0.0103)
+T2 lesion activity: no change
+NCT02220244 (11)
+93 (MS, chronic
+optic neuropathy)
+MD1003 (100 mg) vs placebo
+Secondary (presence of clear wave, change in
+ffVEP P100 latency)
+No significant differences
+—
+NCT00772525 (12)
+31 (MS)
+Nerispirdine (50 mg or 400 mg) vs
+placebo
+Primary (ffVEP P100 latency)—ongoing
+—
+NCT03350633 144
+118 (NMOSD)
+Tocilizumab vs azathioprine
+Exploratory (change in P100 latency and
+amplitude change over 60 wks)
+P100 latency increased compared with those in
+the tocilizumab group (p = 0.009).
+T2 lesion activity: used to confirm relapses
+NCT03586557 (2)
+142 (acute ON,
+AQP4-IgG–positive
+NMOSD)
+Corticosteroid and plasma exchange
+vs corticosteroids alone
+Secondary (changes in flash VEP
+latency)—ongoing
+—
+NCT02671682 (17)
+60 (MS or CIS)
+Immunoabsorption vs
+plasmapheresis
+Secondary (change in ffVEP latency)—unknown
+—
+NCT02040298 (19)
+(ReBUILD)
+50 (early MS)
+Cross-over trial for clemastine
+fumarate (4 mg) vs placebo
+Primary (change in ffVEP P100 latency)
+Reduced P100 latency delay by 1.7 ms/eye
+(p = 0.0048)
+DTI: secondary—white matter FA—no effect
+found; MTR: secondary—white matter—no
+effect
+NCT02521311145
+90, acute ON
+RCT clemastine 12 mg and 8 mg vs
+placebo
+Primary (change in ffVEP P100 latency)—ongoing
+MTR: secondary—whole brain MTR
+NCT01721161
+(RENEW)146
+82 (acute ON)
+Anti–LINGO-1 mAb (BIIB033, 100 mg/
+kg IV) vs placebo
+Primary (change in ffVEP P100 latency)—no
+significant differences
+T2 lesion activity: T2 and enhancing lesions
+recorded—no difference between groups
+8
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 9 ---
+perceived through motion detection and can be used to assess
+de/remyelination.e34 These tests, while not yet in trials, may
+hold promise for use in future designs.
+Vision QOL
+Although patients with MS rate visual function as a top
+concern,25 vision-related patient-reported outcomes have
+been widely neglected in pivotal trials of MS immunother-
+apy.e35 Visual QoL in both MS and NMOSD correlates with
+LCLA and structural measures of retinal damage.26-28 The
+commonly used 51-item National Eye Institute Visual Func-
+tion Questionnaire (NEI-VFQ) comprises 12 individual sub-
+scales for general health, general vision, ocular pain, near
+activities, distance activities, driving, color vision, peripheral
+vision and vision-speciﬁc social functioning, mental health, role
+diﬃculties, and dependencies. A ﬁnal composite score is gen-
+erated by averaging all subscale scores except the general health
+item. An additional version with 39 and 25 items and a neuro-
+ophthalmic supplement have since been established and have
+been applied to measure vision-related QoL in MS.29,30 Use of
+the NEI-VFQ with the neuro-ophthalmic supplement would
+be recommended for neuroimmunology trials.
+Aﬀerent Visual System
+Structural Measures
+Optical Coherence Tomography (OCT)
+Peripapillary and Macular Measurements
+OCT uses light waves passing through the pupil, vitreous, and
+retinal layers and then reﬂecting oﬀthe pigmented retinal
+epithelium to reconstruct images of the retina and assess tis-
+sue integrity. Over the past 20 years, studies describing OCT
+outcomes in MS, NMOSD, and MOGAD have exponentially
+increased.31 Initial work used time-domain OCT, whereas
+recent studies have leveraged the faster acquisition speeds,
+higher-resolution images (axial resolution 4–6 μm), and im-
+proved reproducibility of spectral domain OCT.e36-e37 Seg-
+mentation of the images, typically performed using automated
+algorithms, allows the quantitative assessment of discrete
+retinal neuronal and axonal layers (Figure 2). With appro-
+priate quality control in acquisition,32 these quantitative
+measures demonstrate excellent test-retest reliability, a critical
+feature for clinical trial outcomes.33
+MS, NMOSD, and MOGAD observational OCT studies have
+largely focused on the macular ganglion cell + inner plexiform
+layer (GCIPL) and peripapillary RNFL (pRNFL) thickness,
+representing the integrity of RGC cell bodies and axons, re-
+spectively. Following acute ON, there is rapid thinning of the
+GCIPL, often within the ﬁrst month of onset, and this process is
+largely completed by 3 months.34,35 The pRNFL frequently ex-
+hibits increased thickness during acute ON due to swelling, which
+confounds the baseline measurement and leads to a delayed time
+course of detecting atrophy of the pRNFL compared with the
+GCIPL.34,35 It is best to measure pRNFL 6 months after onset for
+assessment of axonal loss from an acute ON event.34,35
+Selecting the speciﬁc OCT outcome for a trial depends on the
+disease state and time course of interest (Table 3). Important
+considerations for incorporating OCT measures in trials of
+putative neuroprotective agents in acute ON include the
+following: 1) GCIPL thickness is superior to pRNFL thick-
+ness at early time points, given the lack of swelling at baseline,
+2) GCIPL thinning occurs rapidly during the ﬁrst month after
+ON, and participants should be enrolled shortly after symptom
+onset; very early intervention (within 2–4 weeks) with thera-
+peutics may be required to change the outcome,36 3) a 6-month
+trial duration could be suﬃcient to detect a diﬀerence in
+GCIPL or pRNFL thinning between treatment groups (though
+Figure 2 Optical Coherence Tomography Peripapillary and Macular Measurements
+Upper left: Fundus image with superimposed macular
+GCIPL thickness map. Bottom: Horizontal macular OCT
+B-scan traversing the fovea, corresponding to the red
+horizontal line shown in the fundus photograph (upper
+left). The scan has been automatically segmented
+(boundaries between retinal layers are outlined in red).
+Upper right: Peripapillary RNFL ring scan; the shown
+OCT B-scan shown corresponds to the purple peri-
+papillary ring shown superimposed on the fundus im-
+age. RNFL = retinal nerve fiber layer; GCIPL = ganglion
+cell + inner plexiform layer; INL = inner nuclear layer;
+OPL = outer plexiform layer; ONL = outer nuclear layer.
+Neurology.org/NN
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+9
+
+
+--- PAGE 10 ---
+should consider if investigative medication could alter typical
+time course of retinal layer thinning).
+Consistent with postmortem ﬁndings,e2 pRNFL and GCIPL
+thicknesses are lower than in the healthy population even in those
+without a history of clinical ON, but thinning is more severe
+in ON eyes.37 The etiology of insidious optic nerve injury in MS
+is not fully understood but may have contributions from sub-
+clinical optic nerve inﬂammation or transsynaptic retrograde de-
+generation from posterior visual pathway injury. Compared with
+MS ON eyes, eyes with AQP4-IgG and MOGAD-associated ON
+have greater pRNFL and GCIPL thinning, which appears to be
+commensurate with greater losses in HCVA and LCLA in AQP4-
+IgG,butnotMOG-IgG,associatedON.38Whilenotasprominent
+as in MS, there is some evidence to suggest that subclinical
+retinal neuroaxonal loss may occur in NMOSD, possibly
+caused by an attack-independent astrocytopathy.e4, e38-e41
+Consistent with this, attack-independent tissue loss and
+associated functional changes were found in the parafoveal
+region, which is rich in astrocytes and AQP4-expressing
+M¨uller cells.7,e40-e42
+Accelerated rates of inner retinal atrophy in MS eyes are
+associated with inﬂammatory disease activity, global disability
+progression, and increased brain atrophy.6,39,e43-e44 Disease-
+modifying therapies (DMTs) may diﬀerentially aﬀect pRNFL
+and GCIPL thinning in MS, mainly in the relapsing-remitting
+stage.40 Important to trial design, there are ﬂoor eﬀects in eyes
+that have already had signiﬁcant retinal injury. This is in part
+why one might consider adjusting for baseline OCT values,
+even in randomized trials. Also relevant for study design and
+inclusion criteria, the proportion of pRNFL and GCIPL
+thinning attributable to MS decreases with older age. After age
+65 years, >80% of the rate of thinning in these layers is at-
+tributable to normal aging.6 pRNFL and GCIPL thinning is
+faster earlier in the RRMS disease course (when there is more
+tissue to lose), whereas progressive disease subtype (which is
+associated with older age) is independently associated with
+faster inner retinal layer thinning.6 Normative values of retinal
+layer thicknesses diﬀer by race, with African American pa-
+tients with MS exhibiting faster rates of retinal atrophy.41,e45
+Diﬀerential eﬀects of sex on levels of retinal injury exist, with
+men and boys demonstrating worse atrophy after ON.42,43
+These data highlight the importance of accounting for patient
+demographics on rates of pRNFL/GCIPL thinning when
+designing trials.
+In addition to pRNFL and GCIPL, deeper retinal neuronal
+layers have been proposed as biomarkers of chronic neuro-
+degeneration, with accelerated INL and ONL atrophy
+Table 3 Summary Recommendations for Application of Visual Outcome Measures for Multiple Sclerosis (MS) and
+Neuromyelitis Optica Spectrum Disorder (NMOSD) Trials Based on the Study Design
+Visual outcome
+measure
+Traditional DMT trials
+Acute ON neuroprotection or
+remyelination trials
+Chronic injury neuroprotection or
+remyelination trials
+HCVA
+Best-corrected monocular HCVA should be
+collected at baseline and follow-up visits
+Capture HCVA at visual nadir and recovery
+values at 3, 6, and/or 12 mo.
+Best-corrected monocular HCVA should be
+collected at baseline and follow-up visits.
+Low-contrast
+vision (LCLA and
+contrast
+sensitivity)
+Best-corrected monocular LCLA should be
+collected at baseline and follow-up visits. CS
+also appropriate, but LCLA may be more
+sensitive to change over time.
+Capture LCLA or CS at visual nadir and
+recovery values at 3, 6, and/or 12 mo.
+Best-corrected monocular LCLA should be
+collected at baseline and follow-up visits. CS
+is also appropriate, but LCLA may be more
+sensitive to change over time.
+VF perimetry
+May not have as high utility in this design.
+Capture perimetry at visual nadir and
+recovery values at 3, 6, and/or 12 mo.
+Assess data quality and ability to fixate
+(may be impaired in severe ON).
+May not have as high utility in this design.
+VEP, mfVEP
+May not have as high utility in this design.
+Capture VEP or mfVEP at visual nadir and
+recovery values at 3, 6, and/or 12 mo.
+Assess data quality and ability to fixate
+(may be impaired in severe ON).
+Capture VEP or mfVEP at baseline and all
+follow-up visits. Assess data quality and
+ability to fixate (may be impaired in eyes
+with a history of severe ON).
+OCT
+Obtain spectral domain imaging at baseline
+and semiannual or annual follow-up visits,
+capturing pRNFL, total macular volume, and
+automated retinal layer segmentation
+outcomes. Account for history of and new
+events of ON during study, as well as baseline
+OCTvalues. Adhereto OSCAR-IB criteria68and
+APOSTEL recommendations127
+Obtain spectral domain imaging at 1, 6, and
+12 mo of follow-up. At 1 mo may capture
+early GCIPL thinning; early pRNFL measures
+will reflect edema more than atrophy. Also,
+capture total macular volume, and
+automated retinal layer segmentation
+outcomes. Adhere to OSCAR-IB criteria68
+and APOSTEL recommendations127
+Obtain spectral domain imaging at baseline
+and semiannual or annual follow-up visits,
+capturing pRNFL, total macular volume, and
+automated retinal layer segmentation
+outcomes. Account for history of and new
+events of ON during study, as well as baseline
+OCTvalues.Adhereto OSCAR-IB criteria68and
+APOSTEL recommendations.127
+Advanced MRI
+measures (DTI and
+MTR) of visual
+pathway
+structures
+May provide baseline and follow-up
+information about acute inflammatory activity,
+but more broad use of measures across brain
+structures may be more appropriate.
+Obtain at visual nadir and final follow-up
+visit. Recommend to consider using these
+as predictors to response to therapy and
+final functional visual outcome measures.
+Obtain at baseline and final follow-up visit.
+Recommend to consider using these as
+predictors to response to therapy and final
+functional and structural visual outcome
+measures.
+Visual QOL
+Should be included with other PROs in
+secondary analyses.
+Obtain at visual nadir and final study visit.
+Recommend to include in all of these
+studies as secondary outcome.
+Obtain at baseline and final study visit.
+Recommend to include in all of these
+studies as secondary outcome.
+10
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 11 ---
+reported in progressive MS compared with both relapsing-
+remitting MS and healthy controls.6 Notably, the INL exhibits
+a complex spectrum of abnormalities in MS including
+microcystoid macular pathology, increased thickness in as-
+sociation with inﬂammatory disease activity, reduction in
+thickness following DMT initiation, and atrophy in late,
+progressive disease.e2-e4
+OCT has also been used to support the identiﬁcation of
+clinical and subclinical ON by identifying intereye diﬀerences
+in the pRNFL and GCIPL layers.44,e46-e47 OCT has also been
+used for participant selection criteria to identify those who
+may be more likely to beneﬁt from remyelination therapies.19
+A special consideration for MOGAD trials is the relative
+preserved central acuity despite moderate to severe retinal
+injury. Compared with NMOSD, for a given level of pRNFL
+thinning, there are better HCVA outcomes in MOGAD.38
+This may be due to less involvement of the papillomacular
+bundle in MOGAD, but deﬁnitive studies are needed.
+OCT outcomes have been studied in the pediatric population.
+As in the adult MS population, decreased RNFL and GCIPL
+are noted early in the disease course43,45 with evidence for
+progressive RNFL and GCIPL loss through time. Thus, de-
+spite having better visual function recovery, children have
+similar burden of retinal thinning.43,45 As in adult patients,
+distinct OCT patterns can distinguish pediatric neuro-
+inﬂammatory disorders such as MOG-IgG– and AQP4-
+IgG–related neuroinﬂammation from MS.e48
+MRI Visual System Structural Measures
+Complementary to OCT, MRI outcomes evaluate anterior
+and posterior aﬀerent visual pathway injury. Methodological
+advances have overcome the challenges of optic nerve imag-
+ing posed by its small size, mobility, and location adjacent to
+nasal cavities, orbital fat, and CSF.e49 Particularly in MOGAD,
+optic nerve MRI can speed diagnosis—showing characteristic
+features including anterior longitudinal extensive optic nerve
+lesions and perineural or periorbital gadolinium enhance-
+ment.e50-e52
+Optic nerve cross-sectional area can be reliably assessed using
+a short-echo fast ﬂuid-attenuated inversion recovery sequence
+with fat and CSF suppression.e53 In a 12-month acute ON
+longitudinal study of this method, there was an 11.7% greater
+decline in aﬀected vs unaﬀected optic nerve volumes.46 Optic
+nerve atrophy correlated with RNFL thinning47 after ON, and
+with both HCVA and P100 latency in chronic optic neuro-
+pathye49, supporting potential use of this approach in trials
+(Table 1).
+Diﬀusion tensor imaging (DTI) captures three-dimensional
+magnitude and direction of water diﬀusion. After acute ON,
+diﬀusion parallel to axons (axial diﬀusivity, AD) is low,
+whereas diﬀusion perpendicular to the axon, or radial diﬀu-
+sivity (RD), remains in a normal range.48 In a 12-month
+longitudinal study of 37 patients with acute ON,49 reduced
+AD at baseline correlated with pRNFL thinning and mfVEP
+amplitude loss at 6 and 12 months. Importantly, early re-
+ductions in AD also predict VA recovery at 6 months,49,e54
+suggesting that acute ON therapies that normalize optic nerve
+AD could also promote axon survival and improve visual
+outcomes. Baseline measurements of optic nerve DTI
+(Table 2) may also help select patients who are most likely to
+beneﬁt from intervention.50 DTI can be obtained on most
+commercial scanners but, unfortunately, adds signiﬁcant ac-
+quisition time and cost. Advanced image processing and an-
+alytical requirements are additional barriers to widespread
+implementation, but we anticipate reduction of these barriers
+with improved, standardized software.
+Application of optic nerve DTI in acute NMOSD-ON has not
+been as well studied. In 1 retrospective study of 57 patients
+with NMOSD-ON,e55 a radiomics model using whole-brain
+DTI measures correlated strongly with visual outcomes after
+IV methylprednisolone, suggesting its potential as a predictor
+of response to acute therapy.
+The magnetization transfer ratio (MTR) indicates the
+balance between protons bound to molecules (protein and
+lipids) vs free protons. Postmortem studies have conﬁrmed
+a strong association between a reduced MTR and demye-
+lination,e56 whereas others have shown a similar correlation
+between MTR and axonal density or both.e57 It is accepted
+that a higher MTR indicates more bound protons, as seen
+in normal, myelinated tissue. MTR decreases in acute
+ONe58 with an approximate 8-month nadir46 and correlates
+with P100 latency, HCVA,46 mfVEP amplitude, and RNFL
+thinning.e59,e60 MTR in the optic nerve, whole brain, or T2
+lesions have been used in clinical trials (Table 2, Table e1, links.
+lww.com/NXI/A675). Timing and location of MTR mea-
+surement in relation to the acute injury is critical for in-
+terpretation of results. In the anti–LINGO-1 RRMS trial,
+baseline lesional MTR was associated with disability outcomes
+in the 10 mg/kg group.50
+New Structural Biomarkers
+OCT advances may oﬀer novel biomarkers for future tri-
+als.e61-e62 New machine learning retinal segmentation algo-
+rithms decrease rater dependence, improve reliability, and
+allow automatic quantiﬁcation of disease-speciﬁc changes such
+as microcystic macular edema.e63 Novel 3D methods resample
+standard OCT images to depict retinal shape changes,e40,e64-e65
+which may be especially useful to standardize assessment of
+NMOSD foveal morphology changes.e40,e42,e66
+Another new addition, OCT angiography (OCTA), uses the
+movement of erythrocytes to create maps of the superﬁcial
+and deep retinal vascular plexuses and to calculate retinal
+vascular ﬂow rates. In MS and NMOSD, vessel reduction in
+OCTA images is correlated with neuroaxonal damage, and in
+MS, also with general disability (EDSS).51,e67-e68 Relative
+blood ﬂow velocity is decreased around the optic nerve head
+Neurology.org/NN
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+11
+
+
+--- PAGE 12 ---
+and fovea in patients with MS and AQP4-IgG–seropositive
+ON.52,53
+Finally, new MRI sequences such as double-inversion recovery
+sequences can help detect early optic nerve injury and improve
+timely trial inclusion.e69 Atlas-based automated segmentation
+and volumetry of the LGN may facilitate understanding of
+anterograde and retrograde neurodegeneration and visual
+function.
+Recommendations for
+Implementation of Aﬀerent
+Assessments in Clinical Trials
+With the increasing use of aﬀerent visual assessments, it is
+important to understand the best methods in a speciﬁc study
+design and the main challenges and pitfalls in applying them
+(Tables 3 and 4).
+Study Design
+Balancing the needs of generalizability vs risks of heteroge-
+neity impairing detection of treatment eﬀects, clinical trials
+should clearly deﬁne the disease state measured (e.g., acute
+optic neuritis and chronic optic neuropathy), inclusion and
+exclusion criteria, and measurement protocols. Depending on
+the intervention’s mechanism of action, diﬀerent time points
+or assessments should be considered; these decisions can be
+critical to the success of the trial.
+It is important to take into account diﬀerential pathophysio-
+logic features of MS, NMOSD, and MOGAD as well as to
+consider aging eﬀects and potential basement eﬀects (e.g.,
+testing putative neuroprotective therapies in eyes with severe
+optic neuropathy), and disease- or treatment-related retinal
+changes such as microcystoid and/or ﬁngolimod-associated
+macular edema.e5,e70
+Other important considerations are excluding patients with
+confounding primary ophthalmologic pathologies (e.g., se-
+vere myopia, glaucoma, central serous retinopathy, or diabetic
+retinopathy) and identifying the up to 16% of patients with
+MS who may have unrelated morphologic macular abnor-
+malities such as drusen or epiretinal membranes, which can
+induce OCT segmentation errors or be associated with
+nonneurologic causes of visual dysfunction.e71
+In ON, conduction block and inﬂammatory edema may limit
+the use of standard VEP and pRNFL OCT measurements at
+early time points. For chronic optic neuropathy, pathologic
+sensitivity of some measures may change in the setting of
+gliosise72 or visual repair (e.g., functional neuroplasticity).e9
+Importantly, regulatory authorities are likely to always prefer a
+clinical outcome for phase III RCTs, and trial duration of up
+to 12 months may be needed to fully capture the eﬀects of an
+intervention on visual recovery.12
+Advanced imaging techniques may provide the means to
+better stratify and select trial participants most likely to beneﬁt
+from early intervention with a potential neuroprotective
+therapy. Optic nerve DTI measurements such as AD, espe-
+cially if assessed outside the anatomical segment with acute
+inﬂammatory change, could more directly assess the degree of
+axonal involvement. Similarly, MTR could also potentially be
+used as an early stratiﬁcation tool when allocating patients to
+diﬀerent treatment groups.e73
+Data Acquisition
+A strong study protocol deﬁnes the speciﬁc device(s), mea-
+surement parameters, required environment (e.g., illumina-
+tion and noise level), and patient needs (e.g., refractive
+correction). Frequency of assessments needs to be tailored to
+the clinical model (acute or chronic ON), temporal ﬂux in
+visual and paraclinical measures, and safety requirements. For
+assessments requiring focus and alertness such as electro-
+physiologic or VF perimetry, patients with fatigue or cognitive
+dysfunction may require accommodations.54,e74 Eﬀerent
+dysfunction can negatively aﬀect ﬁxation and acquisition of
+aﬀerent measures. Severe acute ON can impair ability to ﬁx-
+ate, resulting in poor-quality electrophysiology and OCT
+studies. Awareness of these pitfalls can help troubleshoot ways
+to acquire the best data (e.g., ﬁxate with the unaﬀected or less
+aﬀected eye during OCT acquisition).
+Data Analysis
+Ideally, multicenter trials should use identical devices and
+protocols for data acquisition. When this is not feasible, the
+statistical analysis plan should account for device and protocol
+eﬀects. Eﬀorts to harmonize data from diﬀerent OCT devices
+are under way, and initial results are promising. Multisite
+success has been demonstrated for automated retinal seg-
+mentation software.55 In nonrandomized studies, multi-
+variable modeling to account for confounding variables
+(sex, age, ethnicity, history of ON, and baseline disability
+measures) is important. Even in randomized studies,
+tracking the ON status of each eye and considering ad-
+justments for baseline values of measurements are important
+as the meaning and magnitude of change in measures may
+notably diﬀer based on these variables, particularly for OCT
+studies. In analyses for which each participant contributes data
+from both eyes, intereye correlations must be adjusted for using
+mixed-eﬀects models or generalized estimating equations.
+When possible, both eyes of a patient should be included, but
+for correlations with MRI outcomes, either the best or worst
+eye in terms of the outcome measure could be used. Averaging
+values between eyes may result in losing information about
+injury as the worse eye may be more informative about disease
+injury than an averaged value. Eyes should be tested in-
+dividually for HCVA and LCLA. If binocular measures are
+included, the impact of the neuroimmunologic disease on
+binocular summation/inhibition should be considered. In adult
+MS, binocular summation may be impairede75 and could be an
+outcome measure to consider if appropriate for the research
+question.
+12
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 13 ---
+Quality Control and Reporting of OCT Results
+Given the complexity of OCT technology, as well as its sus-
+ceptibility to artifacts or confounding pathologies, complete
+reporting of methodology and quality control are of paramount
+importance. Investigators are recommended to adhere to the
+OSCAR-IB criteria32 and APOSTEL recommendations56 for
+quality control and reporting of OCT studies, respectively.
+Eﬀerent Visual System
+and Oculometrics
+Most people with MS experience eﬀerent visual dysfunction
+from disorders of ﬁxation to intereye misalignment. Eﬀerent
+oculometric assessments may reveal deﬁcits not readily appre-
+ciated at bedside and associate with overall disability in MS.57 An
+eye-tracking paradigm was able to detect subtle cerebellar dys-
+function in participants without ataxia.58 Even in the very young,
+with pediatric onset MS and no discernible disability on exam-
+ination, saccadic latencies can distinguish eyes of patients with
+MS from those of healthy controls.59 For rapidly quantifying
+disease burden largely driven by the brainstem and cerebellum
+(key contributors to overall disability scores), eye-tracking ap-
+proaches oﬀer objective, reliable means to collect these data.
+Despite the great promise of eﬀerent oculometric techniques
+in quantifying neuroimmunologic disease burden, these ap-
+proaches have not percolated signiﬁcantly into clinical trials.
+One interventional neuromodulation study lists video nys-
+tagmography as an exploratory outcome of treatment eﬃcacy
+(NCT02252666). A primary reason may be the variety of eye-
+tracking devices and software and a lack of widely accepted
+protocol parameters for data quality. However, these are
+surmountable obstacles, and similar consensus and quality
+approaches could be applied as has been done for the aﬀerent
+measurements highlighted here.
+Table 4 Systematic Approach to Common Pitfalls in Visual System Assessments for Clinical Trials and Observational
+Studies
+Pitfall
+Systematic approach
+Study design
+Study criteria too liberal with
+participant heterogeneity and
+confounding of comorbid
+ophthalmologic disease
+Design the cohort as homogenously as possible and appropriate for the research question
+Clearly specify the study population (RMS vs PMS, AQP4-IgG– vs MOG-IgG–positive disorders).
+Exclude patients with certain systemic comorbidities and diagnoses that could influence outcome measures such
+as severe myopia, CSR, glaucoma, or diabetic retinopathy.
+Depending on your research question, consider excluding patients with disease- or treatment-related retinal
+pathologies that could bias/influence your results such as microcystic macular edema, fingolimod-associated
+macular edema, prior ON, or optic radiation lesions.
+Simplified protocols for multicenter
+studies
+Be as specific as possible about device(s) needed, measurement parameters, and environment (e.g., illumination,
+dilatation, distance required, and type of visual acuity correction).
+Data acquisition
+Interference of non–vision-related
+symptoms
+Consider the impact of other disease-related symptoms such as cognitive changes and fatigue on obtaining data,
+and if this affects the quality of the study, consider excluding patients with specific symptoms.
+Interference of vision-related
+symptoms
+If possible, use newest generation devices that may help mitigate other vision- and disease-related symptoms
+interfering with the patient’s fixation abilities or functional measurements such as Pulfrich and Uhthoff
+phenomenon, binocular summation, or sex-specific disease characteristics.
+Interference of data quality
+OCT results are biased by low signal strength or cyclotorsion and other measurement artifacts (e.g., nystagmus-
+induced motion artifact), and a premature classification of VEP latencies as absent can significantly decrease the
+usability of the data.
+pRNFL edema confounding atrophy
+measurements
+The pRNFL thickness in OCT can be dramatically affected by edema (thickened) during the acute stage of ON and
+cannot be used as a marker of retinal neurodegeneration until >3–6 mo post-AON. The combined GCIPL layer is
+less likely to be confounded by edema in early measurements.
+Confounding of longitudinal
+measurements by aging or
+development of ocular diseases
+To ensure correct longitudinal assessments, many devices allow to measure in a follow-up mode. However,
+multiple influencing factors such as age and myopia and learning effects have to be considered when comparing
+longitudinal data to a normative cohort.
+Data analysis
+Increased error of point estimates
+from combining data from
+multicenter and multidevice studies
+For most OCT and electrophysiologic assessments, the data from different devices and/or protocols are not yet
+comparable. Advanced analysis approaches have to be applied to allow a merged data analysis.
+Reliability and reproducibility across
+centers
+The intertest and intratest variability vary dramatically between centers and device operators. Ideally, the range
+of variability should be established for each center, and (significant) results that are within the range of retest
+variability should be interpreted with caution.
+Abbreviations: RMS = relapsing MS; PPMS = primary progressive MS; MOG = myelin oligodendrocyte protein; AQP4 = aquaporin-4 channel; ON = optic
+neuritis; OCT = optical coherence tomography; VEP = visual evoked potential; CSR = central serous retinopathy; pRNFL = peripapillary retinal nerve fiber layer.
+Neurology.org/NN
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+13
+
+
+--- PAGE 14 ---
+Advantages of Assessments in the
+Visual System
+Low Cost and Correlations With Other
+Outcome Measures—Atrophy, Cognition, and
+Employment Status
+RNFL and GCIPL thinning on OCT are low-cost measures
+that have shown considerable cross-sectional and longitudinal
+associations with other outcome measures of tissue damage in
+MS, including brain volume loss,39,e76-e77 in particular when
+ON eyes are removed from analyses.e78-e79 These associations
+likely emerge from a common pathophysiologic denominator
+and suggest that in some settings, retinal measures may be
+used as surrogates of MRI measures. Anterograde or retro-
+grade transsynaptic degeneration involving retrogeniculate
+parts of the visual pathway may inﬂuence these associa-
+tions.e80-e81 Retinal damage may also relate to functional
+connectivity changes in the visual system and other networks
+in ON, MS, and NMOSD.e82-e84
+RNFL and GCIPL thinning have been associated with worse
+cognitive performance,e85-e86 suggesting a shared underlying
+pathobiology of diﬀuse CNS tissue destruction. However,
+reduced visual function might aﬀect cognitive test perfor-
+mance, and cognitive dysfunction may alter the capability to
+execute more demanding visual tests such as LCLA testing.e74
+Finally, higher serum neuroﬁlament light chain (NfL) has
+been associated with lower RNFL and GCIPL thickness val-
+ues in the non-ON eyes of participants with MS.e87
+Precision and in Vivo Human Microstructural/
+Sensitive Functional Assessments
+Unparalleled in the Other Systems Affected
+by MS
+The availability of sensitive measures has enabled rigorous
+measurement of structural and functional changes in the in-
+jured visual system to a greater degree than is possible in other
+regions of the CNS.e88 Structural changes on OCT are
+strongly correlated with changes in LCLA and visual QOL.
+One can estimate the functional consequence of a 5–10-μm
+change in RNFL thickness. Such precision has not been
+clearly recorded for the corticospinal tracts, for example.
+IMSVISUAL View of the Landscape
+and Proposed Role of Visual System
+for Trials of Agents in the Pipeline
+IMSVISUAL aims to improve care, research, and education in
+MS and other neuroinﬂammatory disorders by advancing our
+understanding of the visual system and by providing a frame-
+work and international standards for applying vision tools in
+clinical trials. These methods are sensitive, reliable, and cost-
+eﬀective with strong structure-function correlations. Diﬀerent
+tools provide complementary information and have ideal time
+points for use along the temporal course of visual injury
+(Table 4). Best practices and even published standard criteria
+exist to guide rigorous study design in visual outcome appli-
+cations. For all paradigms of trials in MS and NMOSD (and
+future trials in MOGAD), from standard DMT trials or those of
+neuroprotection and remyelination, and even trials of com-
+parative eﬃcacy, applicationse90-e94 of visual outcome tools
+oﬀer cost-eﬀective mechanisms to capture widespread and focal
+injury across disease subtypes and may lead to more rapid
+development of new therapeutics for these disabling diseases.
+Study Funding
+The authors report no targeted funding.
+Disclosure
+Unrelated to the current work, Dr. Graves over the past year
+has grant/contract research support from the National MS
+Society, Biogen, and Octave Biosciences. She serves on a
+steering committee for a trial supported by Novartis. She has
+received honoraria for a nonpromotional, educational activity
+for Sanoﬁ-Genzyme. She has received speaker fees from
+Alexion and BMS and served on an advisory board for Gen-
+entech. Unrelated to the current work, Dr. Sotirchos receives
+research support from the NIH and National MS Society. He
+has served on scientiﬁc advisory boards for Alexion, Viela Bio,
+and Genentech and has received speaker honoraria from Viela
+Bio and Biogen. Unrelated to the current work, Dr. Oertel
+receives research support from the American Academy of
+Neurology and National MS Society. Unrelated to the current
+work, Dr. Van der Walt has received research funding and
+served on advisory boards to Novartis Australia, Biogen,
+Roche, Merck, and NervGen. She received speakers’ hono-
+raria from Novartis, Biogen Roche, and Merk. Her research is
+funded by the National Health and Medical Research Council
+of Australia. Unrelated to the current work, Dr. Collorone was
+supported by the Rosetrees Trust (MS632), and she was
+awarded a MAGNIMS-ECTRIMS fellowship in 2016. Un-
+related to the current work, Dr. Albrecht reports grants,
+personal fees, and nonﬁnancial support from Allergan, Bio-
+gen, Celgene, Ipsen, Merck, Merz, Novartis, and Roche and
+speaking honoraria and nonﬁnancial support from Janssen-
+Cilag, Teva, and Bayer HealthCare. Unrelated to the current
+work, Dr. Saidha has received consulting fees from Medical
+Logix for the development of CME programs in neurology
+and has served on scientiﬁc advisory boards for Biogen,
+Genzyme, Genentech Corporation, EMD Serono, and Cel-
+gene. He is the PI of investigator-initiated studies funded by
+Genentech Corporation and Biogen Idec, received support
+from the Race to Erase MS foundation, and was the site
+investigator of a trial sponsored by MedDay Pharmaceuticals.
+He has received equity compensation for consulting from
+JuneBrain LLC, a retinal imaging device developer. Unrelated
+to the current work, Dr. Newsome has received consultant
+fees for scientiﬁc advisory boards from Biogen, Genentech,
+Bristol Myers Squibb, EMD Serono, Novartis, and Greenwich
+Biosciences. He is an advisor for Autobahn Therapeutics and
+BioIncept, a clinical adjudication committee member for a
+14
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 15 ---
+MedDay Pharmaceuticals clinical trial. He has received re-
+search funding (paid directly to institution) from Biogen,
+Novartis, Genentech, National MS Society, Department of
+Defense, and Patient Centered Outcomes Institute. Unrelated
+to the current work, Dr. Yeh has received research funding
+from NMSS,CMSC, CIHR,NIH,OIRM, SCN, CBMHChase
+an Idea, SickKids Foundation, Rare Diseases Foundation, MS
+Scientiﬁc Foundation (Canada), McLaughlin Centre, and
+Mario Battaglia Foundation; investigator-initiated research
+funding from Biogen; scientiﬁc advisory: Biogen, Hoﬀman-
+LaRoche, and Viela Bio; and speaker honoraria: Saudi Epi-
+lepsy Society, NYU, MS-ATL, ACRS, and PRIME.funding.
+Go to Neurology.org/NN for full disclosures.
+Publication History
+Received
+by
+Neurology:
+Neuroimmunology
+&
+Neuroinﬂammation
+February 15, 2021. Accepted in ﬁnal form November 4, 2021.
+References
+1.
+Volpe NJ. Optic neuritis: historical aspects. J Neuroophthalmol. 2001;21(4):302-309.
+2.
+Graves J, Balcer LJ. Eye disorders in patients with multiple sclerosis: natural history
+and management. Clin Ophthalmol. 2010;4:1409-1422.
+3.
+Wingerchuk DM, Hogancamp WF, O’Brien PC, Weinshenker BG. The clinical course
+of neuromyelitis optica (Devic’s syndrome). Neurology. 1999;53(5):1107-1114.
+4.
+Balk LJ, Coric D, Knier B, et al. Retinal inner nuclear layer volume reﬂects in-
+ﬂammatory disease activity in multiple sclerosis; a longitudinal OCT study. Mult Scler
+J Exp Transl Clin. 2019;5(3):2055217319871582.
+5.
+Al-Louzi OA, Bhargava P, Newsome SD, et al. Outer retinal changes following acute
+optic neuritis. Mult Scler. 2016;22(3):362-372.
+6.
+Sotirchos ES, Gonzalez Caldito N, Filippatou A, et al. Progressive multiple sclerosis is
+associated with faster and speciﬁc retinal layer atrophy. Ann Neurol. 2020;87(6):
+885-896.
+7.
+You Y, Zhu L, Zhang T, et al. Evidence of m¨uller glial dysfunction in patients with
+aquaporin-4 immunoglobulin G-positive neuromyelitis optica spectrum disorder.
+Ophthalmology. 2019;126(6):801-810.
+8.
+Kim HJ, Paul F, Lana-Peixoto MA, et al. MRI characteristics of neuromyelitis optica
+spectrum disorder: an international update. Neurology. 2015;84(11):1165-1173.
+9.
+Tur C, Goodkin O, Altmann DR, et al. Longitudinal evidence for anterograde trans-
+synaptic degeneration after optic neuritis. Brain. 2016;139(Pt 3):816-828.
+10.
+Frederiksen JL, Larsson HB, Ottovay E, Stigsby B, Olesen J. Acute optic neuritis with
+normal visual acuity. Comparison of symptoms and signs with psychophysiological,
+electrophysiological and magnetic resonance imaging data. Acta Ophthalmol
+(Copenh). 1991;69(3):357-366.
+11.
+Pelli DG, Robson JG, Wilkins AJ. The design of a new letter chart for measuring
+contrast sensitivity. Clin Vis Sci. 1988;2.
+Appendix 1 Authors
+Name
+Location
+Contribution
+Jennifer S.
+Graves, MD,
+PhD, MAS
+Department of
+Neurosciences, University of
+California, San Diego
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content, and study
+concept or design
+Frederike
+Cosima
+Oertel, MD
+Experimental and Clinical
+Research Center, Max
+Delbr¨uck Center for Molecular
+Medicine and
+Charit´e—Universit¨atsmedizin
+Berlin & NeuroCure Clinical
+Research Center,
+Charité—Universitätsmedizin
+Berlin, corporate member of
+Freie Universität Berlin,
+Humboldt-Universität zu
+Berlin, and Berlin Institute of
+Health, Berlin, Germany
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Anneke Van
+der Walt,
+MBChB, PhD
+Department of Neuroscience,
+Central Clinical School,
+Monash University,
+Melbourne, Australia
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Sara
+Collorone,
+MD, PhD
+NMR Research Unit, Queen
+Square MS Centre, Department
+of Neuroinflammation, UCL
+Queen Square Institute of
+Neurology, Faculty of Brain
+Sciences, University College
+London, London, United
+Kingdom
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Elias S.
+Sotirchos,
+MD
+Department of Neurology,
+Johns Hopkins University
+School of Medicine, Baltimore,
+MD
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Gorm Pihl-
+Jensen, PhD
+Rigshospitalet, Denmark
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Philipp
+Albrecht, MD
+Department of Neurology,
+Medical Faculty, Heinrich-
+Heine-University D¨usseldorf,
+Germany
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Appendix 1
+(continued)
+Name
+Location
+Contribution
+E. Ann Yeh,
+MD
+Division of Neurology,
+Department of Pediatrics,
+Division of Neuroscience
+and Mental Health,
+Hospital for Sick Children,
+Hospital for Sick Children
+Research Institute, and
+University of Toronto,
+Toronto, Canada
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Shiv Saidha,
+MBBCh, MD,
+MRCPI
+Department of Neurology,
+Johns Hopkins University
+School of Medicine, Baltimore,
+MD
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Jette
+Frederiksen,
+MD
+Rigshospitalet, Denmark
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Scott
+Douglas
+Newsome,
+DO
+Department of Neurology,
+Johns Hopkins University
+School of Medicine, Baltimore,
+MD
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Friedemann
+Paul, MD
+Experimental and Clinical
+Research Center, Max
+Delbr¨uck Center for Molecular
+Medicine and
+Charit´e—Universit¨atsmedizin
+Berlin & NeuroCure Clinical
+Research Center,
+Charité—Universitätsmedizin
+Berlin, corporate member of
+Freie Universität Berlin,
+Humboldt-Universität zu
+Berlin, and Berlin Institute of
+Health, Berlin, Germany
+Drafting/revision of the
+manuscript for content,
+including medical writing
+for content
+Appendix 2 Coinvestigators
+Coinvestigators are listed at links.lww.com/NXI/A677.
+Neurology.org/NN
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+15
+
+
+--- PAGE 16 ---
+12.
+Beck RW, Cleary PA. Optic neuritis treatment trial. One-year follow-up results. Arch
+Ophthalmol. 1993;111(6):773-775.
+13.
+Balcer LJ, Baier ML, Cohen JA, et al. Contrast letter acuity as a visual component for
+the multiple sclerosis functional composite. Neurology. 2003;61(10):1367-1373.
+14.
+Keltner JL, Johnson CA, Cello KE, Dontchev M, Gal RL, Beck RW. Visual ﬁeld proﬁle
+of optic neuritis: a ﬁnal follow-up report from the optic neuritis treatment trial from
+baseline through 15 years. Arch Ophthalmol. 2010;128(3):330-337.
+15.
+Keltner JL, Johnson CA, Beck RW, Cleary PA, Spurr JO. Quality control functions of
+the visual ﬁeld reading center (VFRC) for the optic neuritis treatment trial (ONTT).
+Control Clin Trials. 1993;14(2):143-159.
+16.
+Brusa A, Jones SJ, Plant GT. Long-term remyelination after optic neuritis: a 2-year
+visual evoked potential and psychophysical serial study. Brain. 2001;124(Pt 3):
+468-479.
+17.
+Jones SJ, Brusa A. Neurophysiological evidence for long-term repair of MS lesions:
+implications for axon protection. J Neurol Sci. 2003;206(2):193-198.
+18.
+Ringelstein M, Harmel J, Zimmermann H, et al. Longitudinal optic neuritis-unrelated visual
+evoked potential changes in NMO spectrum disorders. Neurology. 2020;94(4):e407-e418.
+19.
+Green AJ, Gelfand JM, Cree BA, et al. Clemastine fumarate as a remyelinating therapy
+for multiple sclerosis (ReBUILD): a randomised, controlled, double-blind, crossover
+trial. Lancet. 2017;390(10111):2481-2489.
+20.
+Wooliscroft L, Altowaijri G, Hildebrand A, et al. Phase I randomized trial of iodo-
+thyronine for remyelination in multiple sclerosis: a dose-ranging study with assess-
+ment of reliability of visual outcomes. Mult Scler Relat Disord. 2020;41:102015.
+21.
+Cadavid D, Balcer L, Galetta S, et al. Safety and eﬃcacy of ipilimumab in acute optic
+neuritis (RENEW): a randomised, placebo-controlled, phase 2 trial. Lancet Neurol.
+2017;16(3):189-199.
+22.
+Raftopoulos R, Hickman SJ, Toosy A, et al. Phenytoin for neuroprotection in patients
+with acute optic neuritis: a randomised, placebo-controlled, phase 2 trial. Lancet
+Neurol. 2016;15(3):259-269.
+23.
+Coupland SG, Kirkham TH. Flash electroretinogram abnormalities in patients with
+clinically deﬁnite multiple sclerosis. Can J Neurol Sci. 1982;9(3):325-330.
+24.
+Klistorner A, Chai Y, Leocani L, et al. Assessment of opicinumab in acute optic neuritis
+using multifocal visual evoked potential. CNS Drugs. 2018;32(12):1159-1171.
+25.
+Heesen C, Haase R, Melzig S, et al. Perceptions on the value of bodily functions in
+multiple sclerosis. Acta Neurol Scand. 2018;137(3):356-362.
+26.
+Schinzel J, Zimmermann H, Paul F, et al. Relations of low contrast visual acuity,
+quality of life and multiple sclerosis functional composite: a cross-sectional analysis.
+BMC Neurol. 2014;14:31.
+27.
+Walter SD, Ishikawa H, Galetta KM, et al. Ganglion cell loss in relation to visual
+disability in multiple sclerosis. Ophthalmology. 2012;119(6):1250-1257.
+28.
+Schmidt F, Zimmermann H, Mikolajczak J, et al. Severe structural and functional
+visual system damage leads to profound loss of vision-related quality of life in patients
+with neuromyelitis optica spectrum disorders. Mult Scler Relat Disord. 2017;11:45-50.
+29.
+Mowry EM, Loguidice MJ, Daniels AB, et al. Vision related quality of life in multiple
+sclerosis: correlation with new measures of low and high contrast letter acuity. J Neurol
+Neurosurg Psychiatry. 2009;80(7):767-772.
+30.
+Ma SL, Shea JA, Galetta SL, et al. Self-reported visual dysfunction in multiple sclerosis:
+new data from the VFQ-25 and development of an MS-speciﬁc vision questionnaire.
+Am J Ophthalmol. 2002;133(5):686-692.
+31.
+Graves JS. Optical coherence tomography in multiple sclerosis. Semin Neurol. 2019;
+39(6):711-717.
+32.
+Schippling S, Balk LJ, Costello F, et al. Quality control for retinal OCT in multiple
+sclerosis: validation of the OSCAR-IB criteria. Mult Scler. 2015;21(2):163-170.
+33.
+Syc SB, Warner CV, Hiremath GS, et al. Reproducibility of high-resolution optical
+coherence tomography in multiple sclerosis. Mult Scler. 2010;16(7):829-839.
+34.
+SycSB, SaidhaS,Newsome SD, etal. Optical coherence tomography segmentation reveals
+ganglion cell layer pathology after optic neuritis. Brain. 2012;135(Pt 2):521-533.
+35.
+Kupersmith MJ, Garvin MK, Wang JK, Durbin M, Kardon R. Retinal ganglion cell
+layer thinning within one month of presentation for optic neuritis. Mult Scler. 2016;
+22(5):641-648.
+36.
+Stiebel-Kalish H, Hellmann MA, Mimouni M, et al. Does time equal vision in the
+acute treatment of a cohort of AQP4 and MOG optic neuritis?. Neurol Neuroimmunol
+Neuroinﬂamm. 2019;6:e572.
+37.
+Petzold A, Balcer LJ, Calabresi PA, et al. Retinal layer segmentation in multiple
+sclerosis: a systematic review and meta-analysis. Lancet Neurol. 2017;16(10):797-812.
+38.
+Sotirchos ES, Filippatou A, Fitzgerald KC, et al. Aquaporin-4 IgG seropositivity is
+associated with worse visual outcomes after optic neuritis than MOG-IgG seroposi-
+tivity and multiple sclerosis, independent of macular ganglion cell layer thinning. Mult
+Scler. 2020;26(11):1360-1371.
+39.
+Saidha S, Al-Louzi O, Ratchford JN, et al. Optical coherence tomography reﬂects brain
+atrophy in multiple sclerosis: a four-year study. Ann Neurol. 2015;78(5):801-813.
+40.
+Button J, Al-Louzi O, Lang A, et al. Disease-modifying therapies modulate retinal
+atrophy in multiple sclerosis: a retrospective study. Neurology 2017;88(6):525-532.
+41.
+Kimbrough DJ, Sotirchos ES, Wilson JA, et al. Retinal damage and vision loss in
+African American multiple sclerosis patients. Ann Neurol. 2015;77(2):228-236.
+42.
+Costello F, Hodge W, Pan YI, et al. Sex-speciﬁc diﬀerences in retinal nerve ﬁber layer
+thinning after acute optic neuritis. Neurology. 2012;79(18):1866-1872.
+43.
+Graves JS, Chohan H, Cedars B, et al. Sex diﬀerences and subclinical retinal injury in
+pediatric-onset MS. Mult Scler. 2017;23(3):447-455.
+44.
+Lambe J, Saidha S, Bermel RA. Optical coherence tomography and multiple sclerosis:
+update on clinical application and role in clinical trials. Mult Scler. 2020;26(6):624-639.
+45.
+Wilbur C, Reginald YA, Longoni G, et al. Early neuroaxonal injury is seen in the acute
+phase of pediatric optic neuritis. Mult Scler Relat Disord. 2019;36:101387.
+46.
+Hickman SJ, Toosy AT, Jones SJ, et al. A serial MRI study following optic nerve mean
+area in acute optic neuritis. Brain. 2004;127(Pt 11):2498-2505.
+47.
+Trip SA, Schlottmann PG, Jones SJ, et al. Optic nerve atrophy and retinal nerve ﬁbre
+layer thinning following optic neuritis: evidence that axonal loss is a substrate of MRI-
+detected atrophy. Neuroimage. 2006;31(1):286-293.
+48.
+Naismith RT, Xu J, Tutlam NT, et al. Disability in optic neuritis correlates with
+diﬀusion tensor-derived directional diﬀusivities. Neurology. 2009;72(7):589-594.
+49.
+van der Walt A, Kolbe SC, Wang YE, et al. Optic nerve diﬀusion tensor imaging after
+acute optic neuritis predicts axonal and visual outcomes. PLoS One. 2013;8:e83825.
+50.
+Cadavid D, Mellion M, Hupperts R, et al. Safety and eﬃcacy of ipilimumab in patients
+with relapsing multiple sclerosis (SYNERGY): a randomised, placebo-controlled,
+phase 2 trial. Lancet Neurol. 2019;18(9):845-856.
+51.
+Feucht N, Maier M, Lepennetier G, et al. Optical coherence tomography angiography
+indicates associations of the retinal vascular network and disease activity in multiple
+sclerosis. Mult Scler. 2019;25(2):224-234.
+52.
+Spain RI, Liu L, Zhang X, et al. Optical coherence tomography angiography enhances
+the detection of optic nerve damage in multiple sclerosis. Br J Ophthalmol. 2018;
+102(4):520-524.
+53.
+Huang Y, Zhou L, ZhangBao J, et al. Peripapillary and parafoveal vascular network
+assessment by optical coherence tomography angiography in aquaporin-4 antibody-
+positive neuromyelitis optica spectrum disorders. Br J Ophthalmol. 2019;103(6):
+789-796.
+54.
+Chahin S, Miller D, Sakai RE, et al. Relation of quantitative visual and neurologic
+outcomes to fatigue in multiple sclerosis. Mult Scler Relat Disord. 2015;4(4):304-310.
+55.
+Oberwahrenbrock T, Traber GL, Lukas S, et al. Multicenter reliability of semiautomatic
+retinal layer segmentation using OCT. Neurol Neuroimmunol Neuroinﬂamm. 2018;5(3):e449.
+56.
+Aytulun A, Cruz-Herranz A, Aktas O, et al. APOSTLE 2.0 recommendations for
+reporting quantitative optical coherence tomography studies. Neurology. 2021;97(2):
+68-79.
+57.
+Roberg BL, Bruce JM, Feaster HT, O’Bryan SR, Westervelt HJ, Glusman M. Speedy
+eye movements in multiple sclerosis: association with performance on visual and
+nonvisual cognitive tests. J Clin Exp Neuropsychol. 2015;37(1):1-15.
+58.
+Moroso A, Ruet A, Deloire M, et al. Cerebellar assessment in early multiple sclerosis.
+Cerebellum. 2017;16(2):607-611.
+59.
+Yousef A, Devereux M, Gourraud PA, et al. Subclinical saccadic eye movement dys-
+function in pediatric multiple sclerosis. J Child Neurol. 2019;34(1):38-43.
+Data available. Additional eReferences e1-e94 available at: links.lww.com/NXI/A675.
+16
+Neurology: Neuroimmunology & Neuroinflammation | Volume 9, Number 2 | March 2022
+Neurology.org/NN
+
+
+--- PAGE 17 ---
+DOI 10.1212/NXI.0000000000001126
+2022;9; 
+Neurol Neuroimmunol Neuroinflamm 
+Jennifer S. Graves, Frederike Cosima Oertel, Anneke Van der Walt, et al. 
+Neuroimmunologic Disorders
+Leveraging Visual Outcome Measures to Advance Therapy Development in
+This information is current as of December 26, 2021
+Services
+Updated Information &
+ 
+http://nn.neurology.org/content/9/2/e1126.full.html
+including high resolution figures, can be found at:
+References
+ 
+http://nn.neurology.org/content/9/2/e1126.full.html##ref-list-1
+This article cites 58 articles, 5 of which you can access for free at: 
+Subspecialty Collections
+ 
+http://nn.neurology.org//cgi/collection/multiple_sclerosis
+Multiple sclerosis
+ 
+http://nn.neurology.org//cgi/collection/mri
+MRI
+ 
+http://nn.neurology.org//cgi/collection/devics_syndrome
+Devic's syndrome
+ 
+http://nn.neurology.org//cgi/collection/all_neuroophthalmology
+All Neuro-ophthalmology
+following collection(s): 
+This article, along with others on similar topics, appears in the
+  
+Permissions & Licensing
+ 
+http://nn.neurology.org/misc/about.xhtml#permissions
+its entirety can be found online at:
+Information about reproducing this article in parts (figures,tables) or in
+  
+Reprints
+ 
+http://nn.neurology.org/misc/addir.xhtml#reprintsus
+Information about ordering reprints can be found online:
+Academy of Neurology.. All rights reserved. Online ISSN: 2332-7812.
+Copyright © 2021 The Author(s). Published by Wolters Kluwer Health, Inc. on behalf of the American
+Published since April 2014, it is an open-access, online-only, continuous publication journal. Copyright 
+is an official journal of the American Academy of Neurology.
+Neurol Neuroimmunol Neuroinflamm 
