@@ -341,6 +341,69 @@ Pattern Aでは8.0, 8.4, ..., 11.6 Hzをtarget，8.2, 8.6, ..., 11.8 Hzをnon-ta
 Pearson相関式とANCOVA概念式は元論文で式自体への引用が付いていないこと，
 smooth pursuit背景論文のDOIを追記した。
 
+2026-06-25，ユーザ依頼に基づき，
+`research/drafts/journal-club-presentation/moving-mfssvep-ms_summary.md`と
+元論文抽出テキスト`research/drafts/journal-club/moving-mfssvep-ms-pymupdf_original.md`を確認し，
+初見の聴衆に伝わる構成へ作り直した日付付き再構成案を作成した。
+既存の`moving-mfssvep-ms_slide-script.md`は直接変更せず，
+`research/drafts/journal-club-presentation/2026-06-25_moving-mfssvep-ms_slide-script-rebuild.md`
+を新規作成した。
+
+再構成案では，本編19枚を，背景，課題，提案，求心性指標，遠心性指標，
+仮説，実験，解析，結果，著者考察，限界，発表者コメント，結論の順へ整理した。
+表示文は短くし，論文結果と発表者コメントを分離した。
+Slide 18をコメント，Slide 19を結論とし，
+結論では「診断法の完成」ではなく「小規模な予備的検証」として位置付けた。
+
+同日，ユーザ指摘に基づき，再構成案を追加修正した。
+`求心性`と`遠心性`はSlide 3で
+「眼から脳への視覚情報伝達=求心性視覚機能」，
+「脳から眼への眼球運動制御=遠心性視覚機能」と説明してから使う構成にした。
+Slide 2や説明前の箇所では「視覚情報伝達側」「眼球運動側」と表現した。
+また，発表原稿から`第一に`，`第二に`のような独立列挙を外し，
+要素同士の意味関係が見える接続へ修正した。
+同じ方針を今後のスライド作成へ反映するため，
+`C:\Users\Shunya Omori\.codex\skills\drafting-japanese-slides\SKILL.md`にも
+未導入語の禁止と列挙表現のルールを追記した。
+
+さらに同日，ユーザ指摘に基づき，再構成案の表示文と発表原稿を再点検した。
+表紙では論文の重要点を先取りせず，書誌情報と論文紹介に限定した。
+Slide 2では，スライド表示だけで理解できるように，
+多発性硬化症（MS），VR，EEG，EOG，SSVEP，mfSSVEP，SNRを表示文側で導入した。
+各スライドに独立して置いていた`次への接続`欄は削除し，
+必要な接続は発表原稿の最後の文に組み込んだ。
+Slide 3の「モデル系」という抽象表現は削除し，
+視覚系が臨床症状の明瞭でない段階でも脱髄性障害を捉えられる可能性があり，
+視覚機能が病勢や治療効果を評価するバイオマーカ候補になる，という具体的な説明へ変更した。
+同じ見落としを防ぐため，
+`drafting-japanese-slides`の`SKILL.md`にも，表示文だけで文脈が成立するか，
+表紙で要点を先取りしていないか，抽象語に逃げていないか，
+`次への接続`欄を機械的に作っていないかを確認するチェック項目を追記した。
+
+2026-06-25，追加のユーザ指摘に基づき，
+`research/drafts/journal-club-presentation/2026-06-25_moving-mfssvep-ms_slide-script-rebuild.md`
+を表示文中心へ再改稿した。
+既存手法の欠点，二つの機能を同じ課題で定量評価しにくい点，
+専門施設外で利用しにくい点をSlide 4--5へ明示した。
+検定については，Slide 9，13，14に帰無仮説，ANCOVA，p値の読み方を入れた。
+遠心性側の限界では，参加者に通常診察で明瞭な遠心性眼球運動異常がなかったことを
+Slide 10，14，17で明示し，眼球追従性能に有意差が出なかった理由として
+最重要の読み方にした。
+VR，EEG，EOGを組み合わせた可搬型計測構想はSlide 6，18，19で強調しつつ，
+BioSemi ActiveTwoを使ったため完成した小型医療機器の実証ではないことも限定した。
+本編に入りきらないSNR式，Pearson相関係数，ANCOVA概念式，EEG/EOG前処理，
+左右眼の非独立性，診断法として未確立である理由はAppendixへ追加した。
+Pearson相関係数は元論文に式自体が示されていないため，
+元論文の「相関係数を用いた」という記載に対する標準式の補足として扱う。
+
+同日，ユーザ依頼に基づき，再構成案に引用を追加した。
+引用対象は，元論文で引用されている背景知識・手法知識に限定した。
+先輩資料の表記に合わせ，`[著者+, ジャーナル名, 年]`形式で，
+Slide 3--8，Slide 10--11，Appendix A--Eに短縮引用を付けた。
+また，Appendix Mにスライド内引用と元論文References番号の対応表を追加した。
+Pearson相関係数やANCOVA概念式など，元論文が式自体に引用を付けていない補足は，
+引用を捏造せず，根拠メモで補足扱いと明記した。
+
 ## Next Action
 
 再構成した
@@ -373,7 +436,15 @@ Slide 6--19は先輩資料の文構造に寄せて再修正済みのため，
 次の確認対象は，表示文の分量と実スライド上の読みやすさである。
 施設割合は追加せず，原論文の定性的な主張として扱うか，
 「論文は施設数を示していない」と注記するかをユーザが判断する。
-確認後，許可を得て実際のスライド形式へ移す。
+加えて，2026-06-25に作成した
+`research/drafts/journal-club-presentation/2026-06-25_moving-mfssvep-ms_slide-script-rebuild.md`
+を確認し，既存原稿へ統合するか，部分的に取り込むかを判断する。
+同ファイルは表示文中心へ再改稿済みであるため，
+特にSlide 4--5の既存手法の欠点，Slide 9/13/14の検定説明，
+Slide 17の限界，Appendixの前処理・数式・統計補足の分量を確認対象とする。
+確認後，許可を得て既存原稿への統合または実際のスライド形式へ移す。
+引用追加後は，Slide 3--8の本文中引用が実スライド上で重すぎないか，
+Slide 4の表内引用を脚注へ移すか，Appendix Mの対応表を質疑用に残すかも確認対象とする。
 
 ## Blockers
 
@@ -399,6 +470,7 @@ Slide 6--19は先輩資料の文構造に寄せて再修正済みのため，
 - `research/drafts/journal-club-presentation/senior-journal-club-template_pdfinfo.txt`
 - `research/drafts/journal-club-presentation/2026-06-11_slide-draft-options.md`
 - `research/drafts/journal-club-presentation/moving-mfssvep-ms_slide-script.md`
+- `research/drafts/journal-club-presentation/2026-06-25_moving-mfssvep-ms_slide-script-rebuild.md`
 
 ## Key Files
 
