@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Claude Code" version="21.0.0">
+  <diagram name="screenpipe 詳細技術構成図" id="screenpipe-detail">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1320" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title" value="screenpipe 詳細技術構成図"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="500" y="10" width="900" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="いつ（トリガー）・何が（データ型）・何を使って（ライブラリ / API）処理されるか"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontStyle=2;"
+          vertex="1" parent="1">
+          <mxGeometry x="300" y="46" width="1300" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- ===== LEGEND (top-right) ===== -->
+        <mxCell id="leg-bg" value=""
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#bdbdbd;arcSize=5;"
+          vertex="1" parent="1">
+          <mxGeometry x="1665" y="10" width="215" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-scr" value="画面系"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;arcSize=8;"
+          vertex="1" parent="1">
+          <mxGeometry x="1672" y="18" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-aud" value="音声系"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;arcSize=8;"
+          vertex="1" parent="1">
+          <mxGeometry x="1742" y="18" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-ui" value="UI/A11y系"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;arcSize=8;"
+          vertex="1" parent="1">
+          <mxGeometry x="1812" y="18" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-sec" value="セキュリティ"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;arcSize=8;"
+          vertex="1" parent="1">
+          <mxGeometry x="1672" y="42" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-api" value="API/接続"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;arcSize=8;"
+          vertex="1" parent="1">
+          <mxGeometry x="1762" y="42" width="60" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ZONE 1: イベント検知 -->
+        <!-- ========================================================== -->
+        <mxCell id="z1bg" value=""
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF3FB;strokeColor=#6c8ebf;strokeDasharray=6,4;arcSize=3;"
+          vertex="1" parent="1">
+          <mxGeometry x="20" y="76" width="1860" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="z1lbl" value="① イベント検知レイヤー — screenpipe-a11y + screenpipe-engine (event_driven_capture.rs)"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#6c8ebf;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="78" width="900" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t1" value="AppSwitch&#xa;アプリ切り替え検知&#xa;─────&#xa;macOS: CGEventTap&#xa;Windows: SetWindowsHookEx&#xa;Linux: AT-SPI2 (zbus 5.5)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="268" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="WindowFocus&#xa;ウィンドウフォーカス変更&#xa;─────&#xa;macOS: AX Notification&#xa;Windows: WinEvent Hook&#xa;Linux: AT-SPI2 Focus"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="313" y="100" width="268" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="Click / Scroll&#xa;マウス操作検知&#xa;─────&#xa;macOS: CGEventTap&#xa;Windows: SetWindowsHookEx&#xa;Linux: evdev"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="596" y="100" width="268" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" value="KeyboardInput&#xa;入力一時停止を検知&#xa;─────&#xa;macOS: CGEventTap&#xa;Windows: SetWindowsHookEx&#xa;Linux: evdev"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="879" y="100" width="268" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" value="VAD (音声活動検知)&#xa;音声の開始・終了を検知&#xa;─────&#xa;Silero VAD v5/v6 (ONNX)&#xa;または WebRTC VAD&#xa;MIN_SPEECH_RATIO でフィルタ"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=10;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="1162" y="100" width="268" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" value="PeriodicIdleFallback&#xa;アイドル時の定期実行&#xa;─────&#xa;一定時間イベントなし時の&#xa;バックアップキャプチャ&#xa;（全プラットフォーム共通）"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=10;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="1445" y="100" width="420" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ZONE 2: キャプチャ -->
+        <!-- ========================================================== -->
+        <mxCell id="z2bg" value=""
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#f9a825;strokeDasharray=6,4;arcSize=3;"
+          vertex="1" parent="1">
+          <mxGeometry x="20" y="268" width="1860" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="z2lbl" value="② キャプチャレイヤー — screenpipe-screen / screenpipe-audio / screenpipe-a11y"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#f9a825;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="270" width="800" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Screen column -->
+        <mxCell id="z2h1" value="🖥️ スクリーンキャプチャ"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="290" width="580" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="macOS 12.3+&#xa;sck-rs (ScreenCaptureKit wrapper)&#xa;CMSampleBuffer → DynamicImage&#xa;→ JPEG 品質80%&#xa;~/.screenpipe/data/ (動画チャンク mp4)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="315" width="280" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Windows / Linux&#xa;xcap 0.9&#xa;(Windows Graphics Capture /&#xa;X11 / Wayland)&#xa;→ JPEG 品質80%&#xa;~/.screenpipe/data/"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="325" y="315" width="280" height="148" as="geometry" />
+        </mxCell>
+
+        <!-- Audio column -->
+        <mxCell id="z2h2" value="🎤 音声キャプチャ"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="640" y="290" width="580" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="マイク / システム音声入力&#xa;CPAL (screenpipe fork)&#xa;WASAPI AEC patch 適用済み&#xa;16bit PCM ステレオ/モノラル&#xa;→ rubato 0.15 でリサンプリング&#xa;   (16kHz に統一)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="640" y="315" width="275" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="VAD フィルタ + チャンク化&#xa;Silero VAD v5/v6 (ONNX Runtime)&#xa;音声区間のみ抽出&#xa;audiopipe でバッファ管理&#xa;→ AudioInput {&#xa;   data, sample_rate,&#xa;   channels, device, timestamp }"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="930" y="315" width="275" height="148" as="geometry" />
+        </mxCell>
+
+        <!-- A11y column -->
+        <mxCell id="z2h3" value="⌨️ アクセシビリティツリー / UIイベント"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="1240" y="290" width="630" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="macOS&#xa;AX API&#xa;(accessibility-sys&#xa;+ cidre)&#xa;AXUIElement&#xa;ツリーを走査"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="1240" y="315" width="190" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="Windows&#xa;UI Automation&#xa;(uiautomation 0.16.1)&#xa;IUIAutomation&#xa;Element ツリー走査"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="1445" y="315" width="190" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="Linux&#xa;AT-SPI2&#xa;(atspi 0.25&#xa;+ zbus 5.5)&#xa;+ evdev&#xa;(キー/マウス)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="1650" y="315" width="210" height="148" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ZONE 3: 処理 -->
+        <!-- ========================================================== -->
+        <mxCell id="z3bg" value=""
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#c62828;strokeDasharray=6,4;arcSize=3;"
+          vertex="1" parent="1">
+          <mxGeometry x="20" y="490" width="1860" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="z3lbl" value="③ 処理レイヤー — screenpipe-engine / screenpipe-redact (Rust, tokio 非同期)"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#c62828;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="492" width="700" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" value="📝 OCR / テキスト抽出&#xa;────────────&#xa;macOS: Apple Vision Framework (cidre)&#xa;Windows: Windows Media OCR API&#xa;Linux / Fallback: rusty-tesseract&#xa;   (screenpipe fork)&#xa;オプション: Unstructured API (Cloud)&#xa;────────────&#xa;出力: { text, confidence, bounding_box }&#xa;OCREngine enum で切り替え可"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="516" width="420" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="🌳 A11y ツリー処理 / UIイベント記録&#xa;────────────&#xa;AccessibilityTreeNode[] をシリアライズ&#xa;{ role, text, bounds, on_screen }&#xa;&#xa;UIイベント記録:&#xa;  Click / Key / Scroll / ClipboardCopy&#xa;  → ui_events テーブルへ書き込み&#xa;────────────&#xa;出力: text_output (JSON) → ui_monitoring"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="465" y="516" width="420" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="🗣️ 音声認識 (ASR)&#xa;────────────&#xa;デフォルト: qwen3-asr (Qwen3-7B-Instruct)&#xa;代替: Parakeet ASR&#xa;      Parakeet-MLX (Apple Silicon 最適化)&#xa;実装: whisper-rs (screenpipe fork)&#xa;推論: ONNX Runtime (ort 2.0-rc.12)&#xa;      または MLX (mlx-rs 0.25)&#xa;────────────&#xa;出力: { text, timestamp, speaker_id }"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="900" y="516" width="420" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="👥 話者識別 (Diarization)&#xa;────────────&#xa;TranscriptionDiarizationSegment&#xa;provider_speaker_label → speaker_id (i64)&#xa;Speaker Embeddings: sqlite-vec 0.1.3&#xa;────────────&#xa;🛡️ PIIフィルタ (screenpipe-redact)&#xa;  クレカ番号・マイナンバー等をマスク&#xa;────────────&#xa;🔐 Vault: ChaCha20-Poly1305 + Argon2"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="1335" y="516" width="530" height="164" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ZONE 4: ストレージ -->
+        <!-- ========================================================== -->
+        <mxCell id="z4bg" value=""
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7b1fa2;strokeDasharray=6,4;arcSize=3;"
+          vertex="1" parent="1">
+          <mxGeometry x="20" y="707" width="1860" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="z4lbl" value="④ ストレージレイヤー — screenpipe-db / SQLite (sqlx 0.7) + FTS5 全文検索 / sqlite-vec ベクトル検索"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#7b1fa2;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="709" width="1000" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d1" value="frames&#xa;──────&#xa;id&#xa;timestamp&#xa;video_chunk_id (FK)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="733" width="188" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="ocr_text + ocr_text_fts (FTS5)&#xa;──────&#xa;frame_id (FK), text&#xa;app_name, window_name, focused&#xa;FTS5: text, app_name, window_name&#xa;トークナイザー: unicode61"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="233" y="733" width="310" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="audio_chunks + audio_transcriptions_fts (FTS5)&#xa;──────&#xa;audio_chunk_id, transcription&#xa;offset_index, timestamp, device&#xa;speaker_id (FK)&#xa;FTS5: transcription, device"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="558" y="733" width="330" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="d4" value="ui_monitoring + ui_events&#xa;──────&#xa;timestamp, app, window&#xa;text_output (A11y JSON)&#xa;ui_events: type, value, position&#xa;FTS5: text_output, app, window"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="903" y="733" width="300" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="d5" value="meetings + speakers&#xa;──────&#xa;start, end, app, title&#xa;attendees (JSON)&#xa;speakers: id, name, metadata&#xa;diarization_segments / evidence"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="1218" y="733" width="300" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="d6" value="pipe_executions + pipe_scheduler_state&#xa;──────&#xa;pipe_name, status&#xa;started_at, completed_at&#xa;last_run_at, consecutive_failures"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="1533" y="733" width="332" height="82" as="geometry" />
+        </mxCell>
+
+        <!-- Row 2: files + notes -->
+        <mxCell id="d7" value="📁 ファイルストレージ&#xa;~/.screenpipe/data/   → 動画チャンク (mp4)&#xa;~/.screenpipe/frames/ → JPEG (品質 80%)&#xa;~/.screenpipe/audio/  → 音声チャンク"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="825" width="430" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="d8" value="🔍 FTS5 全文検索&#xa;unicode61 トークナイザー&#xa;3テーブル: ocr / audio / ui&#xa;idx_frames_timestamp 等インデックス"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="475" y="825" width="290" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="d9" value="🧠 ベクトル検索&#xa;sqlite-vec 0.1.3&#xa;Speaker Embeddings&#xa;（話者識別用ベクトル）"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="780" y="825" width="245" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="d10" value="🔐 暗号化 (screenpipe-vault)&#xa;ChaCha20-Poly1305&#xa;Argon2 (キー導出)&#xa;クラウド同期 / Vault 保存時"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="1040" y="825" width="245" height="88" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ZONE 5: API -->
+        <!-- ========================================================== -->
+        <mxCell id="z5bg" value=""
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565c0;strokeDasharray=6,4;arcSize=3;"
+          vertex="1" parent="1">
+          <mxGeometry x="20" y="940" width="1860" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="z5lbl" value="⑤ API レイヤー — axum 0.7 + tower-http 0.5.2 (CORS / tracing) — localhost:3030"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#1565c0;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="942" width="800" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api1" value="REST API  (HTTP / JSON)&#xa;GET /search-content?q=&amp;content_type=&amp;limit=&amp;offset=&amp;start_time=&amp;end_time=&amp;app_name=&#xa;GET /keyword-search?q=&amp;fuzzy_match=  |  GET /activity-summary  |  GET /list-meetings  |  GET /frame-context  |  GET /search-elements&#xa;GET /search-speakers  |  GET /health  |  GET /list-monitors  |  GET /list-audio-devices&#xa;POST /pipes  |  POST /pipes/{name}/run  |  POST /export-video  |  POST /update-memory  |  POST /update-speaker  |  POST /merge-speakers"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="966" width="1060" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="api2" value="MCP サーバ (Model Context Protocol) — AIツールから直接呼び出し可能な 25+ ツール&#xa;search-content / activity-summary / keyword-search / frame-context / list-meetings / get-meeting&#xa;update-memory / update-speaker / merge-speakers / search-speakers / list-unnamed-speakers&#xa;list-pipes / create-pipe / run-pipe / pipe-logs / export-video / control-recording / send-notification&#xa;start-meeting / stop-meeting / add-tags  +  team-search (Enterprise: sk_ent_ トークン必須)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=8;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="1105" y="966" width="765" height="84" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ZONE 6: クライアント -->
+        <!-- ========================================================== -->
+        <mxCell id="z6bg" value=""
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F8E9;strokeColor=#33691e;strokeDasharray=6,4;arcSize=3;"
+          vertex="1" parent="1">
+          <mxGeometry x="20" y="1078" width="1860" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="z6lbl" value="⑥ クライアント / 活用レイヤー"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#33691e;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="1080" width="400" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cl1" value="💻 デスクトップアプリ&#xa;────────────&#xa;Tauri (Rust + TypeScript)&#xa;Next.js / React UI&#xa;specta 型安全バインディング&#xa;────────────&#xa;・過去画面・音声の検索&#xa;・タイムライン表示&#xa;・Pipe 管理 / 設定管理"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=12;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="1104" width="315" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cl2" value="🤖 AIツール連携 (MCP 経由)&#xa;────────────&#xa;・Claude Desktop&#xa;・Cursor IDE&#xa;・VS Code&#xa;────────────&#xa;AI が 25+ ツールを直接呼び出し&#xa;過去の画面・音声・操作履歴を&#xa;コンテキストとして取得"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=12;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="360" y="1104" width="315" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cl3" value="⚙️ Pipes (自動化エージェント)&#xa;────────────&#xa;配置: ~/.screenpipe/pipes/{name}/pipe.md&#xa;YAML FrontMatter:&#xa;  schedule: &quot;0 9 * * *&quot;  (cron 式)&#xa;  model: claude-opus / gpt-4o&#xa;  trigger: events / connections&#xa;────────────&#xa;PiExecutor → AI モデル&#xa;→ screenpipe API でデータ取得&#xa;→ 会議要約 / 日報 / 通知 自動送信"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontSize=12;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="690" y="1104" width="400" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cl4" value="☁️ 外部サービス連携 (Pipe からオプション)&#xa;────────────&#xa;Notion / Obsidian / Slack / Discord&#xa;Telegram / Google Calendar / GitHub&#xa;Linear / Jira / Email / Webhook&#xa;────────────&#xa;screenpipe-connect (クラウド同期)&#xa;screenpipe-sync (デバイス間暗号化同期)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#bf360c;fontSize=12;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="1110" y="1104" width="390" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cl5" value="🏢 エンタープライズ (ee/)&#xa;────────────&#xa;・ライセンス管理&#xa;・MDM 対応 (Intune / SCCM)&#xa;・管理者ポリシー強制&#xa;・SDK:&#xa;  Electron / Swift&#xa;  Node.js / Tauri&#xa;・team-search (組織横断検索)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#616161;fontSize=12;arcSize=10;align=left;"
+          vertex="1" parent="1">
+          <mxGeometry x="1520" y="1104" width="345" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ARROWS: Z1 → Z2 -->
+        <!-- ========================================================== -->
+        <mxCell id="a01" value="キャプチャ開始"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#6c8ebf;fontColor=#6c8ebf;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="t1" target="c1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a02" value="音声区間検出"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#82b366;fontColor=#82b366;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="t5" target="c4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a03" value="AXイベント"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#9673a6;fontColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="t2" target="c5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ARROWS: Z2 → Z3 -->
+        <!-- ========================================================== -->
+        <mxCell id="a11" value="JPEG スクリーンショット"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#d6b656;fontColor=#d6b656;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="c1" target="p1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a12" value="16bit PCM (16kHz)"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#82b366;fontColor=#82b366;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="c4" target="p3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a13" value="AccessibilityTreeNode[]"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#9673a6;fontColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="c5" target="p2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ARROWS: Z3 → Z4 -->
+        <!-- ========================================================== -->
+        <mxCell id="a21" value="text, app_name, window_name"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#9673a6;fontColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="p1" target="d2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a22" value="text_output (JSON), events"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#9673a6;fontColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="p2" target="d4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a23" value="transcription, speaker_id"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#82b366;fontColor=#82b366;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="p3" target="d3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a24" value="JPEG ファイル書き込み"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;strokeColor=#b85450;fontColor=#b85450;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="p1" target="d7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================================== -->
+        <!-- ARROWS: Z4 → Z5 → Z6 -->
+        <!-- ========================================================== -->
+        <mxCell id="a31" value="SQL クエリ / FTS5 検索 (sqlx 0.7)"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;fontStyle=1;strokeColor=#1565c0;fontColor=#1565c0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="z4bg" target="z5bg" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a41" value="HTTP JSON / MCP Protocol"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;fontStyle=1;strokeColor=#33691e;fontColor=#33691e;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="z5bg" target="z6bg" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

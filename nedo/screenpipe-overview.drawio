@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Claude Code" version="21.0.0">
+  <diagram name="screenpipe システム概要" id="screenpipe-overview">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ========== タイトル ========== -->
+        <mxCell id="title" value="screenpipe システム概要"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="150" y="20" width="700" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="subtitle" value="あなたが見た・聞いた・操作したすべてを記録し、AIで活用するローカルファーストのデジタルメモリシステム"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;"
+          vertex="1" parent="1">
+          <mxGeometry x="100" y="58" width="800" height="28" as="geometry" />
+        </mxCell>
+
+        <!-- ========== 層ラベル（左端） ========== -->
+        <mxCell id="lbl1" value="① キャプチャ"
+          style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontStyle=1;fontColor=#6c8ebf;"
+          vertex="1" parent="1">
+          <mxGeometry x="10" y="100" width="80" height="75" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl2" value="② 処理"
+          style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontStyle=1;fontColor=#82b366;"
+          vertex="1" parent="1">
+          <mxGeometry x="10" y="230" width="80" height="145" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl3" value="③ 保存"
+          style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontStyle=1;fontColor=#9673a6;"
+          vertex="1" parent="1">
+          <mxGeometry x="10" y="425" width="80" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl4" value="④ API"
+          style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontStyle=1;fontColor=#d79b00;"
+          vertex="1" parent="1">
+          <mxGeometry x="10" y="550" width="80" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl5" value="⑤ 活用"
+          style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontStyle=1;fontColor=#b85450;"
+          vertex="1" parent="1">
+          <mxGeometry x="10" y="675" width="80" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Layer 1: キャプチャ対象 ========== -->
+        <mxCell id="screen" value="🖥️ 画面（スクリーン）"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;arcSize=15;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="audio-in" value="🎤 音声（マイク・システム音）"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;arcSize=15;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="350" y="100" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ui-events" value="⌨️ UI操作（キー・マウス・クリップボード）"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;arcSize=15;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="300" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Arrows: Layer 1 → Layer 2 ========== -->
+        <mxCell id="a-s-ocr" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d6b656;"
+          edge="1" source="screen" target="ocr" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-au-stt" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d6b656;"
+          edge="1" source="audio-in" target="stt" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-ui-ev" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d6b656;"
+          edge="1" source="ui-events" target="ev-proc" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Layer 2: 処理エンジン ========== -->
+        <mxCell id="ocr" value="📝 テキスト抽出&#xa;OCR / アクセシビリティツリー"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="100" y="225" width="220" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="stt" value="🗣️ 音声認識（文字起こし）&#xa;Whisper（ローカル実行）"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="350" y="225" width="220" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ev-proc" value="🖱️ イベント記録&#xa;アプリ切り替え・変化検知"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="600" y="225" width="300" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- PII Filter -->
+        <mxCell id="pii" value="🛡️ 個人情報フィルタリング（PIIマスキング）&#xa;クレジットカード番号・マイナンバー等を自動マスク"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="215" y="335" width="570" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-ocr-pii" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;"
+          edge="1" source="ocr" target="pii" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-stt-pii" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;"
+          edge="1" source="stt" target="pii" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-ev-pii" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;"
+          edge="1" source="ev-proc" target="pii" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Layer 3: ストレージ ========== -->
+        <mxCell id="sqlite" value="🗄️ SQLiteデータベース&#xa;テキスト・メタデータ（全文検索対応）&#xa;~/.screenpipe/data.db"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="290" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="files" value="📁 ファイルストレージ&#xa;スクリーンショット（JPEG）・音声ファイル&#xa;~/.screenpipe/frames/ , audio/"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="430" y="440" width="470" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-pii-sq" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;"
+          edge="1" source="pii" target="sqlite" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-pii-fi" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.7;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;"
+          edge="1" source="pii" target="files" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Layer 4: API層 ========== -->
+        <mxCell id="api" value="🔗 REST API  ＋  MCPサーバ（localhost:3030）&#xa;検索・フレーム取得・音声クエリ・パイプ管理"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;arcSize=12;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="215" y="565" width="570" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-sq-api" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;"
+          edge="1" source="sqlite" target="api" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-fi-api" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;"
+          edge="1" source="files" target="api" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Layer 5: 活用層 ========== -->
+        <mxCell id="desktop" value="💻 デスクトップアプリ&#xa;・過去の画面・音声を検索&#xa;・タイムライン表示&#xa;・録画・設定管理"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="100" y="685" width="220" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ai-tools" value="🤖 AIコーディングツール連携&#xa;（MCP経由）&#xa;・Claude Desktop&#xa;・Cursor / VS Code"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="360" y="685" width="220" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pipes" value="⚙️ Pipes（自動化エージェント）&#xa;・定期的にAIが自動実行&#xa;・会議要約・日報生成&#xa;・外部サービスへ通知・連携"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="620" y="685" width="280" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-api-desk" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;"
+          edge="1" source="api" target="desktop" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-api-ai" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;"
+          edge="1" source="api" target="ai-tools" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-api-pipes" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6c8ebf;"
+          edge="1" source="api" target="pipes" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== 外部サービス ========== -->
+        <mxCell id="ext" value="☁️ 外部サービス連携（Pipesからオプションで）&#xa;Notion / Obsidian / Slack / Linear / Calendar など"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;arcSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="360" y="820" width="540" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-pipes-ext" value=""
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#b85450;"
+          edge="1" source="pipes" target="ext" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== プライバシーノート ========== -->
+        <mxCell id="privacy" value="🔒 プライバシー保護&#xa;データはすべてローカルPC内に保存&#xa;クラウド連携はオプト・イン制"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=12;fontStyle=2;"
+          vertex="1" parent="1">
+          <mxGeometry x="100" y="820" width="230" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- ========== 凡例 ========== -->
+        <mxCell id="legend-title" value="凡例"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="920" y="100" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="キャプチャ対象"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="920" y="125" width="140" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="処理コンポーネント"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="920" y="163" width="140" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="ローカルストレージ"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="920" y="201" width="140" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" value="API層"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="920" y="239" width="140" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="leg5" value="外部サービス"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;arcSize=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="920" y="277" width="140" height="28" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
