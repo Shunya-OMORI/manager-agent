@@ -1,0 +1,56 @@
+\documentclass[10pt,a4paper,dvipdfmx]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{enumitem}
+
+% カスタムコマンド
+\newcommand{\hang}[1]{\settowidth{\hangindent}{#1}#1}
+\newcounter{sentnum}
+\newcommand{\parallelitem}[2]{
+  \refstepcounter{sentnum}
+  \noindent
+  \parbox[t]{0.49\textwidth}{\hang{\thesentnum.~}#1}
+  \hfill
+  \parbox[t]{0.49\textwidth}{\hang{\thesentnum.~}#2}
+  \par
+  \vspace{\baselineskip}  % ここでブロックごとの間隔を調整
+}
+
+\title{Novel Moving Steady-State Visual Evoked Potential Stimulus to\\
+Assess Afferent and Efferent Dysfunction in Multiple Sclerosis\\[4pt]
+}
+\author{大森 俊弥}
+\date{2026/07/03}
+
+\begin{document}
+\maketitle
+
+% 第一引数に英文、第二引数に日本語訳を書く
+\parallelitem{Afferent and efferent visual dysfunction are prominent features of multiple sclerosis (MS).}{求心性および遠心性の視覚機能障害は，多発性硬化症（Multiple Sclerosis; MS）の主要な症状である．}
+
+\parallelitem{Visual outcomes have been shown to be robust biomarkers of the overall disease state.}{また，これらの視覚機能を測る指標は，MSの全般的な病態を頑健に反映するバイオマーカーであることが知られている．}
+
+\parallelitem{Unfortunately, precise measurement of afferent and efferent function is typically limited to tertiary care facilities, which have the equipment and analytical capacity to make these measurements, and even then, only a few centers can accurately quantify both afferent and efferent dysfunction.}{しかしながら，求心性および遠心性の機能を精密に測定できるのは，そのための装置と解析能力を備えた三次医療機関に限られる．さらに，そうした施設のなかでも，求心性と遠心性の両方の機能障害を正確に定量化できるのは，ごく一部にとどまる．}
+
+\parallelitem{These measurements are currently unavailable in acute care facilities (ER, hospital floors).}{救急外来や一般病棟といった急性期医療の現場において，これらの測定は現時点で実施できない．}
+
+\parallelitem{We aimed to develop a moving multifocal steady-state visual evoked potential (mfSSVEP) stimulus to simultaneously assess afferent and efferent dysfunction in MS for application on a mobile platform.}{そこで本論文では，モバイル環境での利用に向けて，MSの求心性および遠心性の機能障害を同時に評価するための移動視覚刺激の開発を目指した．この刺激は，多焦点定常状態視覚誘発電位（multifocal steady-state visual evoked potential; mfSSVEP）を誘発する．}
+
+\parallelitem{The brain-computer interface (BCI) platform consists of a head-mounted virtual reality headset with electroencephalogram (EEG) and electrooculogram (EOG) sensors.}{このブレイン・コンピュータ・インタフェース（Brain-Computer Interface; BCI）プラットフォームは，脳波（Electroencephalogram; EEG）センサと眼電図（Electrooculogram; EOG）センサを備えた，頭部装着型のバーチャルリアリティ（Virtual Reality; VR）ヘッドセットで構成される．}
+
+\parallelitem{To evaluate the platform, we recruited consecutive patients who met the 2017 MS McDonald diagnostic criteria and healthy controls for a pilot cross-sectional study.}{このプラットフォームを評価するパイロット横断研究において，2017年版マクドナルド診断基準を満たすMS患者を，該当者から漏れなく連続して募集した．比較のための健常対照者も募集した．}
+
+\parallelitem{Nine MS patients (mean age 32.7 years, SD 4.33) and ten healthy controls (24.9 years, SD 7.2) completed the research protocol.}{研究プロトコルを完了したのは，MS患者9名（平均年齢32.7歳，標準偏差4.33）と健常対照者10名（平均年齢24.9歳，標準偏差7.2）であった．}
+
+\parallelitem{The afferent measures based on mfSSVEPs showed a significant difference between the groups (signal-to-noise ratio of mfSSVEPs for controls: $2.50 \pm 0.72$ vs. MS: $2.04 \pm 0.47$) after controlling for age ($p = 0.049$).}{mfSSVEPに基づく求心性機能の指標は，年齢を調整した解析においても，両群間で有意に異なった（mfSSVEPの信号対雑音比は，対照群とMS患者群でそれぞれ$2.50 \pm 0.72$，$2.04 \pm 0.47$，$p = 0.049$）．}
+
+\parallelitem{In addition, the moving stimulus successfully induced smooth pursuit movement that can be measured by the EOG signals.}{また，移動刺激は，EOG信号によって測定できる滑動性追従眼球運動を誘発した．}
+
+\parallelitem{There was a trend for worse smooth pursuit tracking in cases vs.\ controls, but this did not reach nominal statistical significance in this small pilot sample.}{MS患者群では，対照群に比べて，移動する標的をなめらかに追従できない傾向がみられたものの，今回の小規模なパイロット標本では，統計的に有意な差は認められなかった．}
+
+\parallelitem{This study introduces a novel moving mfSSVEP stimulus for a BCI platform to evaluate neurologic visual function.}{本論文は，神経学的な視覚機能を評価するBCIプラットフォーム向けに，mfSSVEPを誘発する新規の移動視覚刺激を提案した．}
+
+\parallelitem{The moving stimulus showed a reliable capability to assess both afferent and efferent visual functions simultaneously.}{この移動刺激により，求心性と遠心性の視覚機能を同時に，かつ信頼性高く評価できることを示した．}
+
+\end{document}

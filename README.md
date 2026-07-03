@@ -55,6 +55,9 @@ tuat-master-exam/
   logs/                       # 作業ログ
   status.md                   # 現在状態
 
+output/
+  <project>/                  # LaTeX プロジェクト（main.tex, latexmkrc, build.ps1）
+
 scripts/
   pdf_to_markdown.py          # PDF の読み順版、レイアウト版、メタデータを抽出
 ```
@@ -98,6 +101,34 @@ python3 scripts/pdf_to_markdown.py \
 ```
 
 スクリプトの出力は未検証の下書きです。二段組み、数式、表、図キャプション、参考文献、数値をPDFと照合してから、全文和訳や要約を作成します。
+
+## LaTeX Compilation
+
+`output/<project>/` の日本語 LaTeX プロジェクト（jsarticle など）をコンパイルする環境と手順です。
+
+### 環境
+
+- **ディストリビューション**: MiKTeX（ユーザーインストール）。未導入なら `winget install MiKTeX.MiKTeX --scope user` で入れる。パッケージ自動インストールは有効化済み（`initexmf --set-config-value "[MPM]AutoInstall=1"`）。
+- **エンジンは uplatex を使う**。`platex` は使えない: MiKTeX の日本語エンジン実体は euptex 系で、`platex` フォーマットのビルドが `platex: cannot be built by euptex` で失敗するため。uplatex は euptex と一致して動作し、jsarticle + UTF-8 をそのまま扱える（出力は platex と同等）。
+- 旧 `C:\texlive` はコアエンジン欠落の壊れた残骸。使わない。
+
+### ビルド手順
+
+各プロジェクトに置いた `build.ps1`（**Perl 不要**、uplatex を 2 回 → dvipdfmx を直接実行）を使う。
+
+```powershell
+# プロジェクトフォルダ内で
+powershell -ExecutionPolicy Bypass -File build.ps1            # main.tex をビルドして main.pdf を生成
+powershell -ExecutionPolicy Bypass -File build.ps1 -Clean     # 中間ファイル（aux, log, dvi 等）を削除
+powershell -ExecutionPolicy Bypass -File build.ps1 -File foo   # foo.tex をビルド
+```
+
+`latexmkrc` も uplatex 構成にしてある（`$latex = 'uplatex'; $bibtex = 'upbibtex'; $dvipdf = 'dvipdfmx ...'; $pdf_mode = 3`）。`latexmk main.tex` を使いたい場合のみ Perl（Strawberry Perl 等）を別途入れる。Perl 依存を避けたい通常運用では `build.ps1` を正とする。
+
+### 注意点
+
+- **ビルド前に PDF ビューア/IDE のプレビューを閉じる**。`main.pdf` を開いたままだと dvipdfmx が上書きできず `Unable to open "main.pdf"` で失敗する。
+- 新しい LaTeX プロジェクトを `output/` に作るときは、既存プロジェクトの `latexmkrc` と `build.ps1` をコピーして流用する。`build.ps1` は BOM 付き UTF-8 で保存する（Windows PowerShell 5.1 が日本語コメントを誤読しないため）。
 
 ## Handoff To User
 
