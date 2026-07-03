@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.02-251130-2.6 (utf8.uptex) (MiKTeX 25.12) (preloaded format=uplatex 2026.7.3)  3 JUL 2026 16:03
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.02-251130-2.6 (utf8.uptex) (MiKTeX 25.12) (preloaded format=uplatex 2026.7.3)  3 JUL 2026 16:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -225,10 +225,10 @@ L3 programming layer <2025-12-24>
 Here is how much of TeX's memory you used:
  2047 strings out of 468509
  33800 string characters out of 5431495
- 457878 words of memory out of 5000000
+ 456878 words of memory out of 5000000
  30961 multiletter control sequences out of 15000+600000
  635079 words of font info for 79 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 57i,6n,65p,707b,243s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,695b,243s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (2 pages, 8220 bytes).
+Output written on main.dvi (2 pages, 8212 bytes).
