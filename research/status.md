@@ -4,6 +4,27 @@ Status: waiting-user
 
 ## Current State
 
+2026-07-21、**卒業研究の最終テーマを「ミリ波を用いたイヌの RR Interval 推定」に確定した。**
+これに伴い、ユーザ依頼で `research/` 以下の旧テーマ案と完了タスクの成果物を
+`research/archive/` へ移した。移動したのは
+`dog-human-comm/`、`drafts/journal-club/`、`drafts/journal-club-presentation/`、
+`paper_candidates/`、`paper_explore/` である。
+各案の却下理由は [archive/README.md](archive/README.md) の表にまとめた。
+
+現行の作業場所は [dog-mmwave-rri/](dog-mmwave-rri/) である。
+テーマの直系である `先行研究調査_ミリ波の変位推定.md` はアーカイブせず、
+同ディレクトリへ引き継いだ。引き継ぐ論点と未確定事項は
+[dog-mmwave-rri/README.md](dog-mmwave-rri/README.md) に記した。
+
+アーカイブしなかったものは次のとおりである。
+`research/idea.md`（エージェント動作を ERP で最適化する旧案）と
+`research/テーマ決め注意点.txt` は、ユーザの選択に含まれなかったため現状のまま残した。
+`research/drafts/2026-07-03_moving-mfssvep-ms_abstract-ja.md` は、
+対応する `output/moving-mfssvep-ms_日本語ゼミ/` が直近のコミットで更新されており
+作業が継続中とみられるため、`drafts/` に残した。
+
+以下は最終テーマ確定までの経緯である。**記録として残すが、現行の作業指示ではない。**
+
 2026-07-15、卒業研究のテーマ検討を `research/dog-human-comm/` で開始した。
 教授の指示（ミリ波・加速度・光センサでイヌの心拍を測り、ヒトとイヌの
 コミュニケーションを革新する）に対し、「要求とは、恒常性を回復させる介入である」
@@ -545,6 +566,18 @@ Slide 6のBioSemi ActiveTwoに関する説明は，無理な逆接ではなく�
 
 ## Next Action
 
+アーカイブ後の構成をユーザが確認する。特に、`research/idea.md` と
+`research/テーマ決め注意点.txt` もアーカイブへ移すか、
+`research/drafts/2026-07-03_moving-mfssvep-ms_abstract-ja.md` を
+日本語ゼミの作業継続分として `drafts/` に残すかを判断対象とする。
+確認後、`research/dog-mmwave-rri/README.md` の未確定事項
+（RR Interval の正解を取る接触センサ、対象とする行動条件、
+研究室が保有するミリ波レーダの周波数帯）から検討を再開する。
+
+以下は雑誌会の発表準備に関する記録であり、
+対応する資料は `research/archive/journal-club-presentation/` へ移した。
+**現行の作業指示ではない。**
+
 再構成した
 `research/drafts/journal-club-presentation/2026-06-25_moving-mfssvep-ms_slide-script-rebuild.md`を
 ユーザが確認する。特に，Slide 2が先輩資料の概要ページと同じ粒度で，
@@ -614,10 +647,17 @@ Slide 3の表示文では主語を「視覚機能の評価」とし，
 
 ## Blockers
 
-- 再構成後の表示文，セリフ，図の配置方針について，ユーザの確認が必要。
-- 発表日が未確認。
+- アーカイブ範囲について、`research/idea.md` と `research/テーマ決め注意点.txt` の
+  扱いをユーザが判断する必要がある。
+- ミリ波レーダの保有機材と、RR Interval の正解を取る接触センサが未確認。
+- （アーカイブ済み・雑誌会）再構成後の表示文，セリフ，図の配置方針について，ユーザの確認が必要。
+- （アーカイブ済み・雑誌会）発表日が未確認。
 
 ## Latest Outputs
+
+2026-07-21 のアーカイブにより、以下の `research/drafts/journal-club*/` は
+すべて `research/archive/journal-club/` と
+`research/archive/journal-club-presentation/` へ移動した。
 
 - `research/drafts/journal-club/eeg-glasses_original.md`
 - `research/drafts/journal-club/eeg-glasses_layout.txt`
@@ -640,11 +680,12 @@ Slide 3の表示文では主語を「視覚機能の評価」とし，
 
 ## Key Files
 
-- 卒業研究テーマ検討: `research/dog-human-comm/`（`README.md`, `初期案.md`,
-  `論点1_回復の定義.md`, `公開データセット調査.md`）
-- Task: `tasks/active/journal-paper-selection.md`
+- 卒業研究（現行）: `research/dog-mmwave-rri/`（`README.md`,
+  `先行研究調査_ミリ波の変位推定.md`）
+- アーカイブの索引: `research/archive/README.md`
 - Context: `research/context/source_files.md`
-- Candidate URLs: `research/paper_candidates/urls.md`
+- Task（完了）: `tasks/active/journal-paper-selection.md`
+- Candidate URLs（アーカイブ済み）: `research/archive/paper_candidates/urls.md`
 - PDF workflow: `workflows/pdf-to-markdown.md`
 - PDF extraction script: `scripts/pdf_to_markdown.py`
 - Logs: `research/logs/`
