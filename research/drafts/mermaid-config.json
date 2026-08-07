@@ -1,0 +1,18 @@
+{
+  "theme": "default",
+  "themeVariables": {
+    "fontSize": "30px",
+    "primaryColor": "#e8eefd",
+    "primaryBorderColor": "#2f6fed",
+    "primaryTextColor": "#151a21",
+    "lineColor": "#5f6b7a",
+    "clusterBkg": "#fbfcfd",
+    "clusterBorder": "#b9c2cf"
+  },
+  "flowchart": {
+    "nodeSpacing": 45,
+    "rankSpacing": 70,
+    "padding": 16,
+    "htmlLabels": true
+  }
+}

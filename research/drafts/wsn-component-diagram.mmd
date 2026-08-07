@@ -1,0 +1,42 @@
+flowchart LR
+    subgraph TC["🧪 (4) Test Component"]
+        direction TB
+        E2E["🎭 E2E Test<br/>(Playwright)"]
+    end
+
+    subgraph SC["🎮 (2) Scene / Interaction"]
+        direction TB
+        LOADER["🗺️ World<br/>GLB Loader"]
+        SIM["🖱️ useSimulator<br/>click / hover<br/>render loop"]
+        LOADER --> SIM
+    end
+
+    subgraph CC["🧠 (1) Core Component"]
+        direction TB
+        CONFIG["⚙️ Sensor Profiles<br/>(config/)"]
+        PHYS["📡 Physics<br/>Link Budget / Weather<br/>Diffraction"]
+        STATE["🌐 State<br/>(nodes / links / packets)"]
+        ROUTE["🔀 Routing<br/>BFS Routing Tree"]
+        PACK["📦 Packets<br/>Flood / Random Traffic"]
+        CONFIG --> STATE
+        PHYS --> STATE
+        STATE --> ROUTE
+        ROUTE --> STATE
+        STATE --> PACK
+        PACK --> STATE
+        ROUTE ~~~ PACK
+    end
+
+    subgraph VC["👁️ (3) UI Component"]
+        direction TB
+        HUD["🎛️ Hud<br/>ControlsPanel"]
+        LIST["📋 NodeList<br/>Tooltip"]
+        LOGP["🪵 LogPanel"]
+        HUD ~~~ LIST
+        LIST ~~~ LOGP
+    end
+
+    TC -->|"E2E Test"| VC
+    TC -.->|"Core Unit Test<br/>（未実装）"| CC
+    SC ==>|"Node 配置<br/>click-to-place"| CC
+    CC ==>|"Network Status"| VC

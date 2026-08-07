@@ -1,0 +1,20 @@
+Title:           Convex Quaternion Optimization for Signal Processing: Theory and Applications
+Subject:         IEEE Transactions on Signal Processing;2023;71; ;10.1109/TSP.2023.3328053
+Creator:         LaTeX with hyperref
+Producer:        Adobe LiveCycle PDF Generator; modified using iText® Core 7.2.4 (AGPL version) ©2000-2022 iText Group NV
+CreationDate:    Thu Nov  9 21:40:43 2023 ���� (�W����)
+ModDate:         Tue Nov 14 08:27:52 2023 ���� (�W����)
+Custom Metadata: yes
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           10
+Encrypted:       no
+Page size:       594 x 792 pts
+Page rot:        0
+File size:       901662 bytes
+Optimized:       no
+PDF version:     1.7

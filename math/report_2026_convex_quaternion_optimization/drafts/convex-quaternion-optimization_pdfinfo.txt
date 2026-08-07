@@ -1,0 +1,22 @@
+Title:           
+Subject:         
+Keywords:        
+Author:          
+Creator:         LaTeX with hyperref
+Producer:        dvips + GPL Ghostscript GIT PRERELEASE 9.22
+CreationDate:    Fri May 12 09:33:31 2023 ���� (�W����)
+ModDate:         Fri May 12 09:33:31 2023 ���� (�W����)
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           11
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       273997 bytes
+Optimized:       no
+PDF version:     1.4

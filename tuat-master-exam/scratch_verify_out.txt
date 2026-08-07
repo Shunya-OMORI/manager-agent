@@ -1,0 +1,4 @@
+actual on-disk name: '平成6蟷ｴ蠎ｦ驕主悉蝠柔蟆る摩遘醍岼縲\x80隗｣隱ｬ.pdf'
+segment='驕主悉蝠柔蟆る摩遘醍岼縲\x80'
+segment decoded='過去問_専門科目\u3000'
+segment+tail decoded='過去問_専門科目\u3000解説.pdf'

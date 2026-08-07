@@ -1,0 +1,972 @@
+                                                                                                                                                                                                                                                       1
+
+                                         Convex Quaternion Optimization for Signal
+                                              Processing: Theory and Applications
+
+                                         Shuning Sun, Qiankun Diao, Dongpo Xu, Pauline Bourigault and Danilo P. Mandic, Fellow, IEEE
+
+arXiv:2305.06879v1 [math.OC] 9 May 2023     Abstract—Convex optimization methods have been extensively                  The theory of real-valued and complex-valued convex opti-
+                                         used in the ﬁelds of communications and signal processing.                  mization is well-established and has seen widely used in the
+                                         However, the theory of quaternion optimization is currently not             areas of communications [15], machine learning [16–18] and
+                                         as fully developed and systematic as that of complex and real               signal processing [19–21]. In recent years, convex quaternion
+                                         optimization. To this end, we establish an essential theory of              optimization has also attracted interest. For example, Qi et
+                                         convex quaternion optimization for signal processing based on               al. [2] studied ﬁrst-order derivatives and second-order partial
+                                         the generalized Hamilton-real (GHR) calculus. This is achieved              derivatives of real-valued functions of quaternion variables
+                                         in a way which conforms with traditional complex and real                   over their real and imaginary i, j, k parts. However, this
+                                         optimization theory. For rigorous, We present ﬁve discriminant              complicates the proof and computational process in quaternion
+                                         theorems for convex quaternion functions, and four discriminant             optimization. Flamant et al. [22] and Liu et al. [23] provided
+                                         criteria for strongly convex quaternion functions. Furthermore,             ﬁrst-order characterization of quaternion functions by general-
+                                         we provide a fundamental theorem for the optimality of convex               ized Hamilton-real (GHR) calculus [24]. However, these useful
+                                         quaternion optimization problems, and demonstrate its utility               attempts lack the discussion of gradient monotonicity and
+                                         through three applications in quaternion signal processing. These           second-order characterization for convex quaternion function,
+                                         results provide a solid theoretical foundation for convex quater-           a pre-requisite for practical applications.
+                                         nion optimization and open avenues for further developments in
+                                         signal processing applications.                                                To ﬁll this void, we have systematically address the the-
+                                                                                                                     ory of convex optimization in the quaternion domain. For
+                                            Keywords—Convex quaternion functions, strongly convex                    rigorous, this is achieved based on the GHR calculus [24], a
+                                         quaternion functions, convex quaternion optimization, quater-               generalization of Wirtinger-calculus [25–27] from the complex
+                                         nion signal processing.                                                     domain to the quaternion ﬁeld. Before the introduction of
+                                                                                                                     the GHR calculus, the quaternion pseudo-derivative was used
+                                                                   I. INTRODUCTION                                   for calculating the gradient, which transforms the quaternion
+                                                                                                                     optimization problem into a lengthy and complicated real
+                                         Q UATERNIONS were ﬁrst introduced by William Hamil-                         optimization problem; the solution is then found by using
+                                                ton in 1843 as an associative but non-commutative alge-              real-valued optimization algorithms [28, 29]. Flamant et al.
+                                         bra over the real numbers [1]. Since then, they have become                 [5, 22] demostrated that the GHR calculus is a powerful
+                                         a powerful tool in many ﬁelds, including image processing                   theory in quaternion signal processing and non-negative matrix
+                                         [2, 3], signal processing [4–6], and machine learning [7–9].                factorization. Mengu¨c¸ et al. [12, 30] established that the GHR
+                                         Examples include the work by Jia et al. [3], who introduced                 calculus paves the way for the theory and applications of
+                                         a robust method for quaternion matrix completion, that can                  quaternion-valued adaptive ﬁlters. Took and Xia [31] proposed
+                                         be used to reconstruct large-scale color images. Flamant et                 a multichannel quaternion least-mean-square based on the
+                                         al. [10] demonstrated the efﬁciency of Quaternion Fourier                   GHR calculus for the adaptive ﬁltering. Parcollet et al. [32]
+                                         Transform (QFT) in processing bivariate signals. Ogunfunmi                  further emphasized the signiﬁcance of the GHR calculus as a
+                                         et al. [11] presented a kernel adaptive ﬁlter for quaternion                recent breakthrough in the ﬁeld.
+                                         data. Moreover, Mengu¨c¸ et al. [12] designed quaternion-valued
+                                         second-order Volterra adaptive ﬁlters for nonlinear 3-D and 4-              The theory of convex optimization in the quaternion ﬁeld
+                                         D signal processing. Xia et al. [13] established an estimation
+                                         framework for processing quaternion-valued Gaussian data.                   has gained attention due to its promising applications in signal
+                                         Finally, Zhang et al. [7] discussed a new method for reducing
+                                         the computation cost of quaternion signal estimation. Enshaei-              processing and optimization. The aim of this work is to
+                                         far et al. [14] introduced quaternion-valued singular spectrum
+                                         analysis for multichannel electroencephalogram analysis.                    develop the convexity theory of quaternion function using the
+
+                                            This work was funded in part by the National Natural Science Foundation  GHR calculus [24]. To this end, we make use of the duality of
+                                         of China (No. 62176051), in part by National Key R&D Program of China       the augmented quaternion vector qH qT, qiT, qjT, qkT T
+                                         (No. 2021YFA1003400), and in part by the Fundamental Research Funds
+                                         for the Central Universities of China (No. 2412020FZ024). (Corresponding    and the augmented real vector qR  qaT, qbT, qcT, qdT T
+                                         author: Dongpo Xu)
+                                                                                                                     [33]. Next, we employ the relationships between augmented
+                                            Shuning Sun, Qiankun Diao and Dongpo Xu are with the Key Labo-
+                                         ratory for Applied Statistics of MOE, School of Mathematics and Statis-     quaternion gradient and augmented real gradient, as well
+                                         tics, Northeast Normal University, Changchun, 130024, China. (e-mail:
+                                         xudp100@nenu.edu.cn)                                                        as between the augmented quaternion Hessian matrix and
+
+                                            Pauline Bourigault and Danilo P. Mandic are with the Department of       augmented real Hessian matrix, as shown in [33]. Based on
+                                         Electrical and Electronic Engineering, Imperial College London, London SW7
+                                         2AZ, UK. (e-mail: d.mandic@imperial.ac.uk)                                  these results, we extend the discriminant criteria for convexity
+
+                                                                                                                     from the real ﬁeld to the augmented quaternion space, H, and
+                                                                                                                                                    2
+
+then to the quaternion ﬁeld Hn, as illustrated in Figure 1.                 of a quaternion is deﬁned as | q |= √qq∗. Deﬁne also qµ, as
+Moreover, we deﬁne and present four discriminant theorems                   it is used in Deﬁnition 2.1.
+for strong convexity, by employing the discriminant criteria of
+convex quaternion functions. Finally, we present a fundamental                 Deﬁnition 2.1 (Quaternion rotation [34]): For any quater-
+theorem for the optimality of convex quaternion problems                    nion, q, and a nonzero quaternion µ, the transformation
+and provide three illustrative applications in the ﬁeld of
+signal processing, including quaternion linear mean-square                                                     qµ µqµ−1                             (2)
+error ﬁlter, quaternion projection on afﬁne equality constraint,
+and quaternion minimum variance beamforming.                                describes a rotation of q.
+                                                                               In particular, if µ in (2) is a pure unit quaternion, then the
+
+                                                                            quaternion rotation in (2) becomes quaternion involution [35],
+                                                                            such as
+
+   (20)(26)(27)     (23)(25)                                                                     qi = −iqi = qa + iqb − jqc − kqd,                  (3)
+                                        Hn
+R                H
+
+                                                                                                 qj = −jqj = qa − iqb + jqc − kqd,                  (4)
+
+                                                                                                 qk = −kqk = qa − iqb − jqc + kqd.                  (5)
+
+Fig. 1. The derivation process of quaternion optimization theory, with the     Property 2.1 (Properties of quaternion rotation [36]): For
+sets R and H deﬁned by (18), (19).                                          any p, q ∈ H, and ∀ν, µ ∈ H, the following holds
+
+   This work makes three signiﬁcant contributions to the theory                                     (pq)µ = pµqµ, qµν = (qν )µ ,                    (6)
+of convex optimization in the quaternion ﬁeld:                                                      qµ∗ (q∗)µ = (qµ)∗ q∗µ.
+
+   • By using the GHR calculus, we establish ﬁve discrim-                   B. The GHR Calculus
+      inant theorems for convex functions in the quaternion
+      ﬁeld. These theorems include gradient monotonicity and                   Deﬁnition 2.2 (Real-differentiability [37]): A quaternion
+      second-order characterization.                                        function f : H → H, given by f (q) = fa (qa, qb, qc, qd) +
+                                                                            ifb (qa, qb, qc, qd) + jfc (qa, qb, qc, qd) + kfd (qa, qb, qc, qd) is
+   • We provide a clear deﬁnition and four discriminant                     called real differentiable, if fa, fb, fc, fd are differentiable as
+      criteria for strongly convex functions in the quaternion              functions of the real variables qa, qb, qc, qd.
+      ﬁeld; these are consistent with their counterpart real and
+      complex convexity theorems.                                              Deﬁnition 2.3 (GHR derivatives [24]): If f : H → H is real-
+
+   • A fundamental theorem is proposed for the optimality of                differentiable, then the left GHR derivatives of the function f
+      convex quaternion problems, together with some practical              with respect to qµ and qµ∗ (µ = 0, µ ∈ H) are deﬁned as
+      applications of convex quaternion optimization in com-
+      munications and signal processing.                                         ∂f 1               ∂f − ∂f iµ − ∂f jµ − ∂f kµ            ∈ H,      (7)
+                                                                                 ∂qµ = 4            ∂qa ∂qb              ∂qc       ∂qd
+   This paper is organized as follows. In Section II, we
+give an overview of quaternion algebra, the GHR calculus,                    ∂f 1                   ∂f      +  ∂f iµ  +  ∂f jµ  +  ∂f kµ  ∈ H,      (8)
+and some equivalence relationships. Section III presents ﬁve                ∂qµ∗ = 4                ∂qa        ∂qb       ∂qc       ∂qd
+discriminant theorems for convex quaternion functions, cover-
+ing ﬁrst-order characterization, second-order characterization              where q = qa + qbi + qcj + qdk, qa, qb, qc, qd ∈ R, and
+and some examples of convex quaternion functions. Section                   ∂f      ∂f      ∂f      ∂f
+IV introduces the deﬁnition and discriminant theorems for                   ∂qa  ,  ∂qb  ,  ∂qc  ,  ∂qd  ∈ R are the partial derivatives of f   with
+strongly convex quaternion functions. In Section V, we propose
+a fundamental theorem for convex quaternion optimization                    respect to qa, qb, qc, qd.
+problems and provide three practical applications in signal
+processing. Finally, this paper concludes with Section VI.                  Property 2.2 (Properties of the GHR derivatives [24]): If
+
+                                                                            f : H → H, g : H → H, then
+
+                                                                            Product rule:
+
+                                                                            ∂(f g)       =  f    ∂g      +   ∂f       ∂(f g)        ∂g        ∂f    (9)
+                                                                             ∂qµ                 ∂qµ        ∂qgµ g,   ∂ q µ∗  = f ∂qµ∗   + ∂qgµ∗ g
+
+                         II. PRELIMINARIES                                  Chain rule:
+A. Quaternion Algebra
+                                                                                                    ∂f (g(q))                 ∂f ∂gν                (10)
+   A quaternion, q, can be expressed as                                                                ∂qµ =                  ∂gν ∂qµ ,
+
+                                                                                                               ν∈{1,i,j,k}
+
+   q = qa + qbi + qcj + qdk,                (1)                                                     ∂f (g(q))                 ∂f ∂gν∗
+
+where qa, qb, qc, qd ∈ R, and the imaginary units i, j and k                                        ∂qµ∗ =                    ∂gν∗ ∂qµ∗             (11)
+satisfy i2 = j2 = k2 = ijk = −1, ij = −ji = k, jk =
+−kj = i, ki = −ik = j. The set of quaternions is deﬁned as                                                     ν∈{1,i,j,k}
+H {q = qa + qbi + qcj + qdk | qa, qb, qc, qd ∈ R}. Owing
+                                                                            Rotation rule:
+to the properties of the imaginary units, the multiplication of
+                                                                                               ∂f ν ∂fν                  ∂f ν ∂fν
+two quaternions in H is noncommutative. The real part of q                                  ∂qµ = ∂qνµ ,                 ∂qµ∗ = ∂qνµ∗               (12)
+is denoted by Re {q} = qa, whereas the imaginary part (pure
+quaternion) is Im {q} = qbi + qcj + qdk. The conjugate of q                 Conjugate rule: If f : H → R,
+is q∗ = Re {q} − Im {q} = qa − qbi − qcj − qdk. The modulus
+                                                                                                 ∂f ∗ ∂f                 ∂f ∗ ∂f
+                                                                                                 ∂qµ = ∂qµ∗ ,            ∂qµ∗ = ∂qµ .               (13)
+                                                                                                                                                    3
+
+   Deﬁnition 2.4 (Quaternion gradient [33]): The quaternion            and JnHJn = 4I4n, while In is the n × n identity matrix, with
+gradient and its conjugate gradient of a function f : Hn → R           JnH as the conjugate transpose of Jn.
+
+are deﬁned as                                                             From (20), the quaternion function f (q) : Hn → R can be
+                                                                       viewed in three equivalent forms [33], as follows
+                 ∂f T        ∂f , . . ., ∂f          T
+   ∇q f                  =   ∂q1              ∂qn                (14)            f (q) ⇔ f (qR) f (qa, qb, qc, qd)
+                 ∂q                                    ∈ Hn,                               ⇔ f (qH) f q, qi, qj, qk .
+
+                                                                                                                                              (22)
+
+   ∇q∗ f         ∂f T             ∂f             ∂f     T
+                 ∂q∗ =       ∂q1∗ , . . . , ∂qn∗                 (15)
+                                                          ∈ Hn,        Note that these three functions are equivalent but have different
+
+             T                                                         forms, denoted as f for simplicity. Here, the variables of the
+
+where  ∂f       is  the   transpose  of  ∂f   .                        functions f (q), f (qR), and f (qH) are quaternion vectors,
+       ∂q                                ∂q                            augmented real vectors, and augmented quaternion vectors,
+
+Deﬁnition 2.5 (Quaternion Hessian [33]): Let f : Hn → R,               respectively. They are referred to as quaternion function,
+
+then the two quaternion Hessian matrices are deﬁned as                 augmented real function, and augmented quaternion function,
+
+   Hqq       ∂ ∂f T                                                    respectively. For f (qR) : R → R, its augmented real gradient
+             ∂q ∂q                                                                                         T
+                                                                       is deﬁned as ∇Rf            ∂f
+                                                                                                  ∂qR        and the augmented real Hessian
+
+              ∂2f · · · ∂2f                                          matrix as HRR              ∂     ∂f     T
+              ∂q1∂q1                 ∂qn∂q1                                                   ∂qR    ∂qR
+                                                                                                                . For f (qH) : H → R, the
+
+                    ...     ...         ...                          augmented quaternion gradient and its conjugate gradient are
+          =                                        ∈ Hn×n, (16)
+                                                                      deﬁned as [39]
+             
+
+                   ∂2f      ···         ∂2f       
+                                                  
+
+                 ∂q1∂qn               ∂qn∂qn                                                          ∂f       T      ∇qf     
+                                                                                                     ∂qH             ∇qi f
+             ∂ ∂f T                                                                    ∇Hf                        =  ∇qj f     ,           (23)
+             ∂q ∂q∗                                                                                                            
+                                                                                                                               
+
+H qq∗                                                                                                                ∇qk f
+
+              ∂2f                      ∂2f                                                                   T      ∇q∗ f 
+              ∂q1∂q1∗                ∂qn∂q1∗ 
+                             ···                                                    ∇H∗ f             ∂f          =   ∇q i∗  f     ,        (24)
+                                                                                                     ∂ qH∗           ∇qj∗   f  
+                    ...     ...         ...                                                                                    
+                                                      ∈ Hn×n. (17)
+          =                                                                                                        ∇qk∗ f
+             
+
+                   ∂2f      ···         ∂2f                          and the augmented quaternion Hessian matrix is deﬁned as
+                                                    
+
+                    ∂q1∂qn∗           ∂qn∂qn∗                                          ∂        ∂f T
+
+C. The Relationship of Augmented Quaternion and the Aug-               H HH∗        ∂qH ∂qH∗                                                  (25)
+
+mented Real Vector, Gradient, and Hessian Matrix                                     Hqq∗ Hqiq∗                     H qj q∗      Hqkq∗ 
+                                                                                                                     H qj qi∗
+Consider a quaternion vector q = qa +qbi+qcj +qdk ∈ Hn                           =        H qqi∗    H qiqi∗         H qjqj∗      H qkqi∗       .
+                                                                                          H qqj∗    H qiqj∗         H qjqk∗      H qkqj∗     
+
+where qa, qb, qc, qd ∈ Rn. Deﬁne its augmented real vector                                                                                   
+
+as qR qaT, qbT, qcT, qdT T ∈ R [4, 38] and the augmented                                   H H qqk∗        qiqk∗                  H qkqk∗
+
+quaternion vector as qH           qT, qiT, qjT, qkT T ∈ H [33],           Proposition 2.2 ([39]): The relationship between the aug-
+
+where the set of augmented real vectors and the set of                 mented quaternion gradient, ∇H∗ f , and the augmented real
+                                                                       gradient, ∇Rf , is given by
+augmented quaternion vectors are deﬁned as
+
+R         qR = qaT, qbT, qcT, qdT T | q ∈ Hn = R4n,              (18)  ∇H∗ f        =  1  Jn  ∇R  f        ⇔      ∇Rf = JnH∇H∗ f.             (26)
+                                                                                       4
+          qH = qT, qiT, qjT, qkT T | q ∈ Hn ⊂ H4n. (19)
+H                                                                         Proposition 2.3 ([33]): The relationship between the aug-
+                                                                       mented quaternion Hessian matrix, HHH∗, and the augmented
+By deﬁnition, there exists a one-to-one mapping between Hn,            real Hessian matrix, HRR, is given by
+R and H [22].
+                                                                       H HH∗     =  1   Jn  H   RR   JnH   ⇔      HRR = JnHHHH∗ Jn            (27)
+   Proposition 2.1 ([33]): The relationship between the aug-                        16
+mented quaternion vector, qH, and the augmented real vector,
+qR, is given by                                                        where HHH∗            ∂      ∂f     T                ∂         ∂f  T
+                                                                                           ∂qH     ∂ qH ∗                 ∂qR        ∂qR
+                                                 1                                                          , HRR                          .
+                                                 4
+             qH = JnqR       ⇔           qR   =      JnH qH ,    (20)  Corollary 2.1: The augmented quaternion Hessian matrix,
+
+where                                                                  HHH∗ , is a Hermite matrix, that is
+
+           In iIn jIn kIn                                                                     H    H      =  HHH∗ ,                         (28)
+                                                                                                     HH∗
+
+Jn     =    In      iIn     −jIn        −kIn       ∈  H4n×4n,  (21)  where  H  H     is  the  conjugate      transpose  of   HHH∗ .
+            In     −iIn      jIn        −kIn                                   HH∗
+
+                                                                     Proof: This is straightforward to demonstrate by using
+
+             In −iIn −jIn kIn                                          (27) and the fact that HRR is a Hermitian matrix.
+                                                                                                                                4
+
+   Proposition 2.4: For any p, q ∈ Hn, their augmented real                  (b) ∇Rf (pR)T∇Rf (qR) = ∇Rf (pR)H ∇Rf (qR)
+vectors are pR, qR ∈ R, and their augmented quaternion
+vectors are pH, qH ∈ H. Then                                                     (=26) ∇H∗ f (pH)H JnJnH∇H∗ f (qH)
+                                                                                 = 4∇H∗ f (pH)H ∇H∗ f (qH)
+
+(a) pTHqH = 4Re pTq ;                                                  (29)      =4                     ∇p∗ f (p)µH ∇q∗ f (q)µ (41)
+
+(b) 4pRT qR = pHH qH = 4Re pHq ;                                       (30)              µ∈{1,i,j,k}
+
+(c) 2 pR 2 = pH 2 = 2 p 2;                                             (31)      (=6) 4                 ∇p∗ f (p)H ∇q∗ f (q) µ
+
+(d)    p+q       2  =      p     2  +   2Re     pHq      +      q 22.  (32)              µ∈{1,i,j,k}
+                 2               2
+                                                                                 (=20) 16Re ∇p∗ f (p)H ∇q∗ f (q) ;
+
+Proof: By the relationship of q, qR, and qH, we have                         (c) Let q = p in (38).
+
+                                                                             This completes the proof.
+
+(a) pHT qH =                     pµTqµ (=6)                     pTq µ                III. DISCRIMINANT THEOREMS FOR CONVEX
+                                                                                                  QUATERNION FUNCTIONS
+                 µ∈{1,i,j,k}                    µ∈{1,i,j,k}            (33)
+                                                                                The objective of this section is to introduce ﬁve discriminant
+            (=20) 4Re pTq ;                                                  criteria for convex quaternion functions, including the ﬁrst-
+                                                                             order characterization and the second-order characterization.
+(b)  4pRT qR  =  4pHRqR       (=20)     pHH Jn  1  JnH qH  =    pHHqH  (34)  An example is presented to illustrate how these criteria can be
+                                                4                            applied in practice.
+
+              (=29) 4Re pHq ;
+
+(c) 4  pR  2  =  4pTRpR          (=30)  pHH pH     =  pH     2         (35)
+           2                                                 2
+
+              (=30) 4Re pHp = 4pHp = 4 p 22;                                 A. Convex Set and Convex Quaternion Function
+
+(d)    p+q    2  =  (p  +     q)H    (p  +  q)                                  We begin by introducing the fundamental concepts, such as
+              2                                                              convex set and convex function [40, 41].
+
+                 =pHp + pHq + qHp + qHq                                (36)     Deﬁnition 3.1 (Convex set): The set C is called convex, if
+                                                                             ∀x, y ∈ C, ∀0 θ 1, θx + (1 − θ) y ∈ C. The set C can
+                 =  p   2     +  2Re     pHq          +  q 22.               be a subset of Hn, R or H.
+                        2
+                                                                                Deﬁnition 3.2 (Convex function): A function f is said to be
+This completes the proof.                                                    convex, if domf is convex, and ∀x, y ∈ domf , 0 θ 1,
+
+   Proposition 2.5: If the quaternion function f (q) : Hn → R                       f θx + (1 − θ) y θf (x) + (1 − θ) f (y) . (42)
+is real-differentiable, then ∀p, q ∈ Hn we have
+
+(a) ∇Rf (pR)T qR =∇H∗ f (pH)H qH                                       (37)  The range of the function f is R, and the deﬁnition ﬁeld
+                                                                             domf can be a subset of Hn, R or H.
+                        =4Re ∇p∗ f (p)H q ;
+                                                                                Example 3.1: Consider a quaternion matrix, A ∈ Hm×n,
+(b) ∇Rf (pR)T ∇Rf (qR) = 4∇H∗ f (pH)H ∇H∗ f (qH)                             and a quaternion vector, b ∈ Hm, then the set D
+                                                                             {q ∈ Hn | Aq = b} is convex.
+                    =16Re ∇p∗ f (p)H ∇q∗ f (q) ;
+                                                                                   Proof: ∀p, q ∈ D, Ap = b, Aq = b, ∀0 θ 1,
+                                                                       (38)
+                                                                             A (θp + (1 − θ)q) = θAp + (1 − θ)Aq = θb + (1 − θ)b = b.
+(c) ∇Rf (pR) 2 = 2 ∇Hf (pH) 2 = 4 ∇pf (p) 2. (39)                                                                                                   (43)
+
+      Proof: By the relationship of q, qR, and qH, and the                   Therefore, θp + (1 − θ)q ∈ D, that is the set D is convex.
+relationship of ∇q∗ f , ∇Rf , and ∇H∗ f , we have                               Example 3.2: If the quaternion function f (q) is convex, then
+
+(a) ∇Rf (pR)T qR = ∇Rf (pR)H qR                                              the set E {q ∈ Hn | f (q) 0} is also convex.
+                                                                                   Proof: ∀p, q ∈ E, f (p) 0, f (q) 0. Since f (q) is
+                        (20=)(26)    ∇H∗ f      (pH)H    Jn  1  JnHqH
+                                                             4               convex, ∀0 θ 1,
+
+                                                                                   f θp + (1 − θ)q θf (p) + (1 − θ)f (q) 0. (44)
+
+                                                                             Therefore, θp + (1 − θ)q ∈ E, that is the set E is convex.
+
+                        = ∇H∗ f (pH)H qH                                     B. First-order Characterization of Discriminant Theorems for
+                                                                             Convex Quaternion Functions
+                        =                    ∇p∗ f (p)µH qµ            (40)
+
+                              µ∈{1,i,j,k}                                    We shall now introduce four discriminant theorems for
+
+                        (=6)                    ∇p∗ f (p)H q µ               convex quaternion functions, including the ﬁrst-order charac-
+
+                              µ∈{1,i,j,k}                                    terization and gradient monotonicity.
+
+                        (=20) 4Re ∇p∗ f (p)H q ;                             Theorem 3.1: Consider the three sets C ⊂ Hn,
+                                                                                 qR = qaT, qbT, qcT, qdT T | q ∈ C ⊂ R = R4n,
+                                                                             CR
+                                                                                                                        5
+
+CH  qH = qT, qiT, qjT, qkT T | q ∈ C ⊂ H ⊂ H4n.                   C. Second-order Characterization of Discriminant Theorems
+                                                                  for Convex Quaternion Functions
+Then, C is convex ⇔ CR is convex ⇔ CH is convex.
+      Proof: Using the deﬁnition of C, CR, CH, and that of           Before introducing the second-order characterization of
+
+convex set, the proof following.                                  convex quaternion functions, we ﬁrst need to deﬁne positive
+
+A straightforward method to discriminate the convexity of         deﬁnite quaternion matrices.
+                                                                     Deﬁnition 3.4 (Positive deﬁnite matrix): The matrix A ∈
+a quaternion function is to conﬁne it to a line segment and
+                                                                  Hn×n is called positive deﬁnite, if
+determine whether the resulting one-dimensional function is
+
+convex, as in the following theorem.                                          Re xHAx > 0, ∀x ∈ Hn, x = 0,              (51)
+   Theorem 3.2: The quaternion function f (q) : C ⊂ Hn → R
+                                                                  and is denoted by A ≻ O, where O is the n × n zero
+is convex if and only if (shortened to iff) ∀q ∈ C, v ∈ Hn,       matrix. Similarly, the matrix A ∈ Hn×n is called positive
+
+g : S → R,                                                        semi-deﬁnite, if
+
+            g(t) = f (q + tv)              (45)
+
+is convex, where S {t ∈ R | q + tv ∈ C} ⊂ R.                                  Re xHAx 0, ∀x ∈ Hn, x = 0,                (52)
+      Proof: The proof follows the same steps as its counterpart
+                                                                  and is denoted by A O.
+in the real ﬁeld [40, 41].                                           Theorem 3.6: If the matrix A ∈ Hn×n satisﬁes AH = A,
+   For real-differentiable quaternion functions, we can also use
+                                                                  then A is positive deﬁnite iff
+their gradient information to discriminate their convexity, as
+stated in the following theorem.                                                  xHAx > 0, ∀x ∈ Hn, x = 0.             (53)
+
+   Theorem 3.3 (First-order characterization [22]): Consider      Similarly, the matrix A is positive semi-deﬁnite iff
+a convex set C ⊂ Hn and a real-differentiable quaternion
+function f (q) : C → R. Then f (q) is convex iff ∀p, q ∈ C,                       xHAx 0, ∀x ∈ Hn, x = 0.               (54)
+
+    f (q) f (p) + 4Re ∇p∗ f (p)H (q − p) , (46)                   Proof: This is straightforward to prove, by applying
+
+where ∇p∗ f (p) is deﬁned in (15).                                Deﬁnition 3.4.
+   Another commonly used ﬁrst-order characterization is gra-
+                                                                  If the quaternion function f (q) is second-order continuous
+dient monotonicity, as shown below.
+                                                                  real-differentiable, we can use the Hessian matrix to discrim-
+   Theorem 3.4 (Gradient monotonicity): Consider a convex set
+C ⊂ Hn and a real-differentiable quaternion function f (q) :      inate its convexity, as shown below.
+C → R. Then, f (q) is convex iff ∀p, q ∈ C,
+                                                                     Theorem 3.7 (Second-order characterization): Consider a
+                                                                  convex set C ⊂ Hn and a second-order continuous real-
+
+    Re ∇p∗ f (p) − ∇q∗ f (q) H (p − q) 0,                         differentiable quaternion function f (q) : C → R. Then f (q)
+
+                                           (47)                   is convex iff
+
+                                                                                         H HH∗ O.                       (55)
+
+where ∇p∗ f (p) is deﬁned in (15).                                where HHH∗ is deﬁned in (25).
+      Proof: From Theorem 3.1, C is convex iff CR is con-               Proof: Applying Theorem 3.1, the set C is convex iff the
+
+vex. We already know [40, 41] that for a differentiable real      set CR is convex. We already know [40, 41] that for a second-
+function, f (qR) is convex iff ∀pR, qR ∈ CR,                      order continous differentiable function, f (qR) is convex iff
+
+    ∇Rf (pR) − ∇Rf (qR) T (pR − qR) 0,     (48)
+
+where the set CR ⊂ R is convex. Hence from (37), we have                          H RR O, ∀qR ∈ CR,                     (56)
+
+       ∇Rf (pR) − ∇Rf (qR) T (pR − qR)                            where the set CR ⊂ R is convex. By Corollary 2.1, HHH∗ is
+    =4Re ∇p∗ f (p) − ∇q∗f (q) H (p − q) . (49)                    a Hermite matrix. Then ∀xH ∈ H, xH = 0, we have
+
+                                                                  xHHH HH∗ xH     (=27)  1   xHH  JnH  RRJnH  xH
+                                                                                         16
+Upon substituting (49) into (48), the proof follows.
+   In addition, we can also use the epigraph to discriminate                         1       JnHxH H HRR      JnH xH    (57)
+                                                                                  = 16
+the convexity of f (q), as shown below.
+   Deﬁnition 3.3 (Epigraph): For the quaternion generalized                       (=20)xRH HRRxR.
+
+real-valued function f (q) : Hn → R ∪ {±∞}, the set               Therefore,
+
+    epif = (q, t) ∈ Hn+1 | f (q) t, t ∈ R  (50)                                  H HH∗ O ⇔ H RR O,                      (58)
+
+is called the epigraph of f (q).                                  which concludes the proof.
+   Theorem 3.5: The quaternion generalized real-valued func-         Corollary 3.1: Consider a convex set C ⊂ Hn and a second-
+
+tion f (q) : C ⊂ Hn → R ∪ {±∞} is convex, iff epif is a           order continuous real-differentiable quaternion function f (q) :
+convex set.                                                       C → R. Then, the following three propositions are equivalent:
+
+      Proof: The proof follows the same steps as its counterpart     (a) f (q) is convex;
+in the real ﬁeld [40, 41].                                           (b) HHH∗ O;
+                                                                                                                                                6
+
+(c)                  Re xHHqν q∗ xν    0, ∀x ∈ Hn, x = 0.                                                          TABLE I
+
+        ν∈{1,i,j,k}                                                          SEVERAL DERIVATIVES PERFORMED BY THE GHR CALCULUS FROM
+                                                                            TABLE IV OF [36], ∀A ∈ Hn×n , ∀a ∈ Hn, ∀b ∈ Hn, α ∈ H, β ∈ H.
+        Proof: From Theorem 3.7, (a) is equivalent to (b), so we
+
+only need to prove that (b) is equivalent to (c). From Corollary
+
+2.1, we know that HHH∗ is a Hermite matrix. Then ∀xH ∈ H,
+
+xH = 0, we have                                                             f (q) or f (q)     ∂f   or   ∂f                   ∂f   or    ∂f
+                                                                                               ∂q        ∂q                  ∂q∗         ∂q∗
+
+   xHH H HH∗ xH                                                                  aTqβ          aTRe{β}                       −  1  aT  β∗
+                                                                                 αq H b                                         2
+                                                                                 Aqβ
+    x H  H qq∗            H qiq∗    H qj q∗   Hqkq∗   x                    q H Aq        −   1  αbH                    αRe bT
+                             H qiqi∗   H qj qi∗                                                    2
+                             H qiqj∗   H qjqj∗
+=   xi        H qqi∗      H qiqk∗   H qjqk∗   Hqkqi∗  xi                                 ARe {β}                       −    1  Aβ∗
+   xj                                                    xj                                                               2
+                   H qqj∗                      H qk qj∗               
+
+        xk           H qqk∗                      H qkqk∗      xk                            qHA  −    1  (Aq)H  −     1  qH  A  +    Re  (Aq)T
+                                                                                                      2               2
+
+=                    xµHH qν qµ∗ xν
+
+   µ,ν∈{1,i,j,k}
+
+(=20)4               Re xHH qνq∗ xν .                         (59) Upon using the ﬁrst, the second and the fourth rows of TABLE
+                                                                      I, we take the gradient of f (q) with respect to q∗ to gield
+        ν∈{1,i,j,k}
+
+Therefore,                                                                                                   T           ∂f H
+                                                                                                                         ∂q
+            Re       xHH qνq∗ xν      0, ∀x ∈ Hn, x = 0                          ∇q∗ f (q)            ∂f       (=13)
+                      ⇔ HHH∗                                       (60)                               ∂q∗
+ν∈{1,i,j,k}
+                                      O.                                                       = 1 AHAq + 1 AHb − AHb                           (63)
+
+                                                                                                   2            2
+
+This completes the proof.                                                                      = 1 AH (Aq − b) .
+   Lemma 3.1: The matrix A ∈ Hn×n is positive deﬁnite                                            2
+
+(positive semi-deﬁnite), iff all principal submatrices of A are             Then ∀p, q ∈ Hn, we obtain
+positive deﬁnite (positive semi-deﬁnite).
+                                                                            f (q) − f (p) − 4Re ∇p∗ f (p)H (q − p)
+      Proof: The follows the same steps as its counterpart in
+the real ﬁeld [42].                                                         = (Aq − b)H (Aq − b) − (Ap − b)H (Ap − b)
+
+   Applying Lemma 3.1, we can obtain a necessary condition                  −2Re AH (Ap − b) H (q − p)
+for convex quaternion functions.
+                                                                            =qHAHAq + pHAHAp − pHAHAq − qHAHAp (64)
+   Theorem 3.8: Consider a convex set C ⊂ Hn and a second-
+order continuous real-differentiable quaternion function f (q) :
+C → R. If f (q) is convex, then
+
+                             Hqq∗ O,                          (61)          = (q − p)H AHA (q − p)
+
+                                                                            =    A (q − p)  2
+                                                                                            2
+
+where Hqq∗ is the quaternion Hessian matrix, deﬁned in (17).                0.
+      Proof: Upon applying Theorem 3.7, together with the
+                                                                            Therefore, from Theorem 3.3 we know that f (q) is convex.
+convexity of f (q), we have HHH∗ O. By (25) and Lemma                          (Gradient monotonicity criterion) ∀p, q ∈ Hn, we have
+3.1, we ﬁnally obtain Hqq∗ O.
+
+D. Examples of Convex Quaternion Function
+
+   We next provide a basic example to determine the convexity               Re (∇p∗ f (p) − ∇q∗ f (q))H (p − q)
+of quaternion functions. In this example, we make use of
+certain GHR derivatives presented in TABLE IV of [36], which                = 1 Re AH (Ap − b) − AH (Aq − b) H (p − q)
+are included in TABLE I here.                                                 2
+
+   Example 3.3: If the quaternion function f (q) =                          = 1 Re (p − q)H AHA (p − q)
+ Aq − b 22, ∀q ∈ Hn, A ∈ Hm×n, b ∈ Hm, then f (q)                           2                                                                   (65)
+is convex.
+                                                                            = 1 (p − q)H AHA (p − q)
+      Proof: (First-order characterization criterion) By the                2
+deﬁnition of the 2-norm, we have
+                                                                            =1   A (q − p)  2
+                                                                              2             2
+
+            f (q) =  Aq − b  2                                              0.
+                             2
+
+               = (Aq − b)H (Aq − b)                           (62)          Therefore, from Theorem 3.4 we know that f (q) is convex.
+
+               =qHAHAq − qHAHb − bHAq + bHb.
+                                                                                                                                                                        7
+
+   (Second-order characterization criterion) Using the third                         Proof: From Theorem 4.1, f (p) is strongly convex iff
+row of TABLE I, we get
+                                                                              g (p)     =    f (p) −       1  σ   p  2   is    convex.       Then,    upon     applying
+                                                                                                           2         2
+
+                         ∂      ∂f    T = ∂∇q∗ f (q)                          Theorem 3.3, ∀p, q ∈ C,
+                         ∂q     ∂q∗              ∂q
+         Hqq∗                                                                              g (q) g (p) + 4Re ∇p∗ g (p)H (q − p) . (72)
+
+                         ∂ 1 AH (Aq − b)                                (66)  Using the fourth row of TABLE I, ∇p∗ g (p) = ∇p∗ f (p) −
+
+                  (=63)      2                         = 1 AHA,               1  σp.  Then,     ∀p,   q  ∈    C,
+                                                                              4
+                                   ∂q                     2
+                                                                                                σ
+and for any ν ∈ {i, j, k},                                                         f    (q)  −  2  q     2                                                         (73)
+                                                                                                         2
+
+          ∂              ∂f     T     ∂∇q∗f (q)                                    f (p) − σ       p     2  +    4Re        ∇p∗ f      (p) −     σ    H (q − p)      .
+         ∂qν             ∂q∗              ∂qν                                                2           2                                         p
+H qν q∗                            =
+                                                                                                                                                 4
+
+                  1 AH (Aq − b)                                         (67)  Since
+                  2
+         ∂                                 (=9)  1  AH     ∂q   = O.                 σ  q    2  −  σ    p     2  +  4Re         ∇p∗ f     (p) −  σ       H (q  − p)
+      (=63)            ∂qν                       2         ∂qν                       2       2     2          2                                    p
+                                                        A
+                                                                                                                                                 4
+
+                                                                                   =4Re ∇p∗ f (p)H (q − p)                      − σRe        pHq      +σ    p   2
+                                                                                                                                                                2
+Then ∀x ∈ Hn, x = 0, it follows that
+                                                                                     σ       2  −  σ          2
+             Re xHHqνq∗ xν                                                         +    q    2     2    p     2
+
+                                                                                     2                                             σ
+                                                                                                                                +
+ν∈{1,i,j,k}                                                             (68)     (=32)4Re ∇p∗ f (p)H (q − p)                              q−p    22.               (74)
+                                                                   0.                                                              2
+  1                          = 1 xHAHAx = 1
+= Re     xHAHAx                 2                      2  Ax    2             Upon substituting (74) into (73), the proof follows.
+                                                                2
+  2                                                                              Theorem 4.3 (Gradient monotonicity): Consider a convex set
+                                                                              C ⊂ Hn and a real-differentiable quaternion function f (q) :
+Therefore, by Corollary 3.1, we know that f (q) is convex.                    C → R. Then, f (q) is σ-strongly convex iff ∀p, q ∈ C,
+
+IV. STRONGLY CONVEX QUATERNION FUNCTION:                                           Re ∇p∗ f (p) − ∇q∗ f (q) H (p − q)                                 σ   p−q      22,
+   DEFINITION AND DISCRIMINANT THEOREMS                                                                                                               4
+
+We shall now discuss the discriminant criteria for strongly                                                                                                        (75)
+
+convex quaternion functions, building upon the theorems for                   where ∇p∗ f (p) is deﬁned in (15).
+
+convexity. These criteria will be useful in designing optimiza-                      Proof: From the Theorem 4.1, f (q) is strongly convex
+
+tion algorithms.                                                              iff  g (q)   =    f (q) −       1  σ   q   2  is    convex.    Then,    after    applying
+                                                                                                              2          2
+
+   Deﬁnition 4.1 (Strongly convex function): The quaternion                   Theorem 3.4, we have
+function f (q) : C ⊂ Hn → R is called strongly convex, if
+                                                                                   Re (∇p∗ g (p) − ∇q∗g (q))H (p − q) 0, ∀p, q ∈ C.
+∃σ > 0, ∀p, q ∈ C, ∀θ ∈ (0, 1),
+                                                                                                                                                                   (76)
+                         θf (p)+(1−θ)f (q)− σ θ(1−θ)
+f θp+(1−θ)q                                         2              p−q  22,   Using the fourth row of TABLE I, we have ∇q∗ g (q) =
+
+                                                                        (69)  ∇q∗ f     (q)  −  1  σq,   then     ∀p,   q   ∈   C,
+                                                                                                4
+
+where σ is the strongly convex parameter. For convenience,                       Re     ∇p∗ f (p) −           σ  p  −   ∇q∗    f  (q)  +     σq  H (p − q)         0.
+                                                                                                              4                              4
+f (q) is also called σ-strongly convex.                                                                                                                            (77)
+
+Based on the deﬁnition of strongly convex functions, we                       Upon rearranging the terms in (77), we obtain (75).
+
+obtain the following equivalence theorem.                                        Theorem 4.4 (Second-order characterization): Consider a
+   Theorem 4.1: The quaternion function f (q) : C ⊂ Hn → R                    convex set C ⊂ Hn and a second-order continuous real-
+                                                                              differentiable quaternion function f (q) : C → R. Then, f (q)
+is σ-strongly convex, iff ∃σ > 0, s.t. the function                           is σ-strongly convex, iff
+
+                         g (q)     f  (q)  −  σ     q  2                (70)
+                                              2        2
+
+                                                                                                                                  σ
+                                                                                                                 HHH∗ 4 I4n,                                       (78)
+is convex.
+      Proof: This is straightforward to prove, by applying                    where HHH∗ is deﬁned in (25).
+
+Deﬁnition 3.2 and Deﬁnition 4.1.                                                     Proof: Deﬁne g (q)                  f  (q)   −    1  σ  q  22, h(q)     2  q  2    =
+   Similar to convex quaternion functions, strongly convex                                                                             2                           2
+
+quaternion functions also have ﬁrst-order characterization,                   2qHq = 2 qHq µ (=6) 2qµHqµ, µ ∈ {1, i, j, k}. Upon applying
+gradient monotonicity, and second-order characterization.
+                                                                              the fourth row of TABLE I, we have
+   Theorem 4.2 (First-order characterization): Consider a con-
+vex set C ⊂ Hn and a real-differentiable quaternion function                                        ∂h           T                µ ∈ {1, i, j, k} .               (79)
+f (q) : C → R. Then, f (q) is σ-strongly convex iff ∀p, q ∈ C,                                     ∂ q µ∗
+                                                                                                                   = qµ,
+
+ f (q) f (p) + 4Re ∇p∗ f (p)H (q − p)                           σ       22,   Then, ∀µ ∈ {1, i, j, k},
+where ∇p∗ f (p) is deﬁned in (15).                           +2
+                                                                   q−p                              ∂             ∂h        T          ∂qµ
+                                                                                                   ∂qµ           ∂ q µ∗                ∂qµ
+                                                                        (71)                                                    (=79)        = In,                 (80)
+                                                                                                                                                       8
+
+and ∀µ, ν ∈ {1, i, j, k}, µ = ν,                                                          A. Convex Quaternion Optimization Problems
+
+                      ∂           ∂h       T  (=79)  ∂qµ                                     Similar to convex real and complex optimization problems,
+                     ∂qν         ∂ q µ∗              ∂qν                                  convex quaternion optimization problems generally have a
+                                                            = O.                    (81)  structure which consist of the minimization of a convex
+                                                                                          quaternion function subject to (shortened to s.t.) quaternion
+By (25), the augmented quaternion Hessian matrix of h is                                  afﬁne equality constraints and inequality constraints deﬁned
+                                                                                          by convex quaternion functions, as follows
+I4n. Therefore, the augmented quaternion Hessian matrix of
+
+g  is   H HH∗     −  1  σI4n.    From         Theorem     4.1,    f (q)     is  strongly
+                     4
+
+convex iff g (q) is convex. Then upon applying Theorem 3.7,                                              min f0(q)
+
+g  (q)  =  f  (q)   −   1  σ  q  2      is convex iff HHH∗ −            1  σI4n     O.                   q∈Hn
+                        2        2                                      4
+
+                                                                                                             s.t. Aq = b,                             (85)
+
+   Corollary 4.1: Consider a convex set C ⊂ Hn and a second-                                                  fi(q) 0, i = 1, . . . , P
+order continuous real-differentiable quaternion function f (q) :
+C → R. Then, the following three propositions are equivalent:                             where fi : Hn → R, i = 0, 1, . . . , P is convex, A ∈ Hm×n,
+                                                                                                                                    P
+   (a) f (q) is σ-strongly convex;                                                        b ∈ Hm. The problem ﬁeld is F             i=0  domfi,  and  feasi-
+
+   (b) H HH∗               1  σI4n   ;                                                    ble set is C {q ∈ F | fi(q) 0, i = 1, . . . , P, Aq = b}.
+   (c)                     4
+                          Re xHH qνq∗ xν                  1          2                    From Deﬁnition 3.2, Example 3.1 and Example 3.2, the
+                                                      −   4  σ  x    2      0, ∀x ∈
+                                                                                          sets D {q ∈ Hn | Aq = b}, Ei {q ∈ Hn | fi(q) 0},
+             ν∈{1,i,j,k}
+                                                                                          i = 1, . . . , P and domfi, i = 0, 1, . . . , P are convex.
+Hn, x = 0.
+
+       Proof: According to Theorem 4.4, (a) is equivalent to                              Therefore, the set C = D         P    Ei  F is also convex.
+                                                                                                                           i=1
+(b), so we only need to prove that (b) is equivalent to (c). By
+                                                                                          When studying the convexity of quaternion functions, we
+Corollary     2.1,  H HH∗        is  a  Hermite      matrix,  so   H HH∗ −      1   σI4n
+                                                                                4         utilized the augmented quaternion vectors and augmented real
+
+is also Hermite matrix. Then, ∀xH ∈ H, xH = 0, we have                                    vectors. Similarly, when studying the properties of quaternion
+
+              xHH                  σ             xH                                       convex optimization problems, we also need to utilize the
+                       H HH∗ − 4 I4n
+                                           σ                                              augmented quaternion and the augmented real convex opti-
+                                           4
+           =  xHHH HH∗ xH               −     xHH xH                                      mization settings.
+
+           (=31)                     xµHH qνqµ∗ xν − σxHx                           (82)  The convex augmented quaternion optimization problem of
+
+                                                                                          (85) is given by [22]
+
+                  µ,ν∈{1,i,j,k}                                                                          min f0(qH)
+
+           (=20) 4                   Re xHHqνq∗ xν − σ x 22.                                             qH∈H
+
+                    ν∈{1,i,j,k}                                                                          s.t. AHqH = bH,                              (86)
+
+Therefore, ∀x ∈ Hn, x = 0,                                                                                    fi(qH) 0, i = 1, . . . , P
+
+                           Re    xHH qνq∗ xν          −σ        x    2      0,            where fi : H → R, i = 0, 1, . . . , P is convex, AH
+                                                         4           2                    diag A, Ai, Aj , Ak ∈ H4m×4n, A ∈ Hm×n, and bH
+                                                                                           bT, biT, bjT, bkT T ∈ H4m.
+           ν∈{1,i,j,k}                                                              (83)
+                                                                                             The convex augmented real convex optimization problem of
+                              ⇔      H HH∗    −      σ          O.
+                                                     4 I4n                                (85) is given by [22]
+
+This completes the proof.                                                                                min f0(qR)
+
+   Upon applying Lemma 3.1, we can obtain a necessary                                                    qR∈R
+condition for σ-strongly convex quaternion functions.
+                                                                                                         s.t. ARqR = bR,                              (87)
+   Theorem 4.5: Consider a convex set C ⊂ Hn and a second-
+order continuous real-differentiable quaternion function f (q) :                                              fi(qR) 0, i = 1, . . . , P
+C → R. If f (q) is σ-strongly convex, then
+                                                                                          where fi : R → R, i = 0, 1, . . . , P is convex, together
+
+                                              σ                                           with AR  1     JmH  AH   Jn  ∈   R4m×4n,  AH   ∈  H4m×4n,   and
+                                 Hqq∗ 4 In,                                         (84)           4
+                                                                                              1  JmH bH      R4m.
+                                                                                          bR  4          ∈
+
+where Hqq∗ is the quaternion Hessian matrix, deﬁned in (17).                              Lemma 5.1 ([22]): The convex quaternion optimization
+
+       Proof: Note that f (q) is σ-strongly convex, and upon                              problem in (85), the convex augmented quaternion opti-
+
+applying Theorem 4.4, we have HHH∗                                1  σI4n   .   By  (25)  mization problem in (86), and the convex augmented real
+                                                                  4
+                                                                1                         optimization problem in (87) are equivalent.
+and Lemma 3.1, we ﬁnally obtain Hqq∗                            4  σIn   .
+                                                                                          Theorem 5.1: For the convex quaternion optimization prob-
+
+V. CONVEX QUATERNION OPTIMIZATION PROBLEMS AND                                            lem in (85), any local optimal solution is also the global
+        THEIR APPLICATIONS IN SIGNAL PROCESSING
+                                                                                          optimal solution.
+   We now proceed to introduce the convex quaternion prob-
+lem and its fundamental theorem. This is followed by several                                  Proof: We already know [43] that for the real con-
+applications of convex quaternion optimization in communi-
+cations, highlighting its practical signiﬁcance.                                          vex optimization problem in (87), any local optimal solu-
+
+                                                                                          tion, for example q¯R, is also the global optimal solution.
+                                                                                          Then, from Lemma 5.1, the local optimal solution q¯H
+                                                                                           q¯T, q¯iT, q¯jT, q¯kT T = Jnq¯R is also global, in the augmented
+                                                                                                                              9
+
+convex quaternion optimization problem in (86). Therefore, where λ ∈ Hp denotes the set of Lagrange multipliers. Finding
+
+the local optimal solution, q¯, is also global, in the convex the gradient of L (x, λ) with respect to x∗ in the same way
+
+quaternion optimization problem in (85).                             as in (63) and setting the result to 0, we have
+
+                                                                                        ∂L  H
+                                                                                        ∂x
+B. Applications of Convex Quaternion Optimization in Signal          ∇x∗ L(x, λ) =
+Processing
+                                                                     = 1 x + 1 λHA − yH H − 1
+   Application 5.1 (Quaternion linear mean-square error ﬁl-                          2      2                 2       1 AHλ − y
+ter): The quaternion minimum mean-square error (MSE) ﬁlter                                                            2
+can be speciﬁed as                                                   = 1 x − 1 y + 1 AHλ
+                                                                       224                                                        (94)
+
+    min J (w) E |e(n)|2 = E |d(n) − y(n)|2 , (88)                    =0,
+
+     w∈Hn                                                            which leads to
+
+where y(n) = wHx(n), x(n) ∈ Hn is the input vector, w ∈                                     x = y − 1 AHλ.               (95)
+Hn is the ﬁlter weight vector, and d(n) ∈ H is the desired                                       2
+sequence. By the deﬁnition of the modulus, we have
+
+J (w) =E |d(n) − wHx(n)|2                                            A combinition of (95) with the constraint Ax = b yields
+        =E d(n) − wHx(n) d(n) − wHx(n) ∗
+                                                                                            A y − 1 AHλ = b
+   =wHE{x(n)xH(n)}w − E{d(n)xH(n)}w (89)                                                         2                       (96)
+   −wHE{x(n)d∗(n)} + E{d(n)d∗(n)}
+   =wHRw − pHw − wHp + σd2,                                                       ⇒ λ = 2 AAH −1 (Ay − b).
+
+where R = E{x(n)xH(n)} denotes the quaternion-valued                 Substituting (96) into (95) and applying Theorem 5.1, we
+input correlation matrix, p = E{x(n)d∗(n)} is the crosscorre-        obtain the following optimal solution
+
+lation vector between the desired response and the input signal,     x¯ = y + AH AAH −1 (b − Ay).                        (97)
+σd2 = E{d(n)d∗(n)} is the power of the desired response. By
+(62) in Example 3.3, we know that J (w) is convex. Similarly            Application 5.3 (Quaternion minimum variance beamform-
+to (63), we take the gradient of J (w) with respect to w∗,           ing): The problem of quaternion variance beamforming mini-
+                                                                     mization can be described as
+and set the result to 0 to obtain
+
+                         ∂J H = 1 Rw − 1 p = 0.                                         min f (w) wHRw
+                                                                                        w∈Hn
+   ∇w∗ J (w) =                                                (90)                                                       (98)
+                         ∂w       2             2                                           s.t. wHa = 1,
+
+Using (90) and Theorem 5.1, we arrive at gives the closed-           where w ∈ Hn is the beamformer weight vector, a ∈ Hn is
+form optimal solution                                                the steering vector, and RH = R ∈ Hn×n is positive deﬁnite.
+
+                         w¯ = R−1p.                           (91)      We will next prove that the problem in (98) is a convex
+                                                                     quaternion optimization problem. Using the fourth row of
+Application 5.2 (Quaternion projection on afﬁne equality             TABLE I, we have
+
+constraint): The quaternion projection problem can be de-                            ∂f H        wHR − 1 (Rw)H H = 1 Rw.
+                                                                                              =
+scribed as                     x−y    2                              ∇w∗ f (w) =
+                                      2                                              ∂w
+                         min                                  (92)                                         2          2
+
+                         x∈Hn                                                                                            (99)
+
+                         s.t. Ax = b
+
+where y ∈ Hn, b ∈ Hp, A ∈ Hp×n and rank(A) = p < n.                  Then, ∀v, w ∈ Hn,
+
+Applying Example 3.3, f (x) =  x−y       2  is  convex,  and  Ax  =    Re ∇v∗ f (v) − ∇w∗f (w) H (v − w)
+                                         2
+                                                                     = 1 Re (Rv − Rw)H (v − w)
+b is an afﬁne equality constraint. Therefore, the quaternion           2
+
+optimization problem in (92) is convex.                              = 1 (v − w)H R (v − w)
+                                                                       2
+Using the methed of Lagrange multipliers [22, 36], we have             0.                                                (100)
+
+   L(x, λ)
+
+=  x−y      2  +  Re  λH(Ax − b)
+            2
+
+=(x − y)H(x − y) + 1 λH(Ax − b) +           1 (Ax − b)Hλ      (93)   From Theorem 3.4, it follows that f (w) is convex, and
+                            2               2                        wHa = 1 is an afﬁne equality constraint. Therefore, the
+                                                                     problem in (98) is a convex quaternion optimization problem.
+=xHx + 1 λHA − yH x + xH 1 AHλ − y
+               2                      2                                 The Lagrangian of problem in (98) is given by [22, 36]
+
++yHy − 1 λHb − 1 bHλ,                                                     L (w, λ) = wHRw + λ wHa − 1 , λ ∈ R, (101)
+            2         2
+                                                                 10
+
+which is a real-valued function of w ∈ Hn. Using the second       [6] C. C. Took and D. P. Mandic, “A quaternion widely linear
+and the fourth rows of TABLE I, and setting ∇w∗L (w, λ) =              adaptive ﬁlter,” IEEE Transactions on Signal Processing,
+0, we have                                                             vol. 58, no. 8, pp. 4427–4431, 2010.
+
+∇w∗L (w, λ) =  ∂L  H = 1 Rw − 1 λa = 0           (102)            [7] H. Zhang, Z. Wang, D. Chen, S. Zhu, and D. Xu,
+               ∂w     2        2                                       “Quaternion extreme learning machine based on real aug-
+                                                                       mented representation,” IEEE Signal Processing Letters,
+               ⇒ w = λR−1a.                                            vol. 30, pp. 175–179, 2023.
+
+Upon substituting (102) into aHw = 1, we obtain                   [8] S. Walia, K. Kumar, and M. Kumar, “Unveiling dig-
+                                                                       ital image forgeries using Markov based quaternions
+λaHR−1a = 1        ⇒     λ  =       1  a  .      (103)                 in frequency domain and fusion of machine learning
+                               aHR−1                                   algorithms,” Multimedia Tools and Applications, vol. 82,
+                                                                       no. 3, pp. 4517–4532, 2023.
+Therefore, upon applying Theorem 5.1, the closed-form opti-
+mal solution is obtained as                                       [9] B. C. Ujang, C. C. Took, and D. P. Mandic, “Quaternion-
+                                                                       valued nonlinear adaptive ﬁltering,” IEEE Transactions
+                       R−1a                      (104)                 on Neural Networks, vol. 22, no. 8, pp. 1193–1206, 2011.
+               w¯ = aHR−1a .
+                                                                 [10] J. Flamant, N. Le Bihan, and P. Chainais, “Time-
+                         VI. CONCLUSIONS                               frequency analysis of bivariate signals,” Applied and
+                                                                       Computational Harmonic Analysis, vol. 46, no. 2, pp.
+   We have established the theory of convex quaternion op-             351–383, 2019.
+timization based on the GHR calculus, which is an enabling
+methodology in the ﬁeld of quaternion optimization and its       [11] T. Ogunfunmi and C. Safarian, “The quaternion stochas-
+applications in quaternion signal processing and machine               tic information gradient algorithm for nonlinear adap-
+learning. Our study has resulted in the development of ﬁve             tive systems,” IEEE Transactions on Signal Processing,
+discriminant theorems for convex functions in the quaternion           vol. 67, no. 23, pp. 5909–5921, 2019.
+ﬁeld, utilizing (20), (23), (25), (26), and (27). Furthermore,
+we have provided the deﬁnition and four discriminant criteria    [12] E. C. Mengu¨c¸, “Design of quaternion-valued second-
+for strongly convex functions by employing the results for             order Volterra adaptive ﬁlters for nonlinear 3-D and 4-D
+convex quaternion functions. In addition, we have presented            signals,” Signal Processing, vol. 174, p. 107619, 2020.
+a fundamental theorem for the optimality of convex quater-
+nion optimization problems and three applications in signal      [13] Y. Xia, S. Tao, Z. Li, M. Xiang, W. Pei, and D. P. Mandic,
+processing, which have both enriched the theory of convex              “Full mean square performance bounds on quaternion
+quaternion optimization and provided a theoretical foundation          estimators for improper data,” IEEE Transactions on
+for quaternion signal processing. However, the convexity of            Signal Processing, vol. 67, no. 15, pp. 4093–4106, 2019.
+non-differentiable quaternion functions by the GHR calculus
+still remains an open area, and this work provides a foundation  [14] S. Enshaeifar, S. Kouchaki, C. Cheong Took, and
+and an avenue for further research in this direction.                  S. Sanei, “Quaternion singular spectrum analysis of
+                                                                       electroencephalogram with application in sleep analysis,”
+                            REFERENCES                                 IEEE Transactions on Neural Systems and Rehabilita-
+                                                                       tion, vol. 24, no. 1, pp. 57–67, Jan. 2016.
+[1] W. R. Hamilton, “On a new species of imaginary quan-
+     tities, connected with the theory of quaternions,” in       [15] Z. Luo and W. Yu, “An introduction to convex optimiza-
+     Proceedings of the Royal Irish Academy (1836-1869),               tion for communications and signal processing,” IEEE
+     vol. 2. JSTOR, 1840, pp. 424–434.                                 Journal on Selected Areas in Communications, vol. 24,
+                                                                       no. 8, pp. 1426–1438, 2006.
+[2] L. Qi, Z. Luo, Q. Wang, and X. Zhang, “Quaternion
+     matrix optimization: Motivation and analysis,” Journal      [16] S. Sra, S. Nowozin, and S. J. Wright, Optimization for
+     of Optimization Theory and Applications, vol. 193, no.            Machine Learning. MIT Press, 2012.
+     1-3, pp. 621–648, 2022.
+                                                                 [17] M. Jaggi, “Sparse convex optimization methods for ma-
+[3] Z. Jia, Q. Jin, M. K. Ng, and X. Zhao, “Non-local robust           chine learning,” Ph.D. dissertation, ETH Zu¨rich, 2011.
+     quaternion matrix completion for large-scale color im-
+     age and video inpainting,” IEEE Transactions on Image       [18] N. Krejic´, N. K. Jerinkic´, and T. Ostojic´, “An inexact
+     Processing, vol. 31, pp. 3868–3883, 2022.                         restoration-nonsmooth algorithm with variable accuracy
+                                                                       for stochastic nonsmooth convex optimization problems
+[4] C. C. Took and D. P. Mandic, “Augmented second-                    in machine learning and stochastic linear complemen-
+     order statistics of quaternion random signals,” Signal            tarity problems,” Journal of Computational and Applied
+     Processing, vol. 91, no. 2, pp. 214–224, 2011.                    Mathematics, vol. 423, p. 114943, 2023.
+
+[5] J. Flamant, S. Miron, and D. Brie, “Quaternion non-          [19] Y. Xia and D. P. Mandic, “Complementary mean square
+     negative matrix factorization: Deﬁnition, uniqueness, and         analysis of augmented CLMS for second-order noncir-
+     algorithm,” IEEE Transactions on Signal Processing,               cular Gaussian signals,” IEEE Signal Processing Letters,
+     vol. 68, pp. 1870–1883, 2020.                                     vol. 24, no. 9, pp. 1413–1417, 2017.
+
+                                                                 [20] Y. Xia and D. P. Mandic, “A full mean square analysis
+                                                                       of CLMS for second-order noncircular inputs,” IEEE
+                                                                       Transactions on Signal Processing, vol. 65, no. 21, pp.
+                                                                       5578–5590, 2017.
+
+                                                                 [21] A. B. Gershman, N. D. Sidiropoulos, S. Shahbazpanahi,
+                                                                  11
+
+      M. Bengtsson, and B. Ottersten, “Convex optimization-             Proceedings of the Cambridge Philosophical Society,
+      based beamforming,” IEEE Signal Processing Magazine,              vol. 85, no. 2. Cambridge University Press, 1979, pp.
+      vol. 27, no. 3, pp. 62–75, 2010.                                  199–225.
+[22] J. Flamant, S. Miron, and D. Brie, “A general framework      [38] J. V´ıa, D. Ram´ırez, and I. Santamar´ıa, “Properness and
+      for constrained convex quaternion optimization,” IEEE             widely linear processing of quaternion random vectors,”
+      Transactions on Signal Processing, vol. 70, pp. 254–267,          IEEE Transactions on Information Theory, vol. 56, no. 7,
+      2022.                                                             pp. 3502–3515, 2010.
+[23] Y. Liu, Y. Zheng, J. Lu, J. Cao, and L. Rutkowski,           [39] D. P. Mandic, C. Jahanchahi, and C. C. Took, “A quater-
+      “Constrained quaternion-variable convex optimization: A           nion gradient operator and its applications,” IEEE Signal
+      quaternion-valued recurrent neural network approach,”             Processing Letters, vol. 18, no. 1, pp. 47–50, 2011.
+      IEEE Transactions on Neural Networks and Learning           [40] S. Boyd and L. Vandenberghe, Convex Optimization.
+      Systems, vol. 31, no. 3, pp. 1022–1035, 2019.                     Cambridge University Press, 2004.
+[24] D. Xu, C. Jahanchahi, C. C. Took, and D. P. Mandic,          [41] Y. Nesterov, Lectures on Convex Optimization. Springer,
+      “Enabling quaternion derivatives: The generalized HR              2018.
+      calculus,” Royal Society Open Science, vol. 2, no. 8, p.    [42] R. A. Horn and C. R. Johnson, Matrix Analysis. Cam-
+      150255, 2015.                                                     bridge university press, 2012.
+[25] A. Hjørungnes, Complex-valued Matrix Derivatives:            [43] C. Chi, W. Li, and C. Lin, Convex Optimization for
+      With Applications in Signal Processing and Communi-               Signal Processing and Communications: From Funda-
+      cations. Cambridge University Press, 2011.                        mentals to Applications. CRC Press, 2017.
+[26] W. Wirtinger, “Zur formalen theorie der funktionen von
+      mehr komplexen vera¨nderlichen,” Mathematische An-
+      nalen, vol. 97, no. 1, pp. 357–375, 1927.
+[27] D. Brandwood, “A complex gradient operator and its
+      application in adaptive array theory,” in IEE Proceedings
+      H (Microwaves, Optics and Antennas), vol. 130, no. 1.
+      IET Digital Library, 1983, pp. 11–16.
+[28] P. Arena, L. Fortuna, G. Muscato, and M. G. Xibilia,
+      “Multilayer perceptrons to approximate quaternion val-
+      ued functions,” Neural Networks, vol. 10, no. 2, pp. 335–
+      342, 1997.
+[29] M. Yoshida, Y. Kuroe, and T. Mori, “A model of hopﬁeld-
+      type quaternion neural networks and its energy function,”
+      in Neural Information Processing. Springer, 2004, pp.
+      110–115.
+[30] E. C. Mengu¨c¸, “Novel quaternion-valued least-mean
+      kurtosis adaptive ﬁltering algorithm based on the GHR
+      calculus,” IET Signal Processing, vol. 12, no. 4, pp. 487–
+      495, 2018.
+[31] C. C. Took and Y. Xia, “Multichannel quaternion least
+      mean square algorithm,” in IEEE International Confer-
+      ence on Acoustics, Speech and Signal Processing, 2019,
+      pp. 8524–8527.
+[32] T. Parcollet, M. Morchid, and G. Linare`s, “A survey
+      of quaternion neural networks,” Artiﬁcial Intelligence
+      Review, vol. 53, pp. 2957–2982, 2020.
+[33] D. Xu, Y. Xia, and D. P. Mandic, “Optimization in quater-
+      nion dynamic systems: Gradient, Hessian, and learning
+      algorithms,” IEEE Transactions on Neural Networks and
+      Learning Systems, vol. 27, no. 2, pp. 249–261, 2015.
+[34] J. Ward, Quaternions and Cayley Numbers: Algebra and
+      Applications. Springer Science, 1997.
+[35] T. A. Ell and S. J. Sangwine, “Quaternion involutions
+      and anti-involutions,” Computers & Mathematics with
+      Applications, vol. 53, no. 1, pp. 137–143, 2007.
+[36] D. Xu and D. P. Mandic, “The theory of quaternion
+      matrix derivatives,” IEEE Transactions on Signal Pro-
+      cessing, vol. 63, no. 6, pp. 1543–1556, 2015.
+[37] A. Sudbery, “Quaternionic analysis,” in Mathematical
+

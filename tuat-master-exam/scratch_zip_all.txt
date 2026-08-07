@@ -1,0 +1,117 @@
+=== コンピュータ基礎.zip ===
+False	コンピュータ基礎/
+False	コンピュータ基礎/コンピュータ基礎_12掲示用_rev2.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_12掲示用_rev2.pdf
+False	コンピュータ基礎/コンピュータ基礎_4.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_4.pdf
+False	コンピュータ基礎/コンピュータ基礎_5.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_5.pdf
+False	コンピュータ基礎/コンピュータ基礎_1.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_1.pdf
+False	コンピュータ基礎/コンピュータ基礎_2.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_2.pdf
+False	コンピュータ基礎/コンピュータ基礎_3.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_3.pdf
+False	コンピュータ基礎/コンピュータ基礎_9_rev3.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_9_rev3.pdf
+False	コンピュータ基礎/コンピュータ基礎_8_rev3.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_8_rev3.pdf
+False	コンピュータ基礎/コンピュータ基礎_7_rev4.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_7_rev4.pdf
+False	コンピュータ基礎/コンピュータ基礎_10_rev2.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_10_rev2.pdf
+False	コンピュータ基礎/コンピュータ基礎_11_rev3.pdf
+False	__MACOSX/コンピュータ基礎/._コンピュータ基礎_11_rev3.pdf
+=== プログラミングⅡ講義.zip ===
+True	月4 プログラミングⅡ講義/
+True	月4 プログラミングⅡ講義/1.pdf
+True	月4 プログラミングⅡ講義/10.pdf
+True	月4 プログラミングⅡ講義/1019 1-2-1
+True	月4 プログラミングⅡ講義/11.pdf
+True	月4 プログラミングⅡ講義/12.pdf
+True	月4 プログラミングⅡ講義/13.pdf
+True	月4 プログラミングⅡ講義/2.pdf
+True	月4 プログラミングⅡ講義/3.pdf
+True	月4 プログラミングⅡ講義/4.pdf
+True	月4 プログラミングⅡ講義/5.pdf
+True	月4 プログラミングⅡ講義/6.pdf
+True	月4 プログラミングⅡ講義/7.pdf
+True	月4 プログラミングⅡ講義/9.pdf
+True	月4 プログラミングⅡ講義/プログラミングⅡ講義.docx
+True	月4 プログラミングⅡ講義/小テスト/
+True	月4 プログラミングⅡ講義/小テスト/第10回小テスト問題.pdf
+True	月4 プログラミングⅡ講義/小テスト/第11回小テスト問題.pdf
+True	月4 プログラミングⅡ講義/小テスト/第12回小テスト問題.pdf
+True	月4 プログラミングⅡ講義/小テスト/第13回_小テスト問題.pdf
+True	月4 プログラミングⅡ講義/小テスト/第1回_小テスト問題.pdf
+True	月4 プログラミングⅡ講義/小テスト/第6回_小テスト問題.pdf
+True	月4 プログラミングⅡ講義/小テスト/第9回小テスト問題.pdf
+True	月4 プログラミングⅡ講義/演習課題/
+True	月4 プログラミングⅡ講義/演習課題/2023pr02.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr02summary.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr03.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr03summary.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr04.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr04summary.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr05.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr06summary.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr07.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr08summary.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr09.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr10summary.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr11.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr12summary.pdf
+True	月4 プログラミングⅡ講義/演習課題/2023pr13.pdf
+True	月4 プログラミングⅡ講義/演習課題/プログラミングII演習_2023__中間レポート.pdf
+=== 情報理論.zip ===
+False	情報理論/
+False	情報理論/infotheo_02.pdf
+False	__MACOSX/情報理論/._infotheo_02.pdf
+False	情報理論/infotheo_03.pdf
+False	__MACOSX/情報理論/._infotheo_03.pdf
+False	情報理論/infotheo_01.pdf
+False	__MACOSX/情報理論/._infotheo_01.pdf
+False	情報理論/infotheo_04.pdf
+False	__MACOSX/情報理論/._infotheo_04.pdf
+False	情報理論/infotheo_05.pdf
+False	__MACOSX/情報理論/._infotheo_05.pdf
+False	情報理論/lecnote09.pdf
+False	__MACOSX/情報理論/._lecnote09.pdf
+False	情報理論/answer08.pdf
+False	__MACOSX/情報理論/._answer08.pdf
+False	情報理論/answer09.pdf
+False	__MACOSX/情報理論/._answer09.pdf
+False	情報理論/lecnote08.pdf
+False	__MACOSX/情報理論/._lecnote08.pdf
+False	情報理論/infotheo_06.pdf
+False	__MACOSX/情報理論/._infotheo_06.pdf
+False	情報理論/lecnote11.pdf
+False	__MACOSX/情報理論/._lecnote11.pdf
+False	情報理論/answer10.pdf
+False	__MACOSX/情報理論/._answer10.pdf
+False	情報理論/answer11.pdf
+False	__MACOSX/情報理論/._answer11.pdf
+False	情報理論/lecnote10.pdf
+False	__MACOSX/情報理論/._lecnote10.pdf
+False	情報理論/lecnote12.pdf
+False	__MACOSX/情報理論/._lecnote12.pdf
+False	情報理論/answer13.pdf
+False	__MACOSX/情報理論/._answer13.pdf
+False	情報理論/answer12.pdf
+False	__MACOSX/情報理論/._answer12.pdf
+False	情報理論/lecnote13.pdf
+False	__MACOSX/情報理論/._lecnote13.pdf
+=== 論理回路.zip ===
+False	論理回路/
+False	論理回路/論理回路9 配布.pdf
+False	__MACOSX/論理回路/._論理回路9 配布.pdf
+False	論理回路/論理回路5 配布.pdf
+False	論理回路/論理回路7 配布.pdf
+False	論理回路/論理回路3 配布.pdf
+False	論理回路/論理回路1 配布.pdf
+False	論理回路/論理回路8 配布.pdf
+False	論理回路/論理回路4 配布.pdf
+False	論理回路/論理回路6 配布.pdf
+False	論理回路/論理回路2 配布.pdf
+False	論理回路/論理回路10 配布.pdf
+False	__MACOSX/論理回路/._論理回路10 配布.pdf

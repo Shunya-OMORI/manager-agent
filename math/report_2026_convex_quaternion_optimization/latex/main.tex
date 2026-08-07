@@ -1,0 +1,144 @@
+\documentclass[twocolumn, 9pt]{jsarticle}
+% upLaTeX/dvipdfmx環境
+\usepackage[top=12truemm,bottom=12truemm,left=10truemm,right=10truemm]{geometry}
+\pagestyle{empty}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage[dvipdfmx]{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setlength{\abovedisplayskip}{4pt plus 1pt minus 1pt}
+\setlength{\belowdisplayskip}{4pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{6pt plus 1pt minus 1pt}
+\setlength{\intextsep}{6pt plus 1pt minus 1pt}
+\linespread{0.96}
+
+\title{信号処理のための凸四元数最適化：理論と応用（要約）}
+\author{23266025}
+\date{2026年7月31日}
+
+\begin{document}
+\maketitle
+
+\section*{書誌情報}
+\begin{itemize}
+    \item 原題: Convex Quaternion Optimization for Signal Processing: Theory and Applications
+    \item 著者（所属）: Shuning Sun, Qiankun Diao, Dongpo Xu（責任著者）（Academy for Advanced Interdisciplinary Studies／教育部応用統計重点実験室，東北師範大学［Northeast Normal University］，中国）；Pauline Bourigault, Danilo P. Mandic（電気電子工学科，インペリアル・カレッジ・ロンドン［Imperial College London］，英国）
+    \item 掲載誌: IEEE Transactions on Signal Processing, vol.\ 71, pp.\ 4106--4115（2023年）
+    \item DOI: 10.1109/TSP.2023.3328053
+\end{itemize}
+
+\section*{選んだトピック}
+
+トピック6：複素数領域での最適化アルゴリズムの理論や信号処理への応用．本論文は，複素数をさらに一般化した四元数（quaternion）領域における凸最適化理論を扱っており，複素領域の理論（コーシー・リーマンの関係式，ウィルティンガー微分）を四元数領域に拡張した枠組みに相当する．
+
+\section*{概要}
+
+四元数（quaternion）は画像処理・信号処理・機械学習で広く使われているが，四元数を変数とする凸最適化の理論は，実数・複素数領域ほど整備されていない．本論文は，一般化ハミルトン実微分（generalized Hamilton-real calculus; GHR微分）に基づいて，四元数関数の凸性・強凸性を判定する理論と，正定値二次形式に対する四元数ニュートン法の2次収束性を示し，四元数協調表現分類（QCRC）と四元数二値ロジスティック回帰（QBLR）の2つの応用でその有効性を検証している．
+
+以下の要約は，IEEE出版版（vol.\ 71, pp.\ 4106--4115, 2023）を典拠とする．著者らが確立したGHR微分に基づく凸最適化の枠組みと，その適用先の観点から作成した．本文中のSection・Theorem・Proposition・式・Fig.等の番号は，断りのない限りすべて原論文内部の番号を指し，本要約自身の章番号（1.〜8.）とは体系が異なる．要約作成にあたっての生成AIの活用方法は付録に記載した．
+
+\section{背景・問題設定と本論文の位置づけ}
+
+四元数は，1843年にHamiltonが実数上に導入した，結合的だが非可換な代数である（Section I）．四元数は現在，画像処理（Jia et al., 2022, \textit{IEEE Transactions on Image Processing}），信号処理（Ogunfunmi and Safarian, 2019, \textit{IEEE Transactions on Signal Processing}），機械学習（Zhang et al., 2023, \textit{IEEE Signal Processing Letters}）など幅広い分野で応用されている（Section I）．
+
+こうした応用の多くは，四元数を変数とする最適化問題（例えばフィルタ設計や分類モデルの学習）に帰着する．四元数を変数とする凸最適化の理論は，実数・複素数を変数とする理論ほど整備されていない（Abstract）．整備が遅れている原因は，四元数の乗法が非可換である点にある．四元数の乗法が非可換であるため，実数・複素数領域の理論をそのまま四元数領域へ移植することはできない（Section I, ``main challenge''）．したがって，四元数関数 $f(q):\mathbb{H}^n\to\mathbb{R}$ の凸性を，勾配やヘッセ行列（関数の2階偏微分を並べた行列で，符号の情報から凸性を判定できる）を用いて判定する方法は，未解決の課題として残されていた．
+
+そこで Qi ら（2022, \textit{Journal of Optimization Theory and Applications}, vol.\ 193）は，四元数変数の実部・虚部 $q_a, q_b, q_c, q_d$ ごとに1階・2階微分を計算する方法を示した（Section I）．その方法は，証明や計算過程を複雑にする．また，Flamant ら（2022, \textit{IEEE Transactions on Signal Processing}, vol.\ 70, pp.\ 254--267）とLiu ら（2020, \textit{IEEE Transactions on Neural Networks and Learning Systems}, vol.\ 31, no.\ 3）は，GHR微分を用いて，凸四元数関数の1階の特徴づけ $f(q) \geq f(p) + 4\,\mathrm{Re}\{(\nabla_{p^*}f(p))^H(q-p)\}$（本論文中の式(1)）を示している．しかしながら，これら既存研究は2階の特徴づけ（ヘッセ行列を用いた判定）を欠いている（Section I）．そのため，勾配だけでは判定できない関数に対して，凸性を保証する手段がなかった．
+
+本論文は，2階の特徴づけを与えることを目的とする（Abstract, Section I）．GHR微分を用いて，四元数関数の2階の凸性判定理論と強凸性の判定理論を整備する．また，正定値二次形式に対して四元数ニュートン法が1回の更新で最適解に到達すること（2次収束性）を証明する．なお，本論文が用いるGHR微分の枠組み自体は，責任著者 Dongpo Xu を含む同グループの先行研究に基づく．GHR微分を定義した Xu ら（2015, \textit{Royal Society Open Science}）と，四元数の勾配・ヘッセ行列の理論を整備した Xu ら（2016, \textit{IEEE Transactions on Neural Networks and Learning Systems}, vol.\ 27, no.\ 2）の枠組みである（Section II）．本論文は，その枠組みを基盤として2階の理論を新たに構築している．
+
+\section{GHR微分の枠組み}
+
+四元数は，講義で扱った複素数 $z=x+jy$ の虚部を $i,j,k$ の3方向に拡張した数であり，$q = q_a + q_b i + q_c j + q_d k$（$q_a,q_b,q_c,q_d\in\mathbb{R}$）と表される（Section II-A）．虚数単位 $i,j,k$ は $i^2=j^2=k^2=ijk=-1$，$ij=-ji=k$，$jk=-kj=i$，$ki=-ik=j$ を満たす．これらの関係式が，四元数どうしの積が非可換であることの直接の根拠になっている．共役は $q^*=q_a-q_bi-q_cj-q_dk$ と定義される（Section II-A）．絶対値は $|q|=\sqrt{qq^*}$ と定義される．また，非零の四元数 $\mu$ を用いた回転 $q^\mu \triangleq \mu q \mu^{-1}$ を四元数回転（quaternion rotation）と呼ぶ（Section II-A）．特に $\mu=i,j,k$ とした場合は四元数対合（quaternion involution）と呼ばれ，$q^\mu$ は $q^i, q^j, q^k$ と表記される．$q^i,q^j,q^k$ は，第3章の拡張四元数ベクトル $q_H$ の構成要素として用いられる．
+
+四元数関数 $f(q)=f_a(q_a,q_b,q_c,q_d)+f_bi+f_cj+f_dk$ は，成分関数 $f_a,f_b,f_c,f_d$ がそれぞれ $q_a,q_b,q_c,q_d$ の実関数として微分可能であるとき，実微分可能と呼ばれる（Section II-B）．実微分可能な $f$ に対して，GHR微分は
+\begin{align*}
+\frac{\partial f}{\partial q^\mu} &= \frac{1}{4}\left(\frac{\partial f}{\partial q_a} - \frac{\partial f}{\partial q_b}i\mu - \frac{\partial f}{\partial q_c}j\mu - \frac{\partial f}{\partial q_d}k\mu\right), \\
+\frac{\partial f}{\partial q^{\mu*}} &= \frac{1}{4}\left(\frac{\partial f}{\partial q_a} + \frac{\partial f}{\partial q_b}i\mu + \frac{\partial f}{\partial q_c}j\mu + \frac{\partial f}{\partial q_d}k\mu\right)
+\end{align*}
+と定義される（式(17)(18)，Definition 2.1）．ここで $\mu\ (\neq0)\in\mathbb{H}$ は，微分の方向を指定する自由なパラメータである．$\mu=1$ のとき通常の $\partial f/\partial q$ が得られ，$\mu=i,j,k$ のとき $\partial f/\partial q^i, \partial f/\partial q^j, \partial f/\partial q^k$ がそれぞれ得られる．これら4方向の微分をまとめたベクトルが，拡張四元数勾配 $\nabla_Hf$（式(23)）である．
+
+GHR微分には，積の法則・合成関数の法則・回転法則・共役法則の4つの性質が与えられている．
+\begin{align*}
+\frac{\partial(fg)}{\partial q^\mu} &= f\frac{\partial g}{\partial q^\mu} + \frac{\partial f}{\partial q^\mu}g, &&\text{（式(19)，積）}\\
+\frac{\partial f(g(q))}{\partial q^\mu} &= f'(g)\frac{\partial g}{\partial q^\mu}, &&\text{（式(20)，合成関数）}\\
+\left(\frac{\partial f}{\partial q^\mu}\right)^{\!\nu} &= \frac{\partial f}{\partial q^{\nu\mu}}, &&\text{（式(21)，回転）}\\
+\left(\frac{\partial f}{\partial q^\mu}\right)^{\!*} &= \frac{\partial f}{\partial q^{\mu*}}. &&\text{（式(22)，共役）}
+\end{align*}
+各式は $q^{\mu*}$ 側にも同様の形で成り立つ．これらの性質を用いて，線形形式 $a^Tq\beta$ や二次形式 $q^HAq$ など代表的な四元数関数の微分をまとめた一覧表（TABLE I）が与えられている．以降の判定定理の証明，および第4章のQCRC・QBLRの勾配・ヘッセ行列の導出は，いずれも一覧表（TABLE I）の公式を土台としている．
+
+\section{提案理論（凸性・強凸性の判定条件と2次収束性）}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{img/fig1.png}
+\caption{原論文 Fig.\ 1．拡張実ベクトル空間 $\mathcal{R}$・拡張四元数ベクトル空間 $\mathcal{H}$・四元数ベクトル空間 $\mathbb{H}^n$ の対応関係．矢印上の式番号は原論文内部の番号．}
+\label{fig:1}
+\end{figure}
+
+著者らは，Fig.\ 1 に示すように，拡張実ベクトルの空間 $\mathcal{R}$・拡張四元数ベクトルの空間 $\mathcal{H}$・四元数ベクトルの空間 $\mathbb{H}^n$ の3つの空間の対応関係を介して，実数領域ですでに確立された凸性の判定条件を四元数領域へ移植する枠組みを提案した．その枠組みの土台となるのが，四元数ベクトル $q$ と，拡張実ベクトル $q_R = [q_a^T, q_b^T, q_c^T, q_d^T]^T \in \mathbb{R}^{4n}$，拡張四元数ベクトル $q_H = [q^T, q^{iT}, q^{jT}, q^{kT}]^T \in \mathbb{H}^{4n}$ の2つの等価な表現との対応づけである（Section II-A, Proposition 2.1）．対応づけにより，四元数領域の関数 $f(q)$ を，実数領域の関数 $f(q_R)$，あるいは拡張四元数領域の関数 $f(q_H)$ として，等価に読み替えることができる．
+
+四元数ベクトル・拡張実ベクトル・拡張四元数ベクトルの対応関係を用いると，変換行列 $J_n$ を介して次の関係が導かれる．
+\begin{align*}
+q_H &= J_nq_R \iff q_R = \tfrac{1}{4}J_n^Hq_H, &&\text{（式(7)）}\\
+\nabla_{H^*}f &= \tfrac{1}{4}J_n\nabla_Rf \iff \nabla_Rf = J_n^H\nabla_{H^*}f, &&\text{（式(24)）}\\
+H_{HH^*} &= \tfrac{1}{16}J_nH_{RR}J_n^H \iff H_{RR} = J_n^HH_{HH^*}J_n. &&\text{（式(26)）}
+\end{align*}
+これにより，実数領域における凸性の勾配単調性（Theorem 3.1）・2階の特徴づけ（ヘッセ行列の半正定値性，Theorem 3.5）の判定条件が，四元数領域でもそのまま成り立つことが示される．実際，$f(q)$ が凸であることは，拡張四元数ヘッセ行列の半正定値性（$H_{HH^*} \succeq O$）と同値であることが証明されている（Theorem 3.5）．同じ対応関係を用いて，強凸関数（凸性をさらに強めた性質で，最小点の周辺で関数値が二次関数以上の速さで増加することを要求する）についても複数の判定条件（$H_{HH^*} \succeq \frac{\sigma}{4} I_{4n}$ など，Theorem 4.4）が導かれている．
+
+強凸性の判定条件は，四元数ニュートン法の収束性を保証する根拠としても用いられている．ニュートン法は，講義で扱った勾配降下法とは異なり，関数を2次近似したうえで，その近似の最小点を1回の更新で直接計算する方法である．正定値エルミート行列 $A$ と定数ベクトル $b$，定数 $c$ を用いた二次形式 $f(q) = q^H A q + \mathrm{Re}\{b^H q\} + c$ を考える．そのヘッセ行列 $H_{qq^*} = \frac{1}{2}A$ は $q$ に依存せず一定であるため，ニュートン法の更新式 $q_1 = q_0 - H_{qq^*}^{-1} \nabla_{q^*} f(q_0)$ は，初期値 $q_0$ によらず1回の更新で最適解 $q_{\mathrm{opt}} = -\frac{1}{2}A^{-1}b$ に到達することが証明されている（2次収束性，Theorem 4.6）．2次収束性が意味するのは，四元数領域の二次形式最適化問題が，実数・複素数領域の場合と同様に，反復を重ねることなく一意に解ける点である．凸性・強凸性の判定理論とニュートン法の2次収束性は，四元数領域の最適化を実数・複素数領域の理論と同じ確実さで扱える水準まで引き上げている．
+
+\section{有効性の検証方法（応用の定式化と数理的な成功基準）}
+
+理論の有効性は，閉形式解の理論的導出と，反復アルゴリズムの数値実験による収束検証の2段階の方法で示されている（Section V）．いずれの応用でも，四元数勾配降下法（quaternion gradient descent; QGD）と四元数ニュートン法（QN）の2種類の反復アルゴリズムを，MATLAB用のQuaternion Toolbox（QTFM）を用いて実装し，比較している．
+
+\textbf{QCRC（四元数協調表現に基づく分類，Application 5.1）} は，カラー画像の色チャンネル間の構造的相関を捉える分類モデルである（Zou, Kou, and Wang, 2016, \textit{IEEE Transactions on Image Processing}, vol.\ 25, no.\ 7 のモデルに基づく）．QCRCは，$\min_{q} \|Aq-b\|_2^2 + \lambda\|q\|_2^2$ の形の正則化付き最小二乗問題として定式化され，そのヘッセ行列 $H_{qq^*}=\frac{1}{2}A^HA+\frac{1}{2}\lambda I_n$ は $q$ に依存しない定数行列になる．したがって，QCRCの目的関数は $2\lambda$-強凸な正定値二次形式である．そのため，Theorem 4.6 の仮定を厳密に満たす．ゆえに理論からは，QNが初期値によらず厳密に1回の更新で閉形式解 $q_{\mathrm{opt}} = (A^HA+\lambda I_n)^{-1}A^Hb$ に到達するとの，定量的かつ反証可能な予測が得られる．一方，QGDはステップ幅 $\eta$ に依存する勾配降下法である．$\eta$ が大きいほど速く収束するが，収束の保証は理論的な収束レート（強凸性から導かれる線形収束）にとどまる．QNのような厳密な反復回数の予測はない．
+
+\textbf{QBLR（四元数二値ロジスティック回帰，Application 5.2）} は，特徴ベクトルの線形結合をシグモイド関数で0から1の値に変換して二値を予測する，四元数値の特徴ベクトルに対する二値分類モデルであり，対数尤度に基づく損失関数に $\ell_2$ 正則化項を加えた形で定式化され，その損失関数のヘッセ行列 $H_{qq^*} = \frac{1}{4n}AW(q)A^H + \frac{1}{2}\lambda I_m$（式(89)．$W(q)$ は $g_i(q)(1-g_i(q))$ を対角成分とする対角行列）は $q$ に依存する非定数行列である．そのため，QBLRの目的関数は $2\lambda$-強凸ではあるものの，Theorem 4.6 が要求する二次形式ではない．したがって理論的に予測できるのは，強凸性から導かれる大域最小解の一意性と，QNがQGDより速く収束する定性的な傾向のみである．QCRCのように厳密に1回で収束するとの定量的な予測は成り立たない．
+
+実データによる検証には，心電図（ECG）データセット（5,000サンプルを訓練用4,500・評価用500に分割し，140個の実数特徴を35個の四元数特徴に組み替えたもの）が用いられている．データセットの選定理由そのものは，本文中に明記されていない（Section V, Application 5.2に記載なし）．140個の実数特徴は，四元数1個あたり4実数（実部・$i$・$j$・$k$）の構成にちょうど35分割できる．その点で，合成データによるQCRCの検証とは異なり，ECGデータセットは，実データ上で四元数値の特徴表現を試すのに適していたと考えられる．
+
+\section{結果}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{img/fig2.png}
+\caption{原論文 Fig.\ 2．QCRCにおける目的関数値 $f(q^k)$ の反復推移（QN対QGD）．(a) $m{=}10,n{=}1000$，(b) $m{=}1000,n{=}10$，(c) $m{=}1000,n{=}1000$．}
+\label{fig:2}
+\end{figure}
+
+Fig.\ 2 は，QCRCについて，次元の異なる3種類の乱数行列 $A$（(a) $m{=}10, n{=}1000$，(b) $m{=}1000, n{=}10$，(c) $m{=}1000, n{=}1000$）に対して，目的関数値 $f(q^k)$ の30回の反復にわたる減少の推移を示している．QN（実線）はいずれの設定でも1回の更新で最適値 $f(q_{\mathrm{opt}})$ に到達しており，Theorem 4.6が予測したとおりの結果となっている．一方，QGD（点線，ステップ幅 $\eta$ を3通り変えたもの）は，どのステップ幅でも1回では収束せず，より緩やかに減少している．QGDでは，ステップ幅が大きいほど収束が速い．（a）の $m{<}n$（劣決定）の設定では，目的関数値がほぼ0まで減少している．（b）の $m{>}n$（優決定）の設定では，0.990付近までしか下がらない．（c）の $m{=}n$ の設定では，QGDが30回の反復でも0.1〜0.2程度までしか下がっていない．
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{img/fig3.png}
+\caption{原論文 Fig.\ 3．QBLRにおける学習曲線（QN対QGD）．(a) 訓練損失，(b) 訓練正解率，(c) テスト正解率．}
+\label{fig:3}
+\end{figure}
+
+Fig.\ 3 は，前章のECGデータセットに対するQBLRの学習について，（a）訓練損失，（b）訓練正解率，（c）テスト正解率を30回の反復にわたって示している．QNはいずれの指標でも数回の反復でQGDより速く目標の水準に達している．テスト正解率はQNで反復とともに約96\%まで達しているのに対し，QGD（ステップ幅最大の設定でも）は88〜90\%程度で頭打ちになっている（Fig.\ 3(c)）．QNは1回では収束しないもののQGDより速く収束するとの第4章の予測どおり，QNがQGDを全指標で上回る結果となっている．
+
+\section{著者らの考察}
+
+QCRCの結果（Fig.\ 2）では，QGDはステップ幅を大きくするほど降下が速くなるが，1回あたりの計算コストだけを見ると意外なことに，いずれの設定でもQNとの性能差が残る．QGDは行列の逆行列演算を伴わないため，1回あたりのコストはQNより低い．それでもQNが優れているのは，QNがTheorem 4.6の保証どおり厳密に1回で収束し，結果として総コストが閉形式解を直接計算する場合と同等になるためである（Section V, Application 5.1）．著者らはここから，QNには閉形式解の有無によらない汎用性があると指摘している．閉形式解が存在する問題ではQNはその解に1回で到達し，閉形式解が存在しない問題に対しても，同じ更新式をそのまま反復適用できるからである．
+
+その汎用性は，QBLRの結果（Fig.\ 3）で裏づけられている．QBLRの目的関数は対数尤度に基づく非二次形式であるため，QNはTheorem 4.6の対象外であり，1回では収束しない（Section V, Application 5.2）．QCRCで見られた1回で収束する性質は，ここでは失われている．それでも著者らは，QNがQGDより速く収束することを確認している．テスト正解率はQNで反復とともに約96\%まで達し，QGDを一貫して上回っている．
+
+\section{結論と残された課題}
+
+本論文は，GHR微分に基づいて，四元数領域における凸最適化の理論を確立した．式(7)(23)(24)(26)を用いて凸性の判定定理群を導き，強凸性の判定条件を整備したうえで，正定値二次形式に対する四元数ニュートン法が1回の更新で収束することを証明した．QCRCとQBLRの2つの応用は，その理論の有効性を裏づけた．
+
+本論文の結論部で著者らは，GHR微分による微分不可能な四元数関数の凸性理論が未解決のまま残されていることを明示している（Section VI）．本論文の枠組みは，実微分可能（real-differentiable）な関数を前提としている．絶対値関数のように微分不可能な点を含む四元数関数（劣勾配に相当する概念を必要とする関数）への拡張は，今後の課題として位置づけられている．
+
+\section{所感：本論文と講義内容の関連}
+
+著者らは，本論文が用いるGHR微分（式(17)(18)）について，講義で学んだウィルティンガー微分（$z,z^*$ を独立変数とみなす微分）の一般化であると述べており（Section I，Wirtinger, 1927 を参照），実部・虚部が2つ（$x,y$）の複素数から4つ（$q_a,q_b,q_c,q_d$）の四元数へと，微分の対象領域が拡張されている．
+
+微分の対象領域の拡張が意味するのは，複素領域で使われてきた最適化の手続きを，そのまま四元数領域に持ち込める点である．すなわち，目的関数を共役変数で微分して0とおき，停留点を求めたうえで凸性によって大域最適性を保証する手続きである．同様の手続きを踏まえると，講義で扱った複素領域のDOA推定のような手法も，四元数領域へ拡張できると考えられる．複数チャンネルの実数値信号（3軸センサの計測値や多チャンネルの生体信号など）を1つの四元数値信号としてまとめれば，同じ最適化の手続きに載せられるためである．実際，本論文のQBLR（第4章）も，140個の実数特徴を35個の四元数特徴にまとめることで，複数チャンネル間の相関を陽に扱っている．チャンネル間の相関を積極的に利用したい信号処理問題に対して，本論文の判定理論とニュートン法の収束性は，複素領域の既存手法を四元数領域へ拡張するための足がかりになりうる．
+
+講義の最後で扱った複素領域の最小二乗法（$\partial f/\partial z^*=0$ から $z=(A^HA)^{-1}A^Hy$ を導く手順）と，本論文のQCRCにおける閉形式解 $q_{\mathrm{opt}}=(A^HA+\lambda I_n)^{-1}A^Hb$ の導出は，論理構造の点で対応している．いずれも，共役変数に関する微分を0とおいて停留点を求め，凸性（強凸性）によって大域最適性を保証している．
+
+停留点を求めるだけでは，その点が局所解にすぎない可能性を排除できない．大域最適性まで保証できることの意味は，勾配を0とおいて得られる解を，初期値への依存や再探索の必要なしに，そのまま最終解として採用できる点にある．実際，本論文のQNがQCRCで1回の更新のみで最終解に到達できているのも，大域最適性の保証があるためである．同じ理由から，講義で扱ったDOA推定を四元数領域へ拡張する場合にも，大域最適性を理論的に保証できる本論文の枠組みは，繰り返しの再探索や複数回の初期値変更を許容しにくいリアルタイム処理・組み込み実装への応用において，特に有用になると考えられる．
+
+\end{document}

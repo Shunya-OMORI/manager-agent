@@ -1,0 +1,359 @@
+<title>3D_WSNSimulator — コンポーネント図</title>
+<style>
+  :root {
+    --ink: #151a21;
+    --paper: #f4f6f9;
+    --surface: #ffffff;
+    --line: #dde1e7;
+    --muted: #5f6b7a;
+    --signal: #2f6fed;
+    --signal-soft: #e8eefd;
+    --tag-bg: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8ecf2;
+      --paper: #10141b;
+      --surface: #161c25;
+      --line: #2a3240;
+      --muted: #93a0b2;
+      --signal: #6ea8fe;
+      --signal-soft: #1b2a44;
+      --tag-bg: #1c2330;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e8ecf2;
+    --paper: #10141b;
+    --surface: #161c25;
+    --line: #2a3240;
+    --muted: #93a0b2;
+    --signal: #6ea8fe;
+    --signal-soft: #1b2a44;
+    --tag-bg: #1c2330;
+  }
+  :root[data-theme="light"] {
+    --ink: #151a21;
+    --paper: #f4f6f9;
+    --surface: #ffffff;
+    --line: #dde1e7;
+    --muted: #5f6b7a;
+    --signal: #2f6fed;
+    --signal-soft: #e8eefd;
+    --tag-bg: #eef1f5;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Yu Gothic UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Segoe UI", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  header.head {
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--signal);
+    background: var(--signal-soft);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(26px, 4vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 15.5px;
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  section {
+    margin-bottom: 36px;
+  }
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+
+  .note {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 14.5px;
+  }
+  .note p { margin: 0 0 10px; }
+  .note p:last-child { margin-bottom: 0; }
+  .note strong { color: var(--ink); }
+
+  .diagram-card {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 28px 20px;
+  }
+  .diagram-scroll {
+    overflow-x: auto;
+  }
+  pre.mermaid {
+    margin: 0;
+    min-width: 720px;
+  }
+  .diagram-caption {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  thead th {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--tag-bg);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.mod {
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 12.5px;
+    color: var(--signal);
+    white-space: nowrap;
+  }
+  td.note-cell {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .src {
+    position: relative;
+  }
+  .src pre {
+    margin: 0;
+    background: var(--tag-bg);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 12.5px;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  footer {
+    color: var(--muted);
+    font-size: 12.5px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+</style>
+
+<div class="page">
+
+  <header class="head">
+    <span class="eyebrow">3D_WSNSimulator ・ Architecture</span>
+    <h1>コンポーネント図（先行研究フォーマット準拠）</h1>
+    <p class="lede">
+      先行研究の4分割（Core / Attack / Visualize / Test）に倣い、3D_WSNSimulator
+      の実コード構成（<code>src/</code> 配下）から起こしたコンポーネント図です。
+      前回のクラス図とは別物として、モジュール単位のデータフローを示します。
+    </p>
+  </header>
+
+  <section>
+    <h2>クラス図との違い</h2>
+    <div class="note">
+      <p><strong>前回のMermaidクラス図は「実装レベル」の図</strong>で、クラスの継承・属性・メソッドを示すものでした。今回のコンポーネント図は「アーキテクチャレベル」の図で、モジュールの役割分担とデータの流れを示します。目的が異なるため、両方を残すのがおすすめです（設計ドキュメント用にクラス図、ミーティング説明用にコンポーネント図）。</p>
+      <p>先行研究の「Attack Component」に相当する層はこのプロジェクトにはまだ存在しないため、位置だけを踏襲し「Scene/Interaction Component」（3Dモデル読み込み・クリック配置などの入力系）を代わりに割り当てています。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>コンポーネント図</h2>
+    <div class="diagram-card">
+      <div class="diagram-scroll">
+<pre class="mermaid">
+flowchart LR
+    subgraph TC["🧪 (4) Test Component"]
+        direction TB
+        E2E["🎭 E2E Test<br/>(Playwright)"]
+    end
+
+    subgraph SC["🎮 (2) Scene / Interaction"]
+        direction TB
+        LOADER["🗺️ World<br/>GLB Loader"]
+        SIM["🖱️ useSimulator<br/>click / hover<br/>render loop"]
+        LOADER --> SIM
+    end
+
+    subgraph CC["🧠 (1) Core Component"]
+        direction TB
+        CONFIG["⚙️ Sensor Profiles<br/>(config/)"]
+        PHYS["📡 Physics<br/>Link Budget / Weather<br/>Diffraction"]
+        STATE["🌐 State<br/>(nodes / links / packets)"]
+        ROUTE["🔀 Routing<br/>BFS Routing Tree"]
+        PACK["📦 Packets<br/>Flood / Random Traffic"]
+        CONFIG --> STATE
+        PHYS --> STATE
+        STATE --> ROUTE
+        ROUTE --> STATE
+        STATE --> PACK
+        PACK --> STATE
+        ROUTE ~~~ PACK
+    end
+
+    subgraph VC["👁️ (3) UI Component"]
+        direction TB
+        HUD["🎛️ Hud<br/>ControlsPanel"]
+        LIST["📋 NodeList<br/>Tooltip"]
+        LOGP["🪵 LogPanel"]
+        HUD ~~~ LIST
+        LIST ~~~ LOGP
+    end
+
+    TC -->|"E2E Test"| VC
+    TC -.->|"Core Unit Test<br/>（未実装）"| CC
+    SC ==>|"Node 配置<br/>click-to-place"| CC
+    CC ==>|"Network Status"| VC
+</pre>
+      </div>
+      <div class="diagram-caption">
+        実線太矢印＝シミュレーション本体のデータフロー、点線＝UI/入力からのトリガー。矢印ラベルは<code>src/</code>内の実際の関数・状態名に対応（例：<code>STATE.nodes</code>、<code>updateLinks()</code>、<code>buildRoutingTree()</code>）。
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>先行研究との対応表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>先行研究のコンポーネント</th>
+          <th>3D_WSNSimulator 側</th>
+          <th>実体（src/ 配下）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(1) Core Component<br/>Sensors / Routing Protocols / Field</td>
+          <td>(1) Core Component<br/>Physics / Routing / Packets / State</td>
+          <td class="mod">physics/, routing/, packets/, nodes/, state.ts</td>
+        </tr>
+        <tr>
+          <td>(2) Attack Component<br/>Inside / Outside Sinkhole</td>
+          <td>(2) Scene / Interaction Component<br/>World / useSimulator</td>
+          <td class="mod">scene/, composables/useSimulator.ts</td>
+        </tr>
+        <tr>
+          <td>(3) Visualize Component<br/>Visualize Network / Chart / Logger</td>
+          <td>(3) UI Component<br/>Hud / NodeList / LogPanel</td>
+          <td class="mod">ui/*.vue, ui-state.ts, log.ts</td>
+        </tr>
+        <tr>
+          <td>(4) Test Component<br/>Sensors / Routing / Attack Test</td>
+          <td>(4) Test Component<br/>E2E Test のみ（ユニットテスト未整備）</td>
+          <td class="mod">e2e/app.spec.ts</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Mermaidソース（コピー用）</h2>
+    <div class="src">
+<pre>flowchart LR
+    subgraph TC["🧪 (4) Test Component"]
+        direction TB
+        E2E["🎭 E2E Test&lt;br/&gt;(Playwright)"]
+    end
+
+    subgraph SC["🎮 (2) Scene / Interaction"]
+        direction TB
+        LOADER["🗺️ World&lt;br/&gt;GLB Loader"]
+        SIM["🖱️ useSimulator&lt;br/&gt;click / hover&lt;br/&gt;render loop"]
+        LOADER --&gt; SIM
+    end
+
+    subgraph CC["🧠 (1) Core Component"]
+        direction TB
+        CONFIG["⚙️ Sensor Profiles&lt;br/&gt;(config/)"]
+        PHYS["📡 Physics&lt;br/&gt;Link Budget / Weather&lt;br/&gt;Diffraction"]
+        STATE["🌐 State&lt;br/&gt;(nodes / links / packets)"]
+        ROUTE["🔀 Routing&lt;br/&gt;BFS Routing Tree"]
+        PACK["📦 Packets&lt;br/&gt;Flood / Random Traffic"]
+        CONFIG --&gt; STATE
+        PHYS --&gt; STATE
+        STATE --&gt; ROUTE
+        ROUTE --&gt; STATE
+        STATE --&gt; PACK
+        PACK --&gt; STATE
+        ROUTE ~~~ PACK
+    end
+
+    subgraph VC["👁️ (3) UI Component"]
+        direction TB
+        HUD["🎛️ Hud&lt;br/&gt;ControlsPanel"]
+        LIST["📋 NodeList&lt;br/&gt;Tooltip"]
+        LOGP["🪵 LogPanel"]
+        HUD ~~~ LIST
+        LIST ~~~ LOGP
+    end
+
+    TC --&gt;|"E2E Test"| VC
+    TC -.-&gt;|"Core Unit Test&lt;br/&gt;（未実装）"| CC
+    SC ==&gt;|"Node 配置&lt;br/&gt;click-to-place"| CC
+    CC ==&gt;|"Network Status"| VC
+</pre>
+    </div>
+  </section>
+
+  <footer>
+    src/ 配下の実ファイル（state.ts, types.ts, physics/index.ts, nodes/nodes.ts, routing/routing.ts, packets/packets.ts, composables/useSimulator.ts, README.md）を確認した上で構成しています。実装が進んで責務が変わったら、この図も更新してください。
+  </footer>
+
+</div>
